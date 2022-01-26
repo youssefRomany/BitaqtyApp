@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="lblDesc" destination="7KC-Sd-o8r" id="Jjs-Pi-Sr1"/>
+                <outlet property="lblTitle" destination="rrm-K7-Qap" id="Fmi-23-Uvw"/>
+                <outlet property="switchView" destination="04w-L0-l9I" id="kzf-uS-8A4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="513" height="116"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H2G-Tn-IgO">
+                    <rect key="frame" x="0.0" y="54" width="456" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrm-K7-Qap" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="456" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="ColorText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="7KC-Sd-o8r" customClass="LblSmallerLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="456" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="04w-L0-l9I">
+                    <rect key="frame" x="464" y="48.5" width="51" height="31"/>
+                </switch>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="04w-L0-l9I" firstAttribute="leading" secondItem="H2G-Tn-IgO" secondAttribute="trailing" constant="8" id="QY1-yq-PRC"/>
+                <constraint firstItem="H2G-Tn-IgO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="WfV-SE-t7R"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="04w-L0-l9I" secondAttribute="trailing" id="X3J-0k-9Sy"/>
+                <constraint firstItem="04w-L0-l9I" firstAttribute="centerY" secondItem="H2G-Tn-IgO" secondAttribute="centerY" id="YMB-fZ-gaS"/>
+                <constraint firstItem="H2G-Tn-IgO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dE7-Hl-QJx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="H2G-Tn-IgO" secondAttribute="bottom" constant="8" id="fm5-Ld-32w"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="93.478260869565219" y="-185.49107142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ColorText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

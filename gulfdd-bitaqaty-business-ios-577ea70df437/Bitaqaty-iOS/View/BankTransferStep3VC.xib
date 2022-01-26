@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankTransferStep3VC" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="btnNext" destination="ri0-6O-PcK" id="FLN-JZ-Yge"/>
+                <outlet property="btnPrevious" destination="jrr-Ve-rS9" id="m5k-6o-MTK"/>
+                <outlet property="lblMaxAmount" destination="TMW-ou-IbG" id="Dj9-q6-Rpr"/>
+                <outlet property="lblMinAmount" destination="R1u-rT-YFa" id="8Sg-7x-E5y"/>
+                <outlet property="lblOneCardBank" destination="hSy-6x-sZg" id="Tn1-gf-fOh"/>
+                <outlet property="lblOneCardBankHeader" destination="uW8-G5-RJJ" id="955-Pi-989"/>
+                <outlet property="lblRechargeAmount" destination="mYA-o4-VcR" id="3Fw-Vw-k2u"/>
+                <outlet property="lblRechargeAmountValue" destination="9CL-Lb-yaO" id="2lf-Bu-qD9"/>
+                <outlet property="lblSenderBank" destination="cv2-43-Goe" id="zL5-3a-5NM"/>
+                <outlet property="lblSenderBankHeader" destination="nun-mc-w3Z" id="isC-B2-pFr"/>
+                <outlet property="stackRechargeAmount" destination="XO4-9K-VJ6" id="UNA-U9-V0p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewRefNo" destination="XYf-Pn-UCk" id="ycK-CG-eKO"/>
+                <outlet property="viewRequestInfo" destination="vSh-b9-Cq9" id="8xx-C6-Nm3"/>
+                <outlet property="viewTransferAmount" destination="v5e-Ta-xcy" id="4FH-FU-Kn9"/>
+                <outlet property="viewTransferDate" destination="bnf-dJ-4KY" id="FXe-Gr-f8e"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vE8-fe-K5t">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gWV-XR-qEo">
+                            <rect key="frame" x="20" y="20" width="374" height="447.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSh-b9-Cq9">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-EI-LXi">
+                                            <rect key="frame" x="20" y="20" width="334" height="88"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-NH-QMS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="50.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="753" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-JL-pEt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="20.5"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="GvJ-J3-E82">
+                                                                    <rect key="frame" x="0.0" y="5.5" width="15" height="10"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="10" id="3ZE-RW-PBD"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="9l9-XI-nGL"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URB-F0-07a" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                    <rect key="frame" x="15" y="0.0" width="14" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="ColorDarkYellow"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nun-mc-w3Z" customClass="LblMediumSemiBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="37" y="0.0" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv2-43-Goe" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="86.5" y="0.0" width="247.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jLH-cW-VAK">
+                                                    <rect key="frame" x="0.0" y="67.5" width="334" height="20.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="753" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Gc-MO-OCq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-ku-ogE" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="14" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="ColorDarkYellow"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="wd4-74-6Tp">
+                                                                    <rect key="frame" x="14" y="5.5" width="15" height="10"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="10" id="XGP-CP-4v7"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="sSf-Wm-In5"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-G5-RJJ" customClass="LblMediumSemiBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="37" y="0.0" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-6x-sZg" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="86.5" y="0.0" width="247.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="VTD-EI-LXi" firstAttribute="top" secondItem="vSh-b9-Cq9" secondAttribute="top" constant="20" id="3me-nb-49U"/>
+                                        <constraint firstAttribute="trailing" secondItem="VTD-EI-LXi" secondAttribute="trailing" constant="20" id="C58-Cu-lQY"/>
+                                        <constraint firstAttribute="bottom" secondItem="VTD-EI-LXi" secondAttribute="bottom" constant="20" id="GuC-Hb-h5F"/>
+                                        <constraint firstItem="VTD-EI-LXi" firstAttribute="leading" secondItem="vSh-b9-Cq9" secondAttribute="leading" constant="20" id="X36-jD-qcx"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f4Z-jr-jGQ">
+                                    <rect key="frame" x="0.0" y="143" width="374" height="68.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="v5e-Ta-xcy" customClass="RoundedTextField" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XO4-9K-VJ6">
+                                            <rect key="frame" x="0.0" y="48" width="374" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYA-o4-VcR" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CL-Lb-yaO" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="46.5" y="0.0" width="327.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-cx-wmd">
+                                    <rect key="frame" x="0.0" y="226.5" width="374" height="20.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="ic_instructions" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-sr-h2X">
+                                            <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="Tcw-xJ-EYP">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                </constraint>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-rT-YFa" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="0.0" width="349" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="whh-38-zLe">
+                                    <rect key="frame" x="0.0" y="262" width="374" height="20.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="ic_instructions" translatesAutoresizingMaskIntoConstraints="NO" id="pQx-Rg-w6b">
+                                            <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="ydy-p8-m05">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                </constraint>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-ou-IbG" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="0.0" width="349" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="bnf-dJ-4KY" customClass="DropDownView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="297.5" width="374" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="XYf-Pn-UCk" customClass="RoundedTextField" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="352.5" width="374" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-VS-hat">
+                                    <rect key="frame" x="0.0" y="407.5" width="374" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrr-Ve-rS9" customClass="BtnMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="eNc-As-Jv8">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                </constraint>
+                                            </constraints>
+                                            <state key="normal" title="Previous">
+                                                <color key="titleColor" name="ColorAccent"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="previous:" destination="-1" eventType="touchUpInside" id="REH-tr-HQ8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-6O-PcK" customClass="BtnMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="197" y="0.0" width="177" height="40"/>
+                                            <color key="backgroundColor" name="ColorAccent"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="ASW-oR-8u6">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                </constraint>
+                                            </constraints>
+                                            <state key="normal" title="Next">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="next:" destination="-1" eventType="touchUpInside" id="QKc-tO-lfM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gWV-XR-qEo" secondAttribute="trailing" constant="20" id="3Lj-r6-mkV"/>
+                        <constraint firstItem="gWV-XR-qEo" firstAttribute="leading" secondItem="vE8-fe-K5t" secondAttribute="leading" constant="20" id="5jd-uw-vsQ"/>
+                        <constraint firstItem="gWV-XR-qEo" firstAttribute="top" secondItem="vE8-fe-K5t" secondAttribute="top" constant="20" id="T8q-Te-aTT"/>
+                        <constraint firstAttribute="bottom" secondItem="gWV-XR-qEo" secondAttribute="bottom" constant="20" id="moh-fb-cWx"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vE8-fe-K5t" secondAttribute="bottom" id="8f7-v6-aF5"/>
+                <constraint firstItem="vE8-fe-K5t" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zxr-2D-fI8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vE8-fe-K5t" secondAttribute="trailing" id="bh0-sz-9vl"/>
+                <constraint firstItem="vE8-fe-K5t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jwL-12-dsn"/>
+                <constraint firstItem="gWV-XR-qEo" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-40" id="ug0-l6-po5"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_instructions" width="15" height="15"/>
+        <image name="ic_location" width="6.8540000915527344" height="9.8999996185302734"/>
+        <namedColor name="ColorAccent">
+            <color red="0.19200000166893005" green="0.33300000429153442" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorDarkYellow">
+            <color red="0.87800002098083496" green="0.77600002288818359" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

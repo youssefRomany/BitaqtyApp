@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomHyperPayVC" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPayNow" destination="zFs-sb-NXE" id="b8n-AN-q57"/>
+                <outlet property="cardBrandLabel" destination="8ba-nc-hTq" id="L17-H7-dUI"/>
+                <outlet property="cvvTextField" destination="UIf-fA-hlJ" id="iAN-Q8-WpV"/>
+                <outlet property="expiryMonthTextField" destination="JGC-T1-Avi" id="fUP-DP-U8P"/>
+                <outlet property="holderTextField" destination="R54-q3-zIy" id="7rK-d8-P8h"/>
+                <outlet property="imgBg" destination="N8V-HB-0W2" id="FCE-KH-6ZS"/>
+                <outlet property="imgSavedCredit" destination="XVS-bQ-m57" id="CR2-Ed-hUt"/>
+                <outlet property="imgType" destination="kcs-vu-pQr" id="Pfb-X7-O3N"/>
+                <outlet property="lblCardCVV" destination="YQh-UO-DDH" id="j44-OE-8iU"/>
+                <outlet property="lblCardDate" destination="kYi-MH-lhS" id="hIb-Uo-sCE"/>
+                <outlet property="lblCardHolder" destination="FK8-p7-cg3" id="r0Q-Md-dMf"/>
+                <outlet property="lblCardNo" destination="ZwK-3W-ldw" id="36F-kH-59p"/>
+                <outlet property="lblCardType" destination="8RV-jj-jy0" id="ICp-Kf-Kou"/>
+                <outlet property="lblSaveCard" destination="QvY-Px-WE1" id="3P4-Vm-zme"/>
+                <outlet property="numberTextField" destination="HF1-hv-tSH" id="aCc-LK-JHA"/>
+                <outlet property="processingView" destination="Kr7-2s-cCp" id="msU-AB-noY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewCardType" destination="EEV-p8-mfo" id="YYK-Af-dJ3"/>
+                <outlet property="viewHeader" destination="efJ-4k-qGe" id="7WR-Po-79x"/>
+                <outlet property="viewSaveCard" destination="uBl-5W-0He" id="jhB-vf-a5a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efJ-4k-qGe" customClass="CloseHeaderView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="h2W-Sq-GB0"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4u-RR-YSN">
+                    <rect key="frame" x="0.0" y="108" width="414" height="788"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiB-aQ-jYW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="588.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgP-G7-7p8" userLabel="Content View">
+                                    <rect key="frame" x="20" y="50" width="374" height="488.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pay_bg" translatesAutoresizingMaskIntoConstraints="NO" id="N8V-HB-0W2">
+                                            <rect key="frame" x="-10" y="-10" width="394" height="508.5"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_visa_pay" translatesAutoresizingMaskIntoConstraints="NO" id="kcs-vu-pQr">
+                                            <rect key="frame" x="284" y="10.5" width="80" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="vCw-Mt-e1u"/>
+                                                <constraint firstAttribute="height" constant="60" id="xBR-IC-lXP"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VISA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RV-jj-jy0" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="30" width="40" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" name="ColorText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEV-p8-mfo">
+                                            <rect key="frame" x="58" y="23.5" width="126" height="34"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ba-nc-hTq" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="8.5" width="78" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="ColorText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="W48-Ed-9hg">
+                                                    <rect key="frame" x="103" y="7" width="15" height="20"/>
+                                                    <color key="tintColor" name="ColorText"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="0v7-2U-Xf1"/>
+                                                        <constraint firstAttribute="height" constant="20" id="kTq-LC-kK0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="8ba-nc-hTq" firstAttribute="centerY" secondItem="EEV-p8-mfo" secondAttribute="centerY" id="5nQ-oe-b45"/>
+                                                <constraint firstItem="8ba-nc-hTq" firstAttribute="leading" secondItem="EEV-p8-mfo" secondAttribute="leading" constant="10" id="Eht-kQ-3H4"/>
+                                                <constraint firstItem="W48-Ed-9hg" firstAttribute="leading" secondItem="8ba-nc-hTq" secondAttribute="trailing" constant="15" id="IuV-tr-BH8"/>
+                                                <constraint firstAttribute="trailing" secondItem="W48-Ed-9hg" secondAttribute="trailing" constant="8" id="OhK-Bb-yMU"/>
+                                                <constraint firstItem="W48-Ed-9hg" firstAttribute="centerY" secondItem="EEV-p8-mfo" secondAttribute="centerY" id="y8N-wn-DtR"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="m5P-7g-OkQ">
+                                            <rect key="frame" x="10" y="80.5" width="354" height="303"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GhL-6s-5vg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="55"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwK-3W-ldw" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-hv-tSH" customClass="TxtSmallReg" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="21" width="354" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FKJ-QX-iqJ">
+                                                    <rect key="frame" x="0.0" y="67" width="354" height="55"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiry Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYi-MH-lhS" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGC-T1-Avi" customClass="TxtSmallReg" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="21" width="354" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-Iu-Kch">
+                                                    <rect key="frame" x="0.0" y="134" width="354" height="55"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK8-p7-cg3" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R54-q3-zIy" customClass="TxtSmallReg" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="21" width="354" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" returnKeyType="next"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WXc-8r-dpv">
+                                                    <rect key="frame" x="0.0" y="201" width="354" height="55"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-UO-DDH" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UIf-fA-hlJ" customClass="TxtSmallReg" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="21" width="354" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBl-5W-0He">
+                                                    <rect key="frame" x="0.0" y="268" width="354" height="35"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkbox_unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="XVS-bQ-m57">
+                                                            <rect key="frame" x="0.0" y="7.5" width="20" height="20"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="PnX-nC-7nn"/>
+                                                                <constraint firstAttribute="width" constant="20" id="STe-32-Rb2"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvY-Px-WE1" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="28" y="9" width="84.5" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-vP-IU1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
+                                                            <connections>
+                                                                <action selector="onSaveClicked:" destination="-1" eventType="touchUpInside" id="W9C-5C-A8W"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="QvY-Px-WE1" firstAttribute="centerY" secondItem="uBl-5W-0He" secondAttribute="centerY" id="7Se-Wf-4i6"/>
+                                                        <constraint firstItem="S7I-vP-IU1" firstAttribute="top" secondItem="uBl-5W-0He" secondAttribute="top" id="Gdh-cA-us5"/>
+                                                        <constraint firstItem="XVS-bQ-m57" firstAttribute="centerY" secondItem="uBl-5W-0He" secondAttribute="centerY" id="Jcy-nk-K7D"/>
+                                                        <constraint firstItem="S7I-vP-IU1" firstAttribute="leading" secondItem="uBl-5W-0He" secondAttribute="leading" id="Sx1-g0-cBE"/>
+                                                        <constraint firstAttribute="height" constant="35" id="lP7-OB-Wi6"/>
+                                                        <constraint firstItem="XVS-bQ-m57" firstAttribute="leading" secondItem="uBl-5W-0He" secondAttribute="leading" id="mqM-74-tUy"/>
+                                                        <constraint firstAttribute="bottom" secondItem="S7I-vP-IU1" secondAttribute="bottom" id="pDU-9n-seH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="S7I-vP-IU1" secondAttribute="trailing" id="tS1-pz-zqZ"/>
+                                                        <constraint firstItem="QvY-Px-WE1" firstAttribute="leading" secondItem="XVS-bQ-m57" secondAttribute="trailing" constant="8" id="uCR-Pj-3mV"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kr7-2s-cCp">
+                                            <rect key="frame" x="168.5" y="226" width="37" height="37"/>
+                                            <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFs-sb-NXE" userLabel="Payment Button" customClass="OPPPaymentButton">
+                                            <rect key="frame" x="264" y="413.5" width="100" height="45"/>
+                                            <color key="backgroundColor" red="0.34901960784313724" green="0.72156862745098038" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="NGC-au-Xip"/>
+                                                <constraint firstAttribute="width" constant="100" id="xkL-zE-Sa8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Pay now">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="payButtonAction:" destination="-1" eventType="touchUpInside" id="7cn-Hh-lJm"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="N8V-HB-0W2" firstAttribute="leading" secondItem="TgP-G7-7p8" secondAttribute="leading" constant="-10" id="7bU-Si-HYl"/>
+                                        <constraint firstItem="8RV-jj-jy0" firstAttribute="leading" secondItem="m5P-7g-OkQ" secondAttribute="leading" id="BrV-Si-Da5"/>
+                                        <constraint firstItem="EEV-p8-mfo" firstAttribute="centerY" secondItem="8RV-jj-jy0" secondAttribute="centerY" id="EwJ-jn-yia"/>
+                                        <constraint firstAttribute="trailing" secondItem="N8V-HB-0W2" secondAttribute="trailing" constant="-10" id="FvU-XI-JQv"/>
+                                        <constraint firstItem="Kr7-2s-cCp" firstAttribute="centerX" secondItem="TgP-G7-7p8" secondAttribute="centerX" id="J6R-Uv-R1G"/>
+                                        <constraint firstItem="EEV-p8-mfo" firstAttribute="leading" secondItem="8RV-jj-jy0" secondAttribute="trailing" constant="8" id="Mqu-FB-Fj6"/>
+                                        <constraint firstItem="kcs-vu-pQr" firstAttribute="centerY" secondItem="EEV-p8-mfo" secondAttribute="centerY" id="NEZ-jD-OMe"/>
+                                        <constraint firstItem="EEV-p8-mfo" firstAttribute="height" secondItem="HF1-hv-tSH" secondAttribute="height" id="Q71-ti-H4b"/>
+                                        <constraint firstItem="kcs-vu-pQr" firstAttribute="trailing" secondItem="m5P-7g-OkQ" secondAttribute="trailing" id="VPY-fL-ecf"/>
+                                        <constraint firstItem="N8V-HB-0W2" firstAttribute="centerX" secondItem="TgP-G7-7p8" secondAttribute="centerX" id="YTT-O7-Z8p"/>
+                                        <constraint firstAttribute="trailing" secondItem="zFs-sb-NXE" secondAttribute="trailing" constant="10" id="ZH1-Tm-KQC"/>
+                                        <constraint firstItem="m5P-7g-OkQ" firstAttribute="leading" secondItem="TgP-G7-7p8" secondAttribute="leading" constant="10" id="acA-Jk-r6q"/>
+                                        <constraint firstItem="Kr7-2s-cCp" firstAttribute="centerY" secondItem="TgP-G7-7p8" secondAttribute="centerY" id="cxn-XH-xsG"/>
+                                        <constraint firstAttribute="bottom" secondItem="zFs-sb-NXE" secondAttribute="bottom" constant="30" id="ea0-ao-lX5"/>
+                                        <constraint firstAttribute="bottom" secondItem="N8V-HB-0W2" secondAttribute="bottom" constant="-10" id="gJE-LE-xft"/>
+                                        <constraint firstItem="N8V-HB-0W2" firstAttribute="top" secondItem="TgP-G7-7p8" secondAttribute="top" constant="-10" id="jVu-qB-94S"/>
+                                        <constraint firstItem="zFs-sb-NXE" firstAttribute="top" secondItem="m5P-7g-OkQ" secondAttribute="bottom" constant="30" id="jXU-Ur-Fxj"/>
+                                        <constraint firstItem="m5P-7g-OkQ" firstAttribute="centerX" secondItem="TgP-G7-7p8" secondAttribute="centerX" id="pHN-9n-9QP"/>
+                                        <constraint firstItem="m5P-7g-OkQ" firstAttribute="top" secondItem="8RV-jj-jy0" secondAttribute="bottom" constant="30" id="s2h-YI-UBg"/>
+                                        <constraint firstItem="N8V-HB-0W2" firstAttribute="centerY" secondItem="TgP-G7-7p8" secondAttribute="centerY" id="wdO-QR-ZjI"/>
+                                        <constraint firstItem="8RV-jj-jy0" firstAttribute="top" secondItem="TgP-G7-7p8" secondAttribute="top" constant="30" id="zZR-hq-DVF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="TgP-G7-7p8" firstAttribute="leading" secondItem="LiB-aQ-jYW" secondAttribute="leading" constant="20" id="04h-4R-fN9"/>
+                                <constraint firstAttribute="trailing" secondItem="TgP-G7-7p8" secondAttribute="trailing" constant="20" id="3Oq-pf-Rdg"/>
+                                <constraint firstItem="TgP-G7-7p8" firstAttribute="top" secondItem="LiB-aQ-jYW" secondAttribute="top" constant="50" id="WJF-l2-JS2"/>
+                                <constraint firstItem="TgP-G7-7p8" firstAttribute="centerY" secondItem="LiB-aQ-jYW" secondAttribute="centerY" id="s4e-ys-4mf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LiB-aQ-jYW" secondAttribute="bottom" id="Awr-I6-B8u"/>
+                        <constraint firstAttribute="trailing" secondItem="LiB-aQ-jYW" secondAttribute="trailing" id="Jkb-bk-eRU"/>
+                        <constraint firstItem="LiB-aQ-jYW" firstAttribute="leading" secondItem="a4u-RR-YSN" secondAttribute="leading" id="PMj-OH-6JK"/>
+                        <constraint firstItem="LiB-aQ-jYW" firstAttribute="top" secondItem="a4u-RR-YSN" secondAttribute="top" id="ndz-5Z-l8i"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="7yd-Hk-AAc"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="hx7-if-Kip"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="efJ-4k-qGe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0Oa-nh-TWR"/>
+                <constraint firstAttribute="bottom" secondItem="a4u-RR-YSN" secondAttribute="bottom" id="1Bx-rO-c8X"/>
+                <constraint firstItem="LiB-aQ-jYW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Gis-hS-BG8"/>
+                <constraint firstItem="efJ-4k-qGe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kb1-ih-2vd"/>
+                <constraint firstItem="a4u-RR-YSN" firstAttribute="top" secondItem="efJ-4k-qGe" secondAttribute="bottom" id="NHD-1t-0aw"/>
+                <constraint firstAttribute="trailing" secondItem="efJ-4k-qGe" secondAttribute="trailing" id="dX9-wO-7Ze"/>
+                <constraint firstItem="a4u-RR-YSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gaA-xj-TXi"/>
+                <constraint firstAttribute="trailing" secondItem="a4u-RR-YSN" secondAttribute="trailing" id="jsb-6j-nE0"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="49.553571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_down" width="9.8400001525878906" height="5.6269998550415039"/>
+        <image name="ic_checkbox_unchecked" width="13" height="13"/>
+        <image name="ic_visa_pay" width="170" height="68"/>
+        <image name="pay_bg" width="367" height="375"/>
+        <namedColor name="ColorText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

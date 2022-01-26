@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageSubAccountDetailsVC" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="ViewCredit" destination="UgR-el-2Ek" id="2xg-Cs-XaP"/>
+                <outlet property="ViewUnlimited" destination="KUt-I5-1fg" id="Spv-Zh-8W9"/>
+                <outlet property="btnSave" destination="HYC-pv-LeY" id="bla-8L-vMc"/>
+                <outlet property="imgDuration" destination="8nf-sI-ejU" id="kZb-m5-e4S"/>
+                <outlet property="lblAccessTitle" destination="v7S-vl-A60" id="AYy-PF-LfW"/>
+                <outlet property="lblBalance" destination="Rq0-JR-kjB" id="cub-Ti-tOh"/>
+                <outlet property="lblDuration" destination="PM6-tq-0vJ" id="8m8-5y-70O"/>
+                <outlet property="lblEmail" destination="02j-Ne-hi4" id="0Rc-JE-5BA"/>
+                <outlet property="lblPeriodTitle" destination="gfL-KM-2cE" id="cVV-J1-C0k"/>
+                <outlet property="lblPurchaseDesc" destination="AO0-fY-s23" id="eoQ-Yx-fAT"/>
+                <outlet property="lblPurchaseLimitTitle" destination="oOm-FA-UJM" id="bNl-p7-tVl"/>
+                <outlet property="lblRechargeMethod" destination="wez-SF-7oK" id="DET-rw-wtn"/>
+                <outlet property="lblReportMethod" destination="Ux1-te-nC8" id="vz9-XQ-EyO"/>
+                <outlet property="lblTransLogMethod" destination="jjL-JQ-8cF" id="E1R-R2-FAr"/>
+                <outlet property="loaderView" destination="Ozf-Y8-fkQ" id="qNK-6Y-iDc"/>
+                <outlet property="stackPurchace" destination="YBY-8L-REy" id="ZaN-e3-G60"/>
+                <outlet property="stackPurchaceBalance" destination="nKB-HV-vVz" id="X2X-V9-Xwh"/>
+                <outlet property="stackRecharge" destination="5bM-Fm-5Hm" id="Hyt-Rs-Fk7"/>
+                <outlet property="stackReports" destination="TOU-8s-xiz" id="ye0-Un-qfK"/>
+                <outlet property="stackTextBalance" destination="jOL-CH-uW5" id="m8u-yJ-9Gw"/>
+                <outlet property="stackTransactionLog" destination="5dq-fP-eIj" id="KVW-IL-3Uq"/>
+                <outlet property="txtField" destination="dlQ-Th-CcK" id="gsW-EA-wPB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAccessType" destination="jgh-vd-2ab" id="LZe-c2-L8D"/>
+                <outlet property="viewAccountContainer" destination="A5H-ma-1fh" id="Nay-LE-aMN"/>
+                <outlet property="viewAccountTitle" destination="8q3-km-hUC" id="HL2-2g-tuV"/>
+                <outlet property="viewAmex" destination="QMW-gP-54d" id="t9h-DH-rxi"/>
+                <outlet property="viewBalance" destination="jmK-qV-1LP" id="oTo-nq-XHX"/>
+                <outlet property="viewBankTransfere" destination="QuH-vX-Jhh" id="i0A-P2-WdC"/>
+                <outlet property="viewDesc" destination="Dxg-xh-FIW" id="wld-6M-DMD"/>
+                <outlet property="viewDicountContainer" destination="ria-fd-meb" id="qPV-yd-qrJ"/>
+                <outlet property="viewDiscountsTitle" destination="gEq-nT-Bdv" id="RHA-wU-bCe"/>
+                <outlet property="viewDuration" destination="rqf-Rr-581" id="RR5-qL-jMB"/>
+                <outlet property="viewFullName" destination="4Ry-OA-COd" id="Zqs-Hh-Go5"/>
+                <outlet property="viewHeader" destination="gxU-C9-UzO" id="Ffk-kw-7iw"/>
+                <outlet property="viewLimited" destination="PWn-h5-EY1" id="hRr-e4-eEY"/>
+                <outlet property="viewMada" destination="qc7-uu-JPs" id="k2y-56-Iay"/>
+                <outlet property="viewMasterTitle" destination="rOz-go-yGb" id="N3I-2p-Ymk"/>
+                <outlet property="viewMobileNumber" destination="Y6b-9D-Qvh" id="X1t-Vh-8Sr"/>
+                <outlet property="viewPaypal" destination="GAN-ee-dOV" id="WAN-nq-Fla"/>
+                <outlet property="viewPeriodic" destination="6Kj-if-YEZ" id="LWr-3N-pzx"/>
+                <outlet property="viewProductListContainer" destination="9Bs-oM-PCg" id="HuF-Ch-h4L"/>
+                <outlet property="viewProductListTitle" destination="6up-Az-p4T" id="e3w-5k-Hhb"/>
+                <outlet property="viewPurchaseContainer" destination="tqK-l8-V5x" id="17h-wM-GB7"/>
+                <outlet property="viewPurchaseLimitTitle" destination="lMc-n0-oFM" id="TIU-wa-lun"/>
+                <outlet property="viewPurchaseTitle" destination="i87-Cz-FX3" id="HG2-Ls-bhJ"/>
+                <outlet property="viewRechargeContainer" destination="pbm-Bf-A1H" id="T49-Om-mkT"/>
+                <outlet property="viewRechargeLog" destination="J27-Lt-M39" id="Lg5-2o-IYa"/>
+                <outlet property="viewRechargeTitle" destination="nj7-cy-yhf" id="OgJ-lb-2VL"/>
+                <outlet property="viewRemaining" destination="EeR-Av-FDW" id="WU0-mX-aKK"/>
+                <outlet property="viewReportContainer" destination="ofg-F6-y71" id="QHs-fK-Ek2"/>
+                <outlet property="viewReportOption1" destination="poh-3z-Zmi" id="cU7-sS-diu"/>
+                <outlet property="viewReportOption2" destination="cUa-1U-zvZ" id="13x-xj-axC"/>
+                <outlet property="viewReportsTitle" destination="xvK-HA-5WH" id="WvW-er-8kU"/>
+                <outlet property="viewSeperator" destination="3wW-cC-60z" id="Z8h-q6-2lT"/>
+                <outlet property="viewSubType" destination="iO7-iz-2Qo" id="RtZ-rt-Ev6"/>
+                <outlet property="viewSupportCenterContainer" destination="Hyx-bM-qMX" id="Gev-Wv-ecN"/>
+                <outlet property="viewSupportCenterTitle" destination="bOu-nC-oDY" id="glX-pb-bZ3"/>
+                <outlet property="viewTransLogContainer" destination="5SZ-hb-Ya0" id="FSC-lV-fNd"/>
+                <outlet property="viewTransLogTitle" destination="tKh-hh-9Ti" id="1yz-Mo-3h3"/>
+                <outlet property="viewTransOption1" destination="nig-Tn-l0L" id="bzi-Fc-LlI"/>
+                <outlet property="viewTransOption2" destination="g0K-s2-Fs5" id="lbA-dd-c1i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="3864"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-C9-UzO" customClass="CloseHeaderView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="377" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="ZNg-U3-Zrw"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-8O-kiT">
+                    <rect key="frame" x="0.0" y="108" width="377" height="2930"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQR-YQ-8wC">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="3175"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5H-ma-1fh">
+                                    <rect key="frame" x="20" y="20" width="337" height="459"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8q3-km-hUC" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="12" width="297" height="44"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02j-Ne-hi4" customClass="LblSmallerBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="39" y="63" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" name="ColorSecondaryText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bII-rJ-Yzi">
+                                            <rect key="frame" x="20" y="89" width="297" height="1"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.69999999999999996" id="fE7-Dg-lwt"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ry-OA-COd" customClass="ManageSubAccountItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="86" width="297" height="102"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-9D-Qvh" customClass="ManageSubAccountItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="193" width="297" height="156"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxg-xh-FIW" customClass="ManageSubAccountItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="354" width="297" height="141"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-vd-2ab" customClass="ManageSubAccountItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="500" width="297" height="121"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Dxg-xh-FIW" firstAttribute="trailing" secondItem="Y6b-9D-Qvh" secondAttribute="trailing" id="58X-Mq-Ooq"/>
+                                        <constraint firstItem="4Ry-OA-COd" firstAttribute="top" secondItem="bII-rJ-Yzi" secondAttribute="bottom" constant="5" id="5SA-OJ-jIu"/>
+                                        <constraint firstItem="jgh-vd-2ab" firstAttribute="leading" secondItem="Dxg-xh-FIW" secondAttribute="leading" id="A1X-57-oIk"/>
+                                        <constraint firstItem="Y6b-9D-Qvh" firstAttribute="trailing" secondItem="4Ry-OA-COd" secondAttribute="trailing" id="Aee-js-Po4"/>
+                                        <constraint firstItem="bII-rJ-Yzi" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="F4A-yV-ZAh"/>
+                                        <constraint firstItem="8q3-km-hUC" firstAttribute="top" secondItem="A5H-ma-1fh" secondAttribute="top" constant="10" id="Jwk-N8-8S4"/>
+                                        <constraint firstItem="02j-Ne-hi4" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="P6o-zB-mqd"/>
+                                        <constraint firstItem="4Ry-OA-COd" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="RHH-BH-cVZ"/>
+                                        <constraint firstItem="8q3-km-hUC" firstAttribute="leading" secondItem="A5H-ma-1fh" secondAttribute="leading" constant="20" id="RI3-ZP-niR"/>
+                                        <constraint firstAttribute="bottom" secondItem="jgh-vd-2ab" secondAttribute="bottom" constant="5" id="SXJ-PY-sMI"/>
+                                        <constraint firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" constant="20" id="Tq2-KP-XOp"/>
+                                        <constraint firstItem="4Ry-OA-COd" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="Uq3-8F-wyd"/>
+                                        <constraint firstItem="jgh-vd-2ab" firstAttribute="trailing" secondItem="Dxg-xh-FIW" secondAttribute="trailing" id="ab2-za-lV8"/>
+                                        <constraint firstItem="Dxg-xh-FIW" firstAttribute="leading" secondItem="Y6b-9D-Qvh" secondAttribute="leading" id="ce8-nS-R2Z"/>
+                                        <constraint firstItem="Dxg-xh-FIW" firstAttribute="top" secondItem="Y6b-9D-Qvh" secondAttribute="bottom" constant="5" id="cnO-th-Qdl"/>
+                                        <constraint firstItem="bII-rJ-Yzi" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="kS5-rX-Xm9"/>
+                                        <constraint firstItem="bII-rJ-Yzi" firstAttribute="top" secondItem="02j-Ne-hi4" secondAttribute="bottom" constant="5" id="ree-0q-puB"/>
+                                        <constraint firstItem="Y6b-9D-Qvh" firstAttribute="leading" secondItem="4Ry-OA-COd" secondAttribute="leading" id="rwW-ES-8Wk"/>
+                                        <constraint firstItem="jgh-vd-2ab" firstAttribute="top" secondItem="Dxg-xh-FIW" secondAttribute="bottom" constant="5" id="ssZ-Gq-R2d"/>
+                                        <constraint firstItem="Y6b-9D-Qvh" firstAttribute="top" secondItem="4Ry-OA-COd" secondAttribute="bottom" constant="5" id="t5f-pF-tXR"/>
+                                        <constraint firstItem="02j-Ne-hi4" firstAttribute="top" secondItem="8q3-km-hUC" secondAttribute="bottom" constant="10" id="ucg-4m-9pZ"/>
+                                        <constraint firstItem="02j-Ne-hi4" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="yAW-AI-7qo"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqK-l8-V5x">
+                                    <rect key="frame" x="20" y="657" width="336" height="768"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SUa-mu-cWn">
+                                            <rect key="frame" x="0.0" y="10" width="337" height="1363"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-Ju-2fZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="337" height="128"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i87-Cz-FX3" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="20" y="37" width="297" height="53"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="i87-Cz-FX3" secondAttribute="bottom" id="80r-ic-VcF"/>
+                                                        <constraint firstItem="i87-Cz-FX3" firstAttribute="top" secondItem="zdH-Ju-2fZ" secondAttribute="top" id="9CX-cM-feE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="i87-Cz-FX3" secondAttribute="trailing" constant="20" id="FmR-Mb-N4e"/>
+                                                        <constraint firstItem="i87-Cz-FX3" firstAttribute="leading" secondItem="zdH-Ju-2fZ" secondAttribute="leading" constant="20" id="ZSH-5g-1vY"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YBY-8L-REy">
+                                                    <rect key="frame" x="0.0" y="143" width="337" height="1220"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iO7-iz-2Qo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="337" height="581"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dEm-Jb-qvW">
+                                                                    <rect key="frame" x="20" y="-428" width="297" height="581"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO0-fY-s23" customClass="LblSmallerLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <color key="textColor" name="ColorText"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-vm-hRY">
+                                                                            <rect key="frame" x="0.0" y="30.5" width="297" height="1"/>
+                                                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="1" id="y8q-I7-KY4"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7S-vl-A60" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="41.5" width="297" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <color key="textColor" name="ColorSecondaryText"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWn-h5-EY1" customClass="ManageSubAccountPurchaseView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="72" width="297" height="233"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Kj-if-YEZ" customClass="ManageSubAccountPurchaseView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="315" width="297" height="128"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUt-I5-1fg" customClass="ManageSubAccountPurchaseView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="453" width="297" height="128"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="dEm-Jb-qvW" firstAttribute="top" secondItem="iO7-iz-2Qo" secondAttribute="top" id="0vn-PN-KA0"/>
+                                                                <constraint firstAttribute="bottom" secondItem="dEm-Jb-qvW" secondAttribute="bottom" id="wkb-9M-UhL"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmK-qV-1LP">
+                                                            <rect key="frame" x="0.0" y="596" width="337" height="624"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq0-JR-kjB" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                    <rect key="frame" x="20" y="15" width="297" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="ColorSecondaryText"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uZV-Qb-jWi">
+                                                                    <rect key="frame" x="20" y="81" width="297" height="560.5"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-HV-vVz">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="560.5"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohP-NG-LVa">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="20.5"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOm-FA-UJM" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="20.5"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <color key="textColor" name="ColorText"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfL-KM-2cE" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                                            <rect key="frame" x="197" y="0.0" width="100" height="20.5"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <color key="textColor" name="ColorText"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="jOL-CH-uW5">
+                                                                                    <rect key="frame" x="0.0" y="28.5" width="297" height="40"/>
+                                                                                    <subviews>
+                                                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlQ-Th-CcK">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="179" height="40"/>
+                                                                                            <color key="textColor" name="ColorBorder"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                            <textInputTraits key="textInputTraits"/>
+                                                                                        </textField>
+                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqf-Rr-581">
+                                                                                            <rect key="frame" x="197" y="0.0" width="100" height="40"/>
+                                                                                            <subviews>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM6-tq-0vJ" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                                                    <rect key="frame" x="8" y="0.0" width="72" height="40"/>
+                                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                    <nil key="textColor"/>
+                                                                                                    <nil key="highlightedColor"/>
+                                                                                                </label>
+                                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="8nf-sI-ejU">
+                                                                                                    <rect key="frame" x="80" y="14" width="12" height="12"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="height" constant="12" id="BSJ-T2-eMr"/>
+                                                                                                        <constraint firstAttribute="width" constant="12" id="f4S-VU-DXi"/>
+                                                                                                    </constraints>
+                                                                                                </imageView>
+                                                                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-p4-7Jr">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                                                                    <constraints>
+                                                                                                        <constraint firstAttribute="width" constant="100" id="uH9-6g-KLq"/>
+                                                                                                    </constraints>
+                                                                                                </button>
+                                                                                            </subviews>
+                                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                            <color key="tintColor" name="ColorText"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="trailing" secondItem="L9C-p4-7Jr" secondAttribute="trailing" id="Cf7-xF-AXm"/>
+                                                                                                <constraint firstItem="8nf-sI-ejU" firstAttribute="leading" secondItem="PM6-tq-0vJ" secondAttribute="trailing" id="FD5-1M-1oJ"/>
+                                                                                                <constraint firstAttribute="bottom" secondItem="L9C-p4-7Jr" secondAttribute="bottom" id="GeJ-cK-T0S"/>
+                                                                                                <constraint firstItem="8nf-sI-ejU" firstAttribute="centerY" secondItem="PM6-tq-0vJ" secondAttribute="centerY" id="fCi-B5-KWq"/>
+                                                                                                <constraint firstItem="PM6-tq-0vJ" firstAttribute="top" secondItem="rqf-Rr-581" secondAttribute="top" id="h0M-j0-Uo2"/>
+                                                                                                <constraint firstAttribute="bottom" secondItem="PM6-tq-0vJ" secondAttribute="bottom" id="hAh-LO-EBn"/>
+                                                                                                <constraint firstItem="PM6-tq-0vJ" firstAttribute="leading" secondItem="rqf-Rr-581" secondAttribute="leading" constant="8" id="iQZ-Id-YOk"/>
+                                                                                                <constraint firstItem="L9C-p4-7Jr" firstAttribute="top" secondItem="rqf-Rr-581" secondAttribute="top" id="rav-yY-c43"/>
+                                                                                                <constraint firstItem="L9C-p4-7Jr" firstAttribute="leading" secondItem="rqf-Rr-581" secondAttribute="leading" id="sXD-ZC-XDm"/>
+                                                                                                <constraint firstAttribute="trailing" secondItem="8nf-sI-ejU" secondAttribute="trailing" constant="8" id="vyM-hu-xVB"/>
+                                                                                            </constraints>
+                                                                                        </view>
+                                                                                    </subviews>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="30" id="2ko-XI-i7w">
+                                                                                            <variation key="widthClass=regular" constant="40"/>
+                                                                                        </constraint>
+                                                                                    </constraints>
+                                                                                </stackView>
+                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-Av-FDW" customClass="ManageSubAccountItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                                    <rect key="frame" x="0.0" y="76.5" width="297" height="348"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </view>
+                                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMc-n0-oFM" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                                    <rect key="frame" x="0.0" y="432.5" width="297" height="128"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </view>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="gfL-KM-2cE" firstAttribute="width" secondItem="rqf-Rr-581" secondAttribute="width" id="bhc-yi-isz"/>
+                                                                            </constraints>
+                                                                        </stackView>
+                                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wW-cC-60z">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="1"/>
+                                                                            <color key="backgroundColor" name="ColorSecondaryText"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="1" id="hDh-zL-xsb"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-go-yGb" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="0.0"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.94117647059999998" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="uZV-Qb-jWi" secondAttribute="bottom" constant="20" id="J1c-zm-8pZ"/>
+                                                                <constraint firstItem="uZV-Qb-jWi" firstAttribute="top" secondItem="Rq0-JR-kjB" secondAttribute="bottom" constant="8" id="Whl-Qr-I1x"/>
+                                                                <constraint firstItem="Rq0-JR-kjB" firstAttribute="top" secondItem="jmK-qV-1LP" secondAttribute="top" constant="15" id="xhw-UO-usd"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="uZV-Qb-jWi" firstAttribute="leading" secondItem="dEm-Jb-qvW" secondAttribute="leading" id="D9O-Vk-CPy"/>
+                                                        <constraint firstItem="uZV-Qb-jWi" firstAttribute="trailing" secondItem="dEm-Jb-qvW" secondAttribute="trailing" id="fgj-Es-dxV"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rq0-JR-kjB" firstAttribute="leading" secondItem="i87-Cz-FX3" secondAttribute="leading" id="Fq8-kE-xba"/>
+                                                <constraint firstItem="dEm-Jb-qvW" firstAttribute="trailing" secondItem="i87-Cz-FX3" secondAttribute="trailing" id="hIH-oo-btF"/>
+                                                <constraint firstItem="dEm-Jb-qvW" firstAttribute="leading" secondItem="i87-Cz-FX3" secondAttribute="leading" id="jg5-Vq-aTo"/>
+                                                <constraint firstItem="Rq0-JR-kjB" firstAttribute="trailing" secondItem="i87-Cz-FX3" secondAttribute="trailing" id="t6N-QA-yp6"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="SUa-mu-cWn" secondAttribute="trailing" id="GiX-W3-TNN"/>
+                                        <constraint firstAttribute="bottom" secondItem="SUa-mu-cWn" secondAttribute="bottom" constant="10" id="PSq-jz-zOn"/>
+                                        <constraint firstItem="SUa-mu-cWn" firstAttribute="top" secondItem="tqK-l8-V5x" secondAttribute="top" constant="10" id="bSc-xh-wMP"/>
+                                        <constraint firstItem="SUa-mu-cWn" firstAttribute="leading" secondItem="tqK-l8-V5x" secondAttribute="leading" id="rW5-uk-wjK"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ria-fd-meb">
+                                    <rect key="frame" x="20" y="1620" width="337" height="141"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-nT-Bdv" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="15" width="297" height="70"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="gEq-nT-Bdv" secondAttribute="bottom" constant="15" id="kwL-xJ-4E8"/>
+                                        <constraint firstItem="gEq-nT-Bdv" firstAttribute="top" secondItem="ria-fd-meb" secondAttribute="top" constant="15" id="qGF-Nf-9na"/>
+                                        <constraint firstAttribute="height" constant="100" id="x6r-3M-011"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-Bf-A1H">
+                                    <rect key="frame" x="20" y="1767" width="324" height="558"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tAM-dE-4Ya">
+                                            <rect key="frame" x="20" y="10" width="297" height="511.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj7-cy-yhf" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5bM-Fm-5Hm">
+                                                    <rect key="frame" x="0.0" y="65" width="297" height="446.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xES-vC-tGd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="1"/>
+                                                            <color key="backgroundColor" name="ColorSecondaryText"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="5NB-7A-70E"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J27-Lt-M39" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="16" width="297" height="60"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wez-SF-7oK" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="91" width="297" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuH-vX-Jhh" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="126.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qc7-uu-JPs" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="191.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgR-el-2Ek" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="256.5" width="297" height="60"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMW-gP-54d" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="331.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAN-ee-dOV" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="396.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="tAM-dE-4Ya" firstAttribute="top" secondItem="pbm-Bf-A1H" secondAttribute="top" constant="10" id="EUf-HQ-zbw"/>
+                                        <constraint firstAttribute="bottom" secondItem="tAM-dE-4Ya" secondAttribute="bottom" constant="10" id="c1l-P4-FLw"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5SZ-hb-Ya0">
+                                    <rect key="frame" x="20" y="2335" width="337" height="195"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ktt-mE-VT5">
+                                            <rect key="frame" x="20" y="10" width="297" height="236.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKh-hh-9Ti" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-fP-eIj">
+                                                    <rect key="frame" x="0.0" y="70" width="297" height="166.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Dx-fL-n7C">
+                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="1"/>
+                                                            <color key="backgroundColor" name="ColorSecondaryText"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="XJP-us-zRa"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjL-JQ-8cF" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="16" width="297" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nig-Tn-l0L" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="51.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0K-s2-Fs5" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="116.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ktt-mE-VT5" secondAttribute="bottom" constant="20" id="8dI-4j-gO2"/>
+                                        <constraint firstItem="ktt-mE-VT5" firstAttribute="top" secondItem="5SZ-hb-Ya0" secondAttribute="top" constant="10" id="M8c-cJ-Hja"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Bs-oM-PCg">
+                                    <rect key="frame" x="20" y="2701" width="337" height="83"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6up-Az-p4T" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="15" width="297" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="6up-Az-p4T" firstAttribute="top" secondItem="9Bs-oM-PCg" secondAttribute="top" constant="15" id="Eaj-iP-i6o"/>
+                                        <constraint firstAttribute="bottom" secondItem="6up-Az-p4T" secondAttribute="bottom" constant="15" id="bdb-EX-JVc"/>
+                                        <constraint firstAttribute="height" constant="60" id="fB3-Hx-QSa"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofg-F6-y71">
+                                    <rect key="frame" x="20" y="2811" width="337" height="195"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X40-hS-heD">
+                                            <rect key="frame" x="20" y="10" width="297" height="236.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvK-HA-5WH" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-8s-xiz">
+                                                    <rect key="frame" x="0.0" y="70" width="297" height="166.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW6-Vs-INc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="1"/>
+                                                            <color key="backgroundColor" name="ColorSecondaryText"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="Mnd-wB-Fl0"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux1-te-nC8" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="16" width="297" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="ColorText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poh-3z-Zmi" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="51.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cUa-1U-zvZ" customClass="ManageSubRadioView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="116.5" width="297" height="50"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="X40-hS-heD" secondAttribute="bottom" constant="20" id="NiS-hW-cCQ"/>
+                                        <constraint firstItem="X40-hS-heD" firstAttribute="top" secondItem="ofg-F6-y71" secondAttribute="top" constant="10" id="T9Y-hT-RSO"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hyx-bM-qMX">
+                                    <rect key="frame" x="20" y="3072" width="337" height="118"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOu-nC-oDY" customClass="ManageSubAccountTitleView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="15" width="297" height="70"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="TYS-am-Vfv"/>
+                                        <constraint firstAttribute="bottom" secondItem="bOu-nC-oDY" secondAttribute="bottom" constant="15" id="bwM-qj-cvg"/>
+                                        <constraint firstItem="bOu-nC-oDY" firstAttribute="top" secondItem="Hyx-bM-qMX" secondAttribute="top" constant="15" id="v4C-Tk-Ml7"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYC-pv-LeY" customClass="BtnMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="38.5" y="3158" width="300" height="34"/>
+                                    <color key="backgroundColor" name="ColorAccent"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="Bng-0u-K9J">
+                                            <variation key="widthClass=regular" constant="300"/>
+                                        </constraint>
+                                        <constraint firstAttribute="height" constant="45" id="joo-dw-hWo">
+                                            <variation key="widthClass=regular" constant="55"/>
+                                        </constraint>
+                                    </constraints>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" name="ColorPrimary"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onSaveClicked:" destination="-1" eventType="touchUpInside" id="bHx-ga-cpI"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="A5H-ma-1fh" secondAttribute="trailing" constant="20" id="0hG-uQ-Ohd"/>
+                                <constraint firstItem="gEq-nT-Bdv" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="3Ie-fE-DGr"/>
+                                <constraint firstItem="X40-hS-heD" firstAttribute="trailing" secondItem="6up-Az-p4T" secondAttribute="trailing" id="3sJ-yn-AM2"/>
+                                <constraint firstItem="9Bs-oM-PCg" firstAttribute="top" secondItem="5SZ-hb-Ya0" secondAttribute="bottom" constant="15" id="5xk-Lz-BnW"/>
+                                <constraint firstItem="gEq-nT-Bdv" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="6wO-Uf-cEa"/>
+                                <constraint firstItem="tAM-dE-4Ya" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="F2H-0f-1rO"/>
+                                <constraint firstItem="5SZ-hb-Ya0" firstAttribute="trailing" secondItem="pbm-Bf-A1H" secondAttribute="trailing" id="Fqv-lC-LaH"/>
+                                <constraint firstItem="5SZ-hb-Ya0" firstAttribute="leading" secondItem="pbm-Bf-A1H" secondAttribute="leading" id="GyI-HP-9Yc"/>
+                                <constraint firstItem="A5H-ma-1fh" firstAttribute="top" secondItem="QQR-YQ-8wC" secondAttribute="top" constant="20" id="HQ8-em-Rui"/>
+                                <constraint firstItem="pbm-Bf-A1H" firstAttribute="top" secondItem="ria-fd-meb" secondAttribute="bottom" constant="15" id="HY0-Ba-DCY"/>
+                                <constraint firstAttribute="bottom" secondItem="HYC-pv-LeY" secondAttribute="bottom" constant="40" id="IBo-Uf-zxE"/>
+                                <constraint firstItem="HYC-pv-LeY" firstAttribute="centerX" secondItem="QQR-YQ-8wC" secondAttribute="centerX" id="MRn-ek-yHA"/>
+                                <constraint firstItem="pbm-Bf-A1H" firstAttribute="trailing" secondItem="ria-fd-meb" secondAttribute="trailing" id="OSk-R5-Emv"/>
+                                <constraint firstItem="tqK-l8-V5x" firstAttribute="trailing" secondItem="A5H-ma-1fh" secondAttribute="trailing" id="QuQ-Zl-I9S"/>
+                                <constraint firstItem="tqK-l8-V5x" firstAttribute="top" secondItem="A5H-ma-1fh" secondAttribute="bottom" constant="15" id="Tw5-vO-XDT"/>
+                                <constraint firstItem="9Bs-oM-PCg" firstAttribute="trailing" secondItem="5SZ-hb-Ya0" secondAttribute="trailing" id="WqE-xI-SfN"/>
+                                <constraint firstItem="A5H-ma-1fh" firstAttribute="leading" secondItem="QQR-YQ-8wC" secondAttribute="leading" constant="20" id="Xax-hl-bu3"/>
+                                <constraint firstItem="X40-hS-heD" firstAttribute="leading" secondItem="6up-Az-p4T" secondAttribute="leading" id="XxK-Ze-Iq2"/>
+                                <constraint firstItem="pbm-Bf-A1H" firstAttribute="leading" secondItem="ria-fd-meb" secondAttribute="leading" id="Yy0-qy-JnM"/>
+                                <constraint firstItem="bOu-nC-oDY" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="d2R-D0-nOY"/>
+                                <constraint firstItem="ria-fd-meb" firstAttribute="trailing" secondItem="A5H-ma-1fh" secondAttribute="trailing" id="dm6-Zh-cc2"/>
+                                <constraint firstItem="ria-fd-meb" firstAttribute="top" secondItem="tqK-l8-V5x" secondAttribute="bottom" constant="15" id="fIc-np-arH"/>
+                                <constraint firstItem="ofg-F6-y71" firstAttribute="trailing" secondItem="9Bs-oM-PCg" secondAttribute="trailing" id="fkX-5P-8Fb"/>
+                                <constraint firstItem="HYC-pv-LeY" firstAttribute="top" secondItem="Hyx-bM-qMX" secondAttribute="bottom" constant="30" id="g0z-OH-Aum"/>
+                                <constraint firstItem="ktt-mE-VT5" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="ggf-gh-aDA"/>
+                                <constraint firstItem="9Bs-oM-PCg" firstAttribute="leading" secondItem="5SZ-hb-Ya0" secondAttribute="leading" id="iSN-q1-AZN"/>
+                                <constraint firstItem="ofg-F6-y71" firstAttribute="top" secondItem="9Bs-oM-PCg" secondAttribute="bottom" constant="15" id="ihV-gb-CST"/>
+                                <constraint firstItem="Hyx-bM-qMX" firstAttribute="leading" secondItem="ofg-F6-y71" secondAttribute="leading" id="ksX-2p-YvX"/>
+                                <constraint firstItem="Hyx-bM-qMX" firstAttribute="trailing" secondItem="ofg-F6-y71" secondAttribute="trailing" id="l3G-du-nGy"/>
+                                <constraint firstItem="5SZ-hb-Ya0" firstAttribute="top" secondItem="pbm-Bf-A1H" secondAttribute="bottom" constant="10" id="m4x-cE-zW6"/>
+                                <constraint firstItem="ktt-mE-VT5" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="m53-eh-TU5"/>
+                                <constraint firstItem="tqK-l8-V5x" firstAttribute="leading" secondItem="A5H-ma-1fh" secondAttribute="leading" id="qZk-so-y8E"/>
+                                <constraint firstItem="Hyx-bM-qMX" firstAttribute="top" secondItem="ofg-F6-y71" secondAttribute="bottom" constant="15" id="rYM-O3-GOc"/>
+                                <constraint firstItem="bOu-nC-oDY" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="rmd-5V-egZ"/>
+                                <constraint firstItem="ofg-F6-y71" firstAttribute="leading" secondItem="9Bs-oM-PCg" secondAttribute="leading" id="tb1-5a-mUz"/>
+                                <constraint firstItem="6up-Az-p4T" firstAttribute="leading" secondItem="8q3-km-hUC" secondAttribute="leading" id="uB4-ev-NQt"/>
+                                <constraint firstItem="6up-Az-p4T" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="uBC-2g-KEm"/>
+                                <constraint firstItem="tAM-dE-4Ya" firstAttribute="trailing" secondItem="8q3-km-hUC" secondAttribute="trailing" id="wnm-iK-oYl"/>
+                                <constraint firstItem="ria-fd-meb" firstAttribute="leading" secondItem="A5H-ma-1fh" secondAttribute="leading" id="zKH-Zj-eWP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="QQR-YQ-8wC" firstAttribute="leading" secondItem="3Xa-8O-kiT" secondAttribute="leading" id="4Bu-xd-6tF"/>
+                        <constraint firstItem="QQR-YQ-8wC" firstAttribute="top" secondItem="3Xa-8O-kiT" secondAttribute="top" id="IHq-0t-TjK"/>
+                        <constraint firstAttribute="bottom" secondItem="QQR-YQ-8wC" secondAttribute="bottom" id="Jwf-cu-6RZ"/>
+                        <constraint firstAttribute="trailing" secondItem="QQR-YQ-8wC" secondAttribute="trailing" id="hwx-4B-twh"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Ej7-Fa-yx6"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="oCz-jP-B21"/>
+                </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-Y8-fkQ" customClass="ErrorView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="64" width="377" height="3800"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Xa-8O-kiT" secondAttribute="bottom" id="11D-md-T1r"/>
+                <constraint firstItem="3Xa-8O-kiT" firstAttribute="top" secondItem="gxU-C9-UzO" secondAttribute="bottom" id="3O2-pS-zqC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Xa-8O-kiT" secondAttribute="trailing" id="6Tj-r3-CKh"/>
+                <constraint firstItem="Ozf-Y8-fkQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7JK-mL-O6z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gxU-C9-UzO" secondAttribute="trailing" id="Mch-Gn-UFO"/>
+                <constraint firstItem="Ozf-Y8-fkQ" firstAttribute="top" secondItem="3Xa-8O-kiT" secondAttribute="top" id="UEd-ee-i8K"/>
+                <constraint firstItem="gxU-C9-UzO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WBa-qS-RgU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ozf-Y8-fkQ" secondAttribute="trailing" id="fo3-hL-dFP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="gxU-C9-UzO" secondAttribute="top" id="gtW-74-a9E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ozf-Y8-fkQ" secondAttribute="bottom" id="kAE-1c-ljS"/>
+                <constraint firstItem="QQR-YQ-8wC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="vdP-HF-1rG"/>
+                <constraint firstItem="3Xa-8O-kiT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zj5-qo-Ax9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-558.69565217391312" y="2034.375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_down" width="9.8400001525878906" height="5.6269998550415039"/>
+        <namedColor name="ColorAccent">
+            <color red="0.19200000166893005" green="0.33300000429153442" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorBorder">
+            <color red="0.49399998784065247" green="0.50199997425079346" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorSecondaryText">
+            <color red="0.75700002908706665" green="0.75300002098083496" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

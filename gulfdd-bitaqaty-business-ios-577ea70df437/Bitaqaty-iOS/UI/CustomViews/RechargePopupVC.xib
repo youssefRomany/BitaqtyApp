@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargePopupVC" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="lblBankLog" destination="p7S-iA-Cjy" id="bce-Pf-Yci"/>
+                <outlet property="lblLog" destination="ayC-Ue-JHe" id="L9A-wB-TI3"/>
+                <outlet property="lblTitle" destination="Y0Y-05-5X1" id="QpO-z7-bmf"/>
+                <outlet property="loaderView" destination="fpf-44-dEd" id="YWi-42-Xk0"/>
+                <outlet property="stack1" destination="pcd-f3-jSz" id="LAL-9p-1jo"/>
+                <outlet property="stack2" destination="7Az-Kt-Z2k" id="nff-FE-YOj"/>
+                <outlet property="view1" destination="lcQ-Td-BuC" id="ChS-cz-b6q"/>
+                <outlet property="view2" destination="2mf-fO-kLw" id="wwG-id-jW0"/>
+                <outlet property="view3" destination="oVn-zv-fxf" id="aAB-AV-MGP"/>
+                <outlet property="view4" destination="hXr-lI-FC2" id="wbU-ap-rnX"/>
+                <outlet property="view5" destination="2Q8-K9-Zcs" id="3Bt-RX-zmg"/>
+                <outlet property="viewBankLog" destination="8e2-Zf-8xl" id="jSh-XU-D4F"/>
+                <outlet property="viewLog" destination="a8n-DZ-151" id="Bji-hV-DWg"/>
+                <outlet property="viewSpace" destination="l7k-Pb-qMF" id="t9R-0Y-rra"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmF-ME-C6C">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nln-WT-BsG">
+                            <rect key="frame" x="0.0" y="492" width="414" height="306"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O9T-zp-y2r">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-f3-jSz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcQ-Td-BuC" customClass="RechargeItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="131.5" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="140" id="6N9-7O-aIb">
+                                                            <variation key="widthClass=regular" constant="200"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mf-fO-kLw" customClass="RechargeItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="141.5" y="0.0" width="131" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVn-zv-fxf" customClass="RechargeItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="282.5" y="0.0" width="131.5" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Az-Kt-Z2k">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-lI-FC2" customClass="RechargeItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Q8-K9-Zcs" customClass="RechargeItemView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="106" y="0.0" width="96" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7k-Pb-qMF">
+                                                    <rect key="frame" x="212" y="0.0" width="96" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ort-hx-VMA">
+                                                    <rect key="frame" x="318" y="0.0" width="96" height="140"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7Az-Kt-Z2k" firstAttribute="height" secondItem="lcQ-Td-BuC" secondAttribute="height" id="MKW-t3-Z5z"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w9v-rS-MJg">
+                                    <rect key="frame" x="0.0" y="140" width="414" height="166"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3i-ot-3bB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="NeV-ye-BEo"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8n-DZ-151">
+                                            <rect key="frame" x="0.0" y="16" width="414" height="45"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbP-r1-twm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                                    <connections>
+                                                        <action selector="onRechargeLog:" destination="-1" eventType="touchUpInside" id="z9b-4L-pt9"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart_icon" translatesAutoresizingMaskIntoConstraints="NO" id="f13-7t-NYS">
+                                                    <rect key="frame" x="10" y="10" width="30" height="25"/>
+                                                    <color key="tintColor" red="0.19215686269999999" green="0.33333333329999998" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="5jR-CW-Xec"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Drm-9l-tSe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayC-Ue-JHe" customClass="LblMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="56" y="12.5" width="358" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.19215686269999999" green="0.33333333329999998" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="vbP-r1-twm" firstAttribute="top" secondItem="a8n-DZ-151" secondAttribute="top" id="2Nu-au-SOU"/>
+                                                <constraint firstAttribute="trailing" secondItem="ayC-Ue-JHe" secondAttribute="trailing" id="G5K-4u-dDP"/>
+                                                <constraint firstItem="ayC-Ue-JHe" firstAttribute="leading" secondItem="f13-7t-NYS" secondAttribute="trailing" constant="16" id="QHd-ra-VIE"/>
+                                                <constraint firstItem="f13-7t-NYS" firstAttribute="leading" secondItem="a8n-DZ-151" secondAttribute="leading" constant="10" id="WQn-e3-4Xm"/>
+                                                <constraint firstAttribute="bottom" secondItem="vbP-r1-twm" secondAttribute="bottom" id="WXF-rI-E7T"/>
+                                                <constraint firstItem="ayC-Ue-JHe" firstAttribute="centerY" secondItem="a8n-DZ-151" secondAttribute="centerY" id="ZcC-HE-96D"/>
+                                                <constraint firstItem="vbP-r1-twm" firstAttribute="leading" secondItem="a8n-DZ-151" secondAttribute="leading" id="cEf-s6-wdE"/>
+                                                <constraint firstAttribute="height" constant="45" id="dq7-p7-iq7">
+                                                    <variation key="widthClass=regular" constant="60"/>
+                                                </constraint>
+                                                <constraint firstAttribute="trailing" secondItem="vbP-r1-twm" secondAttribute="trailing" id="fIv-xY-Ww4"/>
+                                                <constraint firstItem="f13-7t-NYS" firstAttribute="centerY" secondItem="a8n-DZ-151" secondAttribute="centerY" id="kvR-O5-bw8"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Y-05-5X1" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="76" width="414" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="nIW-Lc-61g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.19215686269999999" green="0.33333333329999998" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8e2-Zf-8xl">
+                                            <rect key="frame" x="0.0" y="121" width="414" height="45"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0D7-SK-pxl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                                    <connections>
+                                                        <action selector="onBankTransfer:" destination="-1" eventType="touchUpInside" id="Zz9-Di-JWE"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank_log_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FAo-jW-lnG">
+                                                    <rect key="frame" x="10" y="12.5" width="30" height="20"/>
+                                                    <color key="tintColor" red="0.19215686269999999" green="0.33333333329999998" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7S-iA-Cjy" customClass="LblMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="56" y="12.5" width="358" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.19215686269999999" green="0.33333333329999998" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="p7S-iA-Cjy" firstAttribute="leading" secondItem="FAo-jW-lnG" secondAttribute="trailing" constant="16" id="4RP-WJ-OGx"/>
+                                                <constraint firstItem="FAo-jW-lnG" firstAttribute="leading" secondItem="8e2-Zf-8xl" secondAttribute="leading" constant="10" id="JOY-hK-ehw"/>
+                                                <constraint firstItem="0D7-SK-pxl" firstAttribute="top" secondItem="8e2-Zf-8xl" secondAttribute="top" id="QCA-Ku-JbJ"/>
+                                                <constraint firstItem="FAo-jW-lnG" firstAttribute="centerY" secondItem="8e2-Zf-8xl" secondAttribute="centerY" id="e6d-vE-utZ"/>
+                                                <constraint firstItem="0D7-SK-pxl" firstAttribute="leading" secondItem="8e2-Zf-8xl" secondAttribute="leading" id="gZe-cc-8DZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="p7S-iA-Cjy" secondAttribute="trailing" id="miB-kO-EYH"/>
+                                                <constraint firstAttribute="trailing" secondItem="0D7-SK-pxl" secondAttribute="trailing" id="sk8-o5-OXl"/>
+                                                <constraint firstItem="p7S-iA-Cjy" firstAttribute="centerY" secondItem="8e2-Zf-8xl" secondAttribute="centerY" id="taS-6q-ckG"/>
+                                                <constraint firstAttribute="bottom" secondItem="0D7-SK-pxl" secondAttribute="bottom" id="zDi-mR-aNc"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FAo-jW-lnG" firstAttribute="height" secondItem="f13-7t-NYS" secondAttribute="height" multiplier="0.8" id="JrS-7I-xPt"/>
+                                        <constraint firstAttribute="trailing" secondItem="8e2-Zf-8xl" secondAttribute="trailing" constant="10" id="Ss9-ad-SWa"/>
+                                        <constraint firstItem="8e2-Zf-8xl" firstAttribute="leading" secondItem="w9v-rS-MJg" secondAttribute="leading" constant="10" id="T8m-V0-M9a"/>
+                                        <constraint firstItem="a8n-DZ-151" firstAttribute="leading" secondItem="w9v-rS-MJg" secondAttribute="leading" constant="10" id="gvG-PI-7JI"/>
+                                        <constraint firstItem="Y0Y-05-5X1" firstAttribute="leading" secondItem="w9v-rS-MJg" secondAttribute="leading" constant="10" id="n6o-Tb-xRd"/>
+                                        <constraint firstItem="FAo-jW-lnG" firstAttribute="width" secondItem="f13-7t-NYS" secondAttribute="width" id="ndG-3T-kIK"/>
+                                        <constraint firstItem="8e2-Zf-8xl" firstAttribute="height" secondItem="a8n-DZ-151" secondAttribute="height" id="r0t-g2-ChL"/>
+                                        <constraint firstAttribute="trailing" secondItem="a8n-DZ-151" secondAttribute="trailing" constant="10" id="tKK-P7-Itt"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Nln-WT-BsG" secondAttribute="trailing" id="J1h-kl-YPe"/>
+                        <constraint firstAttribute="bottom" secondItem="Nln-WT-BsG" secondAttribute="bottom" constant="20" id="RfI-kd-amv"/>
+                        <constraint firstItem="Nln-WT-BsG" firstAttribute="leading" secondItem="JmF-ME-C6C" secondAttribute="leading" id="iAw-WH-8zF"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpf-44-dEd" customClass="ErrorView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fpf-44-dEd" firstAttribute="leading" secondItem="JmF-ME-C6C" secondAttribute="leading" id="3C0-hG-z95"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JmF-ME-C6C" secondAttribute="trailing" id="9H9-lp-dIV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JmF-ME-C6C" secondAttribute="bottom" id="AVD-yB-ji4"/>
+                <constraint firstItem="fpf-44-dEd" firstAttribute="trailing" secondItem="JmF-ME-C6C" secondAttribute="trailing" id="GIK-cP-igv"/>
+                <constraint firstItem="fpf-44-dEd" firstAttribute="bottom" secondItem="JmF-ME-C6C" secondAttribute="bottom" id="iFJ-TO-sLM"/>
+                <constraint firstItem="JmF-ME-C6C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lPS-wH-wZC"/>
+                <constraint firstItem="fpf-44-dEd" firstAttribute="top" secondItem="JmF-ME-C6C" secondAttribute="top" id="pv2-0P-jOE"/>
+                <constraint firstItem="JmF-ME-C6C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="v38-VS-xCF"/>
+            </constraints>
+            <point key="canvasLocation" x="21.739130434782609" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bank_log_icon" width="20" height="20"/>
+        <image name="cart_icon" width="20" height="17.777999877929688"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AgreementVC" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAgree" destination="Xy9-bX-1cO" id="ggF-l2-Xej"/>
+                <outlet property="header" destination="hGu-4R-HYF" id="yX9-mt-aIo"/>
+                <outlet property="lblCR" destination="9X0-QL-OBp" id="Oik-QF-lz5"/>
+                <outlet property="lblCopyRight" destination="ktn-xl-Das" id="Jlf-aW-tkH"/>
+                <outlet property="lblCopyRightHeader" destination="Ftl-7k-9qa" id="O29-do-8j7"/>
+                <outlet property="lblPrivacy" destination="PPT-t1-pHP" id="oK5-5F-WX6"/>
+                <outlet property="lblPrivacyHeader" destination="O92-vO-pzZ" id="6oi-m0-GY5"/>
+                <outlet property="lblServices" destination="gRj-U0-8V4" id="19J-Yw-xmg"/>
+                <outlet property="lblServicesHeader" destination="hpk-9U-hEc" id="whH-RK-5Hd"/>
+                <outlet property="lblTerm" destination="8PK-BL-NzM" id="ZjL-Yh-RwR"/>
+                <outlet property="lblTermHeader" destination="TY6-NX-ItH" id="POO-0l-1h6"/>
+                <outlet property="lblTitle" destination="Ajs-Tq-9JX" id="MlO-BD-dj1"/>
+                <outlet property="lblTrade" destination="8SV-AQ-O5P" id="iEr-KU-d1C"/>
+                <outlet property="lblTradeHeader" destination="A3Y-UD-EwX" id="3Ve-gO-HpC"/>
+                <outlet property="loaderView" destination="Rla-2r-4aN" id="vBI-RW-zzO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="al2-R6-8Qd"/>
+                <outlet property="viewMain" destination="Uox-h3-vUp" id="YI8-re-O0h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-4R-HYF" customClass="SignHeaderView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uox-h3-vUp">
+                    <rect key="frame" x="20" y="244" width="374" height="517.5"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfq-XQ-29l">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="517.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2c-YX-fMP">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="425.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajs-Tq-9JX" customClass="LblLargeBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="15" width="358" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q8p-Dx-z1u">
+                                            <rect key="frame" x="15" y="50.5" width="344" height="360"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h3D-gB-lz8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY6-NX-ItH" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PK-BL-NzM" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="35.5" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yJ0-im-Jhq">
+                                                    <rect key="frame" x="0.0" y="76" width="344" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftl-7k-9qa" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktn-xl-Das" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="35.5" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lZh-JX-HDC">
+                                                    <rect key="frame" x="0.0" y="152" width="344" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3Y-UD-EwX" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SV-AQ-O5P" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="35.5" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LyM-4k-SDb">
+                                                    <rect key="frame" x="0.0" y="228" width="344" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpk-9U-hEc" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRj-U0-8V4" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="35.5" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="odx-fy-jho">
+                                                    <rect key="frame" x="0.0" y="304" width="344" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O92-vO-pzZ" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-t1-pHP" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="35.5" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="q8p-Dx-z1u" secondAttribute="bottom" constant="15" id="Ldi-OF-QGI"/>
+                                        <constraint firstItem="Ajs-Tq-9JX" firstAttribute="leading" secondItem="k2c-YX-fMP" secondAttribute="leading" constant="8" id="SfU-Ya-L2E"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ajs-Tq-9JX" secondAttribute="trailing" constant="8" id="UJx-bq-DHQ"/>
+                                        <constraint firstItem="q8p-Dx-z1u" firstAttribute="leading" secondItem="k2c-YX-fMP" secondAttribute="leading" constant="15" id="eq7-kR-vzC"/>
+                                        <constraint firstItem="q8p-Dx-z1u" firstAttribute="top" secondItem="Ajs-Tq-9JX" secondAttribute="bottom" constant="15" id="iFh-ZI-wK1"/>
+                                        <constraint firstItem="Ajs-Tq-9JX" firstAttribute="top" secondItem="k2c-YX-fMP" secondAttribute="top" constant="15" id="jVr-jd-BRg"/>
+                                        <constraint firstAttribute="trailing" secondItem="q8p-Dx-z1u" secondAttribute="trailing" constant="15" id="oGM-KC-kmI"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="k2c-YX-fMP" secondAttribute="trailing" id="4gF-Sq-zOC"/>
+                                <constraint firstItem="k2c-YX-fMP" firstAttribute="width" secondItem="Sfq-XQ-29l" secondAttribute="width" id="6lB-yM-R5x"/>
+                                <constraint firstAttribute="bottom" secondItem="k2c-YX-fMP" secondAttribute="bottom" id="HBw-nQ-TMc"/>
+                                <constraint firstItem="k2c-YX-fMP" firstAttribute="leading" secondItem="Sfq-XQ-29l" secondAttribute="leading" id="Msd-AX-KFR"/>
+                                <constraint firstItem="k2c-YX-fMP" firstAttribute="top" secondItem="Sfq-XQ-29l" secondAttribute="top" id="q5T-If-eub"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="1w8-Co-yOo"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="YXQ-64-JE6"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Sfq-XQ-29l" firstAttribute="top" secondItem="Uox-h3-vUp" secondAttribute="top" id="Hdb-24-qqi"/>
+                        <constraint firstAttribute="bottom" secondItem="Sfq-XQ-29l" secondAttribute="bottom" id="XdO-lO-5vE"/>
+                        <constraint firstAttribute="trailing" secondItem="Sfq-XQ-29l" secondAttribute="trailing" id="dKK-Ku-u7h"/>
+                        <constraint firstItem="Sfq-XQ-29l" firstAttribute="leading" secondItem="Uox-h3-vUp" secondAttribute="leading" id="jUX-6w-Gwv"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy9-bX-1cO" customClass="BtnStandard" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="184" y="781.5" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="accept:" destination="-1" eventType="touchUpInside" id="ZKx-B2-27o"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X0-QL-OBp" customClass="LblSmallerLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="20" y="831.5" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rla-2r-4aN" customClass="ErrorView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="ColorBackground"/>
+            <constraints>
+                <constraint firstItem="9X0-QL-OBp" firstAttribute="top" secondItem="Xy9-bX-1cO" secondAttribute="bottom" constant="20" id="0EX-cd-mMw"/>
+                <constraint firstItem="Rla-2r-4aN" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="C29-O1-i7H"/>
+                <constraint firstItem="Xy9-bX-1cO" firstAttribute="top" secondItem="Uox-h3-vUp" secondAttribute="bottom" constant="20" id="Rq3-yC-3wR"/>
+                <constraint firstItem="Uox-h3-vUp" firstAttribute="top" secondItem="hGu-4R-HYF" secondAttribute="bottom" id="SHI-7o-kq2"/>
+                <constraint firstItem="Xy9-bX-1cO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TMX-Mm-fav"/>
+                <constraint firstItem="9X0-QL-OBp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="YDG-5G-uUe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9X0-QL-OBp" secondAttribute="trailing" constant="20" id="YRH-j1-sbj"/>
+                <constraint firstItem="Rla-2r-4aN" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="bfo-7Z-kbt"/>
+                <constraint firstItem="Uox-h3-vUp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="cdv-qo-zws"/>
+                <constraint firstItem="hGu-4R-HYF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dkO-aF-ePo"/>
+                <constraint firstItem="Rla-2r-4aN" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="iLG-mR-IiU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9X0-QL-OBp" secondAttribute="bottom" constant="10" id="idC-Jh-Thv"/>
+                <constraint firstItem="Rla-2r-4aN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="isI-2W-ZyH"/>
+                <constraint firstItem="hGu-4R-HYF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="j5E-R5-Iwr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hGu-4R-HYF" secondAttribute="trailing" id="pRz-cF-DY4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Uox-h3-vUp" secondAttribute="trailing" constant="20" id="rv3-el-8CB"/>
+            </constraints>
+            <point key="canvasLocation" x="18.840579710144929" y="-52.232142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ColorBackground">
+            <color red="0.94509803921568625" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

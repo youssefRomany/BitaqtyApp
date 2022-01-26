@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreExtraVC" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="sGl-GA-bS6" id="kh5-C3-vzC"/>
+                <outlet property="tableView" destination="264-Yj-XBm" id="IBf-51-xVM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="u7b-VV-KUi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjx-pg-LYl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="NpK-y1-1t0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-GA-bS6" customClass="MoreExtraHeaderView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="264-Yj-XBm">
+                    <rect key="frame" x="0.0" y="172" width="414" height="690"/>
+                    <color key="backgroundColor" name="ColorBackground"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="ColorBackground"/>
+            <constraints>
+                <constraint firstItem="sGl-GA-bS6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9N9-e7-Kci"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vjx-pg-LYl" secondAttribute="trailing" id="Bib-I0-Hw8"/>
+                <constraint firstItem="Vjx-pg-LYl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BnX-6C-0UL"/>
+                <constraint firstItem="264-Yj-XBm" firstAttribute="top" secondItem="sGl-GA-bS6" secondAttribute="bottom" id="CBf-sE-8nu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="264-Yj-XBm" secondAttribute="trailing" id="FIB-mx-9R5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sGl-GA-bS6" secondAttribute="trailing" id="FxM-um-3X7"/>
+                <constraint firstItem="sGl-GA-bS6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Lhg-4f-Ldf"/>
+                <constraint firstItem="264-Yj-XBm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ydl-5X-WTr"/>
+                <constraint firstItem="Vjx-pg-LYl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lFR-Va-lNp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="264-Yj-XBm" secondAttribute="bottom" id="ytC-RR-oSO"/>
+            </constraints>
+            <point key="canvasLocation" x="57" y="91"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ColorBackground">
+            <color red="0.94509803921568625" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="arrow" destination="Sn2-wV-PND" id="Klo-Mk-Ohl"/>
+                <outlet property="icon" destination="3Ow-gL-A9P" id="49y-1j-zCW"/>
+                <outlet property="iconDetails" destination="GcU-lJ-Xfx" id="hzy-VI-BX4"/>
+                <outlet property="lbl" destination="WB4-BG-USa" id="Yog-uQ-ZWF"/>
+                <outlet property="lblDesc" destination="faH-1L-nq8" id="wwB-Yl-GgQ"/>
+                <outlet property="lblDetails" destination="MNH-Jg-42L" id="nZ9-RZ-dZl"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="dsE-B9-Bpm"/>
+                <outlet property="stackDetails" destination="1vI-gB-Fjv" id="J8O-Ei-Iwe"/>
+                <outlet property="stackMain" destination="rwo-vt-fQg" id="AF5-Bc-rgA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rwo-vt-fQg">
+                    <rect key="frame" x="20" y="10" width="374" height="73"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FsQ-ng-Eiz">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OCe-qv-jxG">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" image="ic_manage" translatesAutoresizingMaskIntoConstraints="NO" id="3Ow-gL-A9P">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="73"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="qKQ-K8-8LQ">
+                                            <rect key="frame" x="45" y="0.0" width="329" height="73"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB4-BG-USa" customClass="LblMediumSemiBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="73"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="ColorAccent"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-1L-nq8" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="73"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="ColorAccent"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sn2-wV-PND">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="73"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.19215686269999999" green="0.33333333329999998" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="9s5-fT-beh" appends="YES" id="zdj-is-XXg"/>
+                            </connections>
+                        </stackView>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1vI-gB-Fjv">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="ic_reports_sales" translatesAutoresizingMaskIntoConstraints="NO" id="GcU-lJ-Xfx">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="0.0"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNH-Jg-42L" customClass="LblMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="30" y="0.0" width="344" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="ColorAccent"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="5KO-zR-uhL" appends="YES" id="JZv-8A-oIM"/>
+                            </connections>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rwo-vt-fQg" secondAttribute="trailing" constant="20" id="H9j-aS-4DA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rwo-vt-fQg" secondAttribute="bottom" constant="20" id="npg-b9-lUr"/>
+                <constraint firstItem="rwo-vt-fQg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="rmb-vD-J5a"/>
+                <constraint firstItem="rwo-vt-fQg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tyy-a4-goY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-177.79017857142856"/>
+        </view>
+        <tapGestureRecognizer id="9s5-fT-beh">
+            <connections>
+                <action selector="headerClicked:" destination="-1" id="tpF-n4-hSG"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="5KO-zR-uhL">
+            <connections>
+                <action selector="detailsClicked:" destination="-1" id="Ag6-zP-5cU"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ic_manage" width="20" height="20"/>
+        <image name="ic_reports_sales" width="20" height="20"/>
+        <namedColor name="ColorAccent">
+            <color red="0.19200000166893005" green="0.33300000429153442" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

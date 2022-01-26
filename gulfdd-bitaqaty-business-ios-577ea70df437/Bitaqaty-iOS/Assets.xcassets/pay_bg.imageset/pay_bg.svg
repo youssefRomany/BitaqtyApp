@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="367" height="375" viewBox="0 0 367 375">
+  <defs>
+    <filter id="Rectangle_2379" x="0" y="0" width="367" height="375" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.329"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3791" data-name="Group 3791" transform="translate(1364.539 14314.499)">
+    <g transform="matrix(1, 0, 0, 1, -1364.54, -14314.5)" filter="url(#Rectangle_2379)">
+      <rect id="Rectangle_2379-2" data-name="Rectangle 2379" width="352" height="360" rx="13" transform="translate(7.5 6.5)" fill="silver" opacity="0.34"/>
+    </g>
+    <rect id="Rectangle_3799" data-name="Rectangle 3799" width="352" height="360" rx="10" transform="translate(-1357.039 -14307.999)" fill="#fff"/>
+    <rect id="Rectangle_3796" data-name="Rectangle 3796" width="352" height="360" rx="10" transform="translate(-1357.039 -14307.999)" fill="#ccc"/>
+    <path id="Rectangle_3798" data-name="Rectangle 3798" d="M10,0H342a10,10,0,0,1,10,10V350a10,10,0,0,1-10,10H10A10,10,0,0,1,0,350V10A10,10,0,0,1,10,0Z" transform="translate(-1357.039 -14307.999)" fill="#cdcdcd"/>
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M7489.034,1937.17H7159.293A11.087,11.087,0,0,1,7148,1926.327V1588.013a11.088,11.088,0,0,1,11.293-10.843h57.336l142.4,116.445,140.034,114.506,1.267-17.448v135.651a11.075,11.075,0,0,1-11.292,10.844Z" transform="translate(-8505.039 -15885.17)" fill="silver"/>
+    <path id="Path_12162" data-name="Path 12162" d="M-6968-1420l176.125,232.936V-1420Z" transform="translate(5787.124 -12887.999)" fill="#d8d8d8"/>
+    <path id="Path_12163" data-name="Path 12163" d="M-6968-1420l140.186,229.683V-1420Z" transform="translate(5823.102 -12887.999)" fill="#dfdfdf"/>
+  </g>
+</svg>

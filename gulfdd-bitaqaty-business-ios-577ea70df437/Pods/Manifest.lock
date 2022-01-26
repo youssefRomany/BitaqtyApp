@@ -1,0 +1,55 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.6.0):
+    - Alamofire (~> 4.9)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - Endless (0.0.1)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JTAppleCalendar (7.1.7)
+  - LiveChat (2.0.24)
+  - lottie-ios (3.2.3)
+  - SwiftKeychainWrapper (4.0.1)
+  - XLPagerTabStrip (8.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - Charts
+  - Endless
+  - IQKeyboardManagerSwift
+  - JTAppleCalendar
+  - LiveChat (~> 2.0.24)
+  - lottie-ios
+  - SwiftKeychainWrapper
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Charts
+    - Endless
+    - IQKeyboardManagerSwift
+    - JTAppleCalendar
+    - LiveChat
+    - lottie-ios
+    - SwiftKeychainWrapper
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Endless: 7347390291c9b03405e976f6f69be32eee0f629d
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
+  LiveChat: 63028afb59c57ae6771d59838b1097def6e560ed
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
+  XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
+
+PODFILE CHECKSUM: 05d74318bb4e49afc4d2197becfbb646f8f0234e
+
+COCOAPODS: 1.9.1

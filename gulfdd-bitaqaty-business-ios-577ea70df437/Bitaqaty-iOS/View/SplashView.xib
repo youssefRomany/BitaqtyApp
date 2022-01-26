@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="eLo-eR-ofb" id="xyC-ja-ARR"/>
+                <outlet property="lblCR" destination="fU7-YN-8hj" id="d1k-R9-Sus"/>
+                <outlet property="view" destination="iN0-l3-epB" id="2KS-y2-JQB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Uzc-gx-ovX">
+                    <rect key="frame" x="143.5" y="349.5" width="127" height="197"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLo-eR-ofb" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="207" y="526.5" width="0.0" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="0Y1-Yd-Moq"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="splash_loader"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2020 Bitaqaty business. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU7-YN-8hj" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="20" y="791" width="374" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eLo-eR-ofb" firstAttribute="top" secondItem="Uzc-gx-ovX" secondAttribute="bottom" constant="-20" id="4fj-9v-jpE"/>
+                <constraint firstItem="eLo-eR-ofb" firstAttribute="centerX" secondItem="Uzc-gx-ovX" secondAttribute="centerX" id="5EQ-SU-Kuf"/>
+                <constraint firstItem="Uzc-gx-ovX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PMh-RI-3Hq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fU7-YN-8hj" secondAttribute="bottom" constant="30" id="WX0-cr-g8o"/>
+                <constraint firstItem="Uzc-gx-ovX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fh4-WQ-2Ge"/>
+                <constraint firstItem="fU7-YN-8hj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l2Z-mX-e8A"/>
+                <constraint firstItem="fU7-YN-8hj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ujB-BS-RFE"/>
+            </constraints>
+            <point key="canvasLocation" x="-186" y="45"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="eLo-eR-ofb"/>
+    </designables>
+    <resources>
+        <image name="Logo" width="127" height="197"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
