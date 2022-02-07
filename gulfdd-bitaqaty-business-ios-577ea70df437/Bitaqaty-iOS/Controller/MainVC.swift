@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import XLPagerTabStrip
+
 class MainVC: ButtonBarPagerTabStripViewController {
     @IBOutlet open var loaderView: ErrorView!
     

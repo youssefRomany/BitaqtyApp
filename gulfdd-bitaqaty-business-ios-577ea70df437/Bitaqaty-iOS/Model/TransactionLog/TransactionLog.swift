@@ -131,4 +131,15 @@ struct TransactionLog : Codable {
         return balanceAfter ?? 0.0
     }
     
+    var RecommendedRetailPrice: Double {
+        return recommendedRetailPrice ?? 0.0
+    }
+    
+    var RecommendedRetailPriceAfterVAT: String {
+        return recommendedRetailPriceAfterVAT ?? "0.0"
+    }
+    
+    var ExpectedProfit: String {
+        return expectedProfit ?? "0.0"
+    }
 }

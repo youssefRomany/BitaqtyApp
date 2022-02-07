@@ -80,6 +80,7 @@ class TransactionsLogVC: UIViewController {
     var isSubAccount = false
     var isSupport = true
     var isViewDiscount = true
+    var isViewRecommendedRetailPrice = false
     var isViewBalance = true
     var viewAllLogs = true
     var isFromHome = false
@@ -130,6 +131,8 @@ class TransactionsLogVC: UIViewController {
                 subaccountId = user.reseller!.id!
             }
             isViewDiscount = user.reseller!.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_PRODUCT_DISCOUNT.rawValue})!.Enabled
+            
+            isViewRecommendedRetailPrice = user.reseller!.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.RECOMMENDED_RETAIL_PRICE.rawValue})!.Enabled
             
             isSupport = user.reseller!.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_SUPPORT_CENTER.rawValue})!.Enabled
             
@@ -676,7 +679,7 @@ extension TransactionsLogVC: UITableViewDelegate,UITableViewDataSource{
             let row = indexPath.row
             cell.tag = row
             cell.delegate = self
-            cell.setData(log: arrLog[row], isHasSupportPermission : isSupport, isHasDiscountPermission: isViewDiscount, isHasViewBalancePermission: isViewBalance)
+            cell.setData(log: arrLog[row], isHasSupportPermission : isSupport, isHasDiscountPermission: isViewDiscount, isHasViewBalancePermission: isViewBalance, isHasViewRecommendedRetailPrice: isViewRecommendedRetailPrice)
             cell.imgArr.tag = 0
             cell.selectionStyle = .none
             return cell;

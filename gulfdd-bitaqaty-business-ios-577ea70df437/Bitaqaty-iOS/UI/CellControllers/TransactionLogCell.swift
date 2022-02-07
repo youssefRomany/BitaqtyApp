@@ -24,6 +24,14 @@ class TransactionLogCell: UITableViewCell {
     @IBOutlet weak var lblTransIdValue: UILabel!
     @IBOutlet weak var lblCostTitle: UILabel!
     @IBOutlet weak var lblCostValue: UILabel!
+    
+    @IBOutlet weak var lblRetailPriceTitle: UILabel!
+    @IBOutlet weak var lblRetailPriceValue: UILabel!
+    @IBOutlet weak var lblRetailPriceAfterVatTitle: UILabel!
+    @IBOutlet weak var lblRetailPriceAfterVatValue: UILabel!
+    @IBOutlet weak var lblProfitTitle: UILabel!
+    @IBOutlet weak var lblProfitValue: UILabel!
+    
     @IBOutlet weak var lblVatAmountTitle: UILabel!
     @IBOutlet weak var lblVatAmountValue: UILabel!
     @IBOutlet weak var lblBalanceTitle: UILabel!
@@ -47,7 +55,10 @@ class TransactionLogCell: UITableViewCell {
     @IBOutlet weak var stackDetails3: UIStackView!
     
     @IBOutlet weak var stackCost: UIStackView!
+    @IBOutlet weak var stackRetailPrice: UIStackView!
+    @IBOutlet weak var stackRetailPriceAfterVat: UIStackView!
     @IBOutlet weak var stackVat: UIStackView!
+    @IBOutlet weak var stackProfit: UIStackView!
     @IBOutlet weak var stackBalance: UIStackView!
     @IBOutlet weak var heightConst: NSLayoutConstraint!
     
@@ -83,6 +94,9 @@ class TransactionLogCell: UITableViewCell {
         lblPrint.text = TransactionStrings.TLogPrint.localizedValue
         lblTransIdTitle.text = TransactionStrings.TLogTransID.localizedValue
         lblCostTitle.text = TransactionStrings.TLogCostPrice.localizedValue
+        lblRetailPriceTitle.text = TransactionStrings.recommended_retail_price.localizedValue
+        lblRetailPriceAfterVatTitle.text = TransactionStrings.recommended_retail_price_after_vat.localizedValue
+        lblProfitTitle.text = TransactionStrings.expected_profit.localizedValue
         lblVatAmountTitle.text = TransactionStrings.TLogVATAmount.localizedValue
         lblBalanceTitle.text = TransactionStrings.TLogBalance.localizedValue
         lblUserNameTitle.text = TransactionStrings.TLogUserName.localizedValue
@@ -100,6 +114,12 @@ class TransactionLogCell: UITableViewCell {
         lblTransIdValue.textAlignment = lang == "en" ? .left : .right
         lblCostTitle.textAlignment = lang == "en" ? .left : .right
         lblCostValue.textAlignment = lang == "en" ? .left : .right
+        lblRetailPriceTitle.textAlignment = lang == "en" ? .left : .right
+        lblRetailPriceValue.textAlignment = lang == "en" ? .left : .right
+        lblRetailPriceAfterVatTitle.textAlignment = lang == "en" ? .left : .right
+        lblRetailPriceAfterVatValue.textAlignment = lang == "en" ? .left : .right
+        lblProfitTitle.textAlignment = lang == "en" ? .left : .right
+        lblProfitValue.textAlignment = lang == "en" ? .left : .right
         lblVatAmountTitle.textAlignment = lang == "en" ? .left : .right
         lblVatAmountValue.textAlignment = lang == "en" ? .left : .right
         lblBalanceTitle.textAlignment = lang == "en" ? .left : .right
@@ -115,13 +135,16 @@ class TransactionLogCell: UITableViewCell {
     }
     func setData(log: TransactionLog, isHasSupportPermission: Bool = true,
                  isHasDiscountPermission: Bool = true,
-                 isHasViewBalancePermission: Bool = true){
+                 isHasViewBalancePermission: Bool = true, isHasViewRecommendedRetailPrice: Bool = false){
         
         lblProductName.text = log.ProductName
         lblDate.text = DateUtils.getLogDate(log.TransactionDate)
         lblCostAfterValue.text = "\(log.Total)"
         lblTransIdValue.text = log.TransactionId
         lblCostValue.text = "\(log.Price)"
+        lblRetailPriceValue.text = "\(log.RecommendedRetailPrice)"
+        lblRetailPriceAfterVatValue.text = "\(log.RecommendedRetailPriceAfterVAT)"
+        lblProfitValue.text = "\(log.ExpectedProfit)"
         lblVatAmountValue.text = "\(log.VatAmount)"
         lblBalanceValue.text = "\(log.Balance)"
         lblUserNameValue.text = "\(log.SubReselleraccount)"
@@ -184,6 +207,21 @@ class TransactionLogCell: UITableViewCell {
             stackCostAfterVat.isHidden = true
             stackCost.isHidden = true
             stackVat.isHidden = true
+        }
+        
+        
+        if isHasViewRecommendedRetailPrice {
+            stackRetailPrice.isHidden = false
+            stackRetailPriceAfterVat.isHidden = false
+        }else {
+            stackRetailPrice.isHidden = true
+            stackRetailPriceAfterVat.isHidden = true
+        }
+        
+        if isHasDiscountPermission && isHasViewRecommendedRetailPrice {
+            stackProfit.isHidden = false
+        }else {
+            stackProfit.isHidden = true
         }
         
     }

@@ -37,6 +37,9 @@ enum TransactionStrings: String{
     case productName = "Product Name"
     case TLogPin2 = "Password "
     case pin = "PIN "
+    case recommended_retail_price = "Recommended Retail Price"
+    case recommended_retail_price_after_vat = "Recommended Retail Price after VAT"
+    case expected_profit = "Expected Profit"
 
     var localizedValue: String{
         switch self {
@@ -189,6 +192,21 @@ enum TransactionStrings: String{
         case .pin:
             if (lang != "en"){
                 return " الرقم السري"
+            }
+            return self.rawValue;
+        case .recommended_retail_price:
+            if (lang != "en"){
+                return "سعر البيع المقترح"
+            }
+            return self.rawValue;
+        case .recommended_retail_price_after_vat:
+            if (lang != "en"){
+                return "سعر البيع المقترح بعد الضريبة"
+            }
+            return self.rawValue;
+        case .expected_profit:
+            if (lang != "en"){
+                return "الربح المتوقع"
             }
             return self.rawValue;
         }

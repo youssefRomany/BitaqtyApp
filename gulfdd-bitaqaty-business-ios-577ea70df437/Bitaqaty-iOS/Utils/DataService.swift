@@ -154,7 +154,7 @@ class DataService {
                 "OS" : "IOS",
                 "locale": lang,
                 "Accept-Language": lang,
-                "device-id": getDeviceId(),
+                "device-id": "641C2812-DAB1-4CD0-89E4-914BE462E6A8",//getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // ""
             ];
         }else{
@@ -163,7 +163,7 @@ class DataService {
                 "locale": lang,
                 "OS" : "IOS",
                 "Accept-Language": lang,
-                "device-id": getDeviceId(),
+                "device-id": "641C2812-DAB1-4CD0-89E4-914BE462E6A8",//getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // "BITAQATY_BUSINESS_MOBILE"
             ];
         }
