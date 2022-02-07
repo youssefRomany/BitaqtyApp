@@ -28,6 +28,7 @@ class ProductSearchCell: UITableViewCell {
         btnBuy.round(to: 5)
         retailBtn.round(to: 5)
         viewMain.setupShadowsWithRoundGray(5)
+        
         lblCostTitle.text = productListStrings.product_cost_price.localizedValue
         recomendRetailPriceTitleLabel.text = productListStrings.recommended_cost_price.localizedValue
         lblStock.text = productListStrings.out_of_stock.localizedValue

@@ -133,22 +133,30 @@ extension PurchaseVC {
                 imgProduct.image = UIImage(named: "nerd");
             }
             lblProductName.text = product.name
-            if (product.productType != ProductType.Service.rawValue && product.bulkPurchaseEnabled == true){
+//            if (product.productType != ProductType.Service.rawValue && product.bulkPurchaseEnabled == true){
+            if (product.bulkPurchaseEnabled == true){
                 min = product.bulkMin ?? 1
                 max = product.bulkMax ?? 1
+                stackQty.isHidden = false
             }else{
-                if (showCost){
-                    stackQty.isHidden = true
-                }else{
+                stackQty.isHidden = true
+            }
+                
+                if (!showCost && !showRetailPrice){
                     line1.isHidden = true
                     viewQty.isHidden = true
+                }else{
+                    
                 }
-            }
+            
+            
+            
             if (!showCost){
                 lblProductPrice.isHidden = true
                 viewPrice.isHidden = true
                 line3.isHidden = true
             }
+            
             lblProductPrice.text = "\(purchaseStrings.product_cost_price.localizedValue) \(product.Price) \(currency)"
 
             if !showCost && showRetailPrice{
