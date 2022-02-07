@@ -8,6 +8,7 @@
 import UIKit
 
 class PurchaseSuccessVC: UIViewController {
+    
     @IBOutlet weak var viewHeader: CloseHeaderView!
     @IBOutlet weak var scv: UIScrollView!
     @IBOutlet weak var imgProduct: UIImageView!
@@ -45,9 +46,24 @@ class PurchaseSuccessVC: UIViewController {
     @IBOutlet weak var headerHeightConst: NSLayoutConstraint!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
+    // retailPrice
+    
+    @IBOutlet weak var retailPriceStackView: UIStackView!
+    
+    @IBOutlet weak var recRetalPriceLabel: LblSmallBoldFont!
+    @IBOutlet weak var tRRetPriceLabel: LblSmallBoldFont!
+    @IBOutlet weak var recVatLabel: LblSmallBoldFont!
+    
+    @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var retailPriceValueLabel: LblSmallRegularFont!
+    @IBOutlet weak var totalRetailPriceValueLabel: LblSmallRegularFont!
+    @IBOutlet weak var retailVatPriceValueLabel: LblSmallRegularFont!
+
+    
     var product: Product?
     var productDetails: ProductDetails?
     var showCost = false
+    var showRetailPrice = false
     var currency = ""
     var radius: CGFloat = UIDevice.isPad ? 6 : 4
     
@@ -114,6 +130,11 @@ extension PurchaseSuccessVC{
         if let user = DataService.getUserData() , let reseller = user.reseller , let product = product, let products = productDetails?.products, let qty = productDetails?.itemsCount{
             currency = reseller.Currency
             showCost = reseller.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_PRODUCT_DISCOUNT.rawValue})!.Enabled
+            
+            showRetailPrice = reseller.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.RECOMMENDED_RETAIL_PRICE.rawValue})!.Enabled
+            
+            retailPriceStackView.isHidden = !showRetailPrice
+            lineView.isHidden = !showRetailPrice
             viewHeader.showX(product.name) {
                 DataService.loadHome()
             }
@@ -122,11 +143,18 @@ extension PurchaseSuccessVC{
             }else{
                 imgProduct.image = UIImage(named: "nerd");
             }
+            retailPriceValueLabel.text = "\(product.recommendedRetailPrice ?? "") \(currency)"
+
+            print("productsuccccccccc", product)
             lblProductName.text = product.name
             lblPurchaseDate.text = "\(purchaseStrings.purchase_date.localizedValue) \(productDetails?.purchaseDate ?? "")"
             lblPurchaseDate.textAlignment = lang == "en" ? .left : .right
             lblQty.text = purchaseStrings.quantity.localizedValue
             lblQtyValue.text = "\(qty)"
+            totalRetailPriceValueLabel.text = "\((product.recRetailDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+    //        lblVatValue.text = "\((product.vatDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+            retailVatPriceValueLabel.text = "\((product.recAfterVatRetailDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+
             if (!showCost){
                 stackPrice.isHidden = true
                 stackTotalCost.isHidden = true
@@ -142,7 +170,13 @@ extension PurchaseSuccessVC{
                 lblTotalCostValue.text = "\((product.priceDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
                 lblVatValue.text = "\((product.vatDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
                 lblTotalCostWithVatValue.text = "\((product.priceAfterVatDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+                
+                
             }
+            recRetalPriceLabel.text = "\(purchaseStrings.recommended_cost_price.localizedValue)"
+            tRRetPriceLabel.text = "\(purchaseStrings.totalRecommended_cost_price.localizedValue)"
+            recVatLabel.text = "\(purchaseStrings.totalRecommended_cost_price_after_vat.localizedValue)"
+
             
             viewDetails.round(to: radius)
             lblSuccess.text = purchaseStrings.purchase_success.localizedValue

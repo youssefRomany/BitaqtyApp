@@ -23,6 +23,10 @@ class ProductSearchCell: UITableViewCell {
     
     weak var delegate: OnBuyDelegate? = nil
     var inStock = false
+    
+    var showCost = false
+    var showRecommendedRetailprice = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         btnBuy.round(to: 5)
@@ -37,33 +41,28 @@ class ProductSearchCell: UITableViewCell {
                 if reseller.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_PRODUCT_DISCOUNT.rawValue})!.Enabled{
                     self.lblCostTitle.isHidden = false
                     self.btnBuy.isHidden = false
-                    
-                    self.recomendRetailPriceTitleLabel.isHidden = false
-                    self.retailBtn.isHidden = false
-                    
+                                        
                     self.constraint.constant = 100
-
+                    showCost = true
                 }else{
                     self.lblCostTitle.isHidden = true
                     self.btnBuy.isHidden = true
-                    
-                    self.recomendRetailPriceTitleLabel.isHidden = true
-                    self.retailBtn.isHidden = true
+                    showCost = false
 
                     self.constraint.constant = 8
                 }
                 if reseller.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.RECOMMENDED_RETAIL_PRICE.rawValue})!.Enabled{
-                    self.recomendRetailPriceTitleLabel.isHidden = false
-                    self.retailBtn.isHidden = false
-                    
-                    self.constraint.constant = 100
+                    showRecommendedRetailprice = true
+                        self.recomendRetailPriceTitleLabel.isHidden = false
+                        self.retailBtn.isHidden = false
 
                 }else{
+                    showRecommendedRetailprice = false
                     self.recomendRetailPriceTitleLabel.isHidden = true
                     self.retailBtn.isHidden = true
-
 //                    self.constraint.constant = 8
                 }
+                
             }
         }
     }
@@ -83,6 +82,12 @@ class ProductSearchCell: UITableViewCell {
         self.btnBuy.setTitle("\(product.Price) \(currency)", for: .normal)
         self.retailBtn.setTitle("\(product.recommendedRetailPrice ?? "") \(currency)", for: .normal)
         self.viewStock.isHidden = inStock
+        if !showCost && showRecommendedRetailprice{
+            self.btnBuy.setTitle("\(product.recommendedRetailPrice ?? "") \(currency)", for: .normal)
+            lblCostTitle.text = productListStrings.recommended_cost_price.localizedValue
+            self.recomendRetailPriceTitleLabel.isHidden = true
+            self.retailBtn.isHidden = true
+        }
 
         if !product.ImagePath.isEmpty{
             let _ = print("Noura \(product.ImagePath)")
