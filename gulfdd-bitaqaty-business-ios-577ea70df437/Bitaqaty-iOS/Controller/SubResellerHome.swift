@@ -35,6 +35,7 @@ class SubResellerHome: UIViewController {
         super.viewDidLoad()
         setupUI()
         loadData()
+        print("dwehdjwedhwejdhwjedjewdw")
     }
     
     @IBAction func viewAll(_ sender: Any) {

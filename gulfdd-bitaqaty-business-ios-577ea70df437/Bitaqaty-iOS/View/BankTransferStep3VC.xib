@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,7 +51,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="50.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="753" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-JL-pEt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="20.5"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="GvJ-J3-E82">
                                                                     <rect key="frame" x="0.0" y="5.5" width="15" height="10"/>
@@ -61,7 +61,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URB-F0-07a" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                                    <rect key="frame" x="15" y="0.0" width="14" height="20.5"/>
+                                                                    <rect key="frame" x="15" y="0.0" width="15" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="ColorDarkYellow"/>
                                                                     <nil key="highlightedColor"/>
@@ -69,13 +69,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nun-mc-w3Z" customClass="LblMediumSemiBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="37" y="0.0" width="41.5" height="20.5"/>
+                                                            <rect key="frame" x="38" y="0.0" width="41.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv2-43-Goe" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="86.5" y="0.0" width="247.5" height="20.5"/>
+                                                            <rect key="frame" x="87.5" y="0.0" width="246.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -86,16 +86,16 @@
                                                     <rect key="frame" x="0.0" y="67.5" width="334" height="20.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="753" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Gc-MO-OCq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="20.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-ku-ogE" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="14" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="ColorDarkYellow"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="wd4-74-6Tp">
-                                                                    <rect key="frame" x="14" y="5.5" width="15" height="10"/>
+                                                                    <rect key="frame" x="15" y="5.5" width="15" height="10"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="10" id="XGP-CP-4v7"/>
                                                                         <constraint firstAttribute="width" constant="15" id="sSf-Wm-In5"/>
@@ -104,13 +104,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-G5-RJJ" customClass="LblMediumSemiBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="37" y="0.0" width="41.5" height="20.5"/>
+                                                            <rect key="frame" x="38" y="0.0" width="41.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-6x-sZg" customClass="LblSmallLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                            <rect key="frame" x="86.5" y="0.0" width="247.5" height="20.5"/>
+                                                            <rect key="frame" x="87.5" y="0.0" width="246.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

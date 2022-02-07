@@ -65,6 +65,12 @@ struct Product: Codable {
         return Double(price ?? "0.0") ?? 0.0
     }
     
+    var recRetailDouble: Double{
+        return Double(recommendedRetailPrice ?? "0.0") ?? 0.0
+    }
+    var recAfterVatRetailDouble: Double{
+        return Double(recommendedRetailPriceAfterVat ?? "0.0") ?? 0.0
+    }
     var vatDouble: Double{
         return Double(vat ?? "0.0") ?? 0.0
     }

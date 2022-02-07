@@ -191,8 +191,8 @@ class AccountServices {
     static func validateAndResetPassword(_ email: String,_ delegate: OnFinishDelegate){
         if (email.isEmpty){
             delegate.onBadRequest(errorMsgs.field_required.localizedValue, 0)
-        }else if (!email.isEmail()){
-            delegate.onBadRequest(errorMsgs.invalid_email.localizedValue, 0)
+//        }else if (!email.isEmail()){
+//            delegate.onBadRequest(errorMsgs.invalid_email.localizedValue, 0)
         }else{
             resetPassword(email, delegate)
         }

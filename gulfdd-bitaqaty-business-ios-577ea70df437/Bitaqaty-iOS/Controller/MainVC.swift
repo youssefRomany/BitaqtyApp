@@ -310,6 +310,9 @@ class MainVC: ButtonBarPagerTabStripViewController {
     
     func setupSubAccountTabs(){
         let permissions = user.reseller?.PermissionsArr.filter{$0.Enabled}
+        for item in permissions ?? []{
+            print("joePerm",item.id ?? 0, item.name ?? "")
+        }
         if permissions != nil && permissions!.count > 0{
             let permissionPurchase = permissions!.filter{$0.id == PERMISSIONS_IDS.PURCHASE.rawValue}
             if permissionPurchase.count > 0{
@@ -439,8 +442,8 @@ class MainVC: ButtonBarPagerTabStripViewController {
                 VCs.append(child_4)
             }
         }
-        let _ = print("Noura \(subAccountTabs)")
-        let _ = print("Noura \(MORE_PERMISSIONS)")
+        let _ = print("Noura subAccount \(subAccountTabs)")
+        let _ = print("Noura MORE_PERMISSIONS \(MORE_PERMISSIONS)")
         if VCs.count > 0{
             if VCs.count == 1 && subAccountTabs.count == 1 && subAccountTabs[0] == SUBACCOUNT_TABS.HOME.rawValue{
                 showEmptyView()

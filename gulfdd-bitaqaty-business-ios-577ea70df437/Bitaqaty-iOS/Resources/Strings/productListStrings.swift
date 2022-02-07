@@ -22,7 +22,8 @@ enum productListStrings: String{
       case product_cost_price = "Product Cost Price"
       case out_of_stock = "Out of stock"
       case productSearchHint = "Search"
-    
+    case recommended_cost_price = "Recommended Retail Price"
+
     var localizedValue: String{
         switch self {
         case .category:
@@ -95,6 +96,12 @@ enum productListStrings: String{
                 return "بحث "
             }
             return self.rawValue
+        case .recommended_cost_price:
+            if (lang != "en") {
+                return "سعر البيع المقترح"
+            }
+            return self.rawValue
+
         }
     }
 }

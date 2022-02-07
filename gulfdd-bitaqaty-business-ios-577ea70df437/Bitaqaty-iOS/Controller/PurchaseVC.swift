@@ -8,6 +8,7 @@
 import UIKit
 
 class PurchaseVC: UIViewController {
+    
     @IBOutlet weak var viewHeader: CloseHeaderView!
     @IBOutlet weak var scv: UIScrollView!
     @IBOutlet weak var imgProduct: UIImageView!
@@ -18,7 +19,6 @@ class PurchaseVC: UIViewController {
     @IBOutlet weak var btnDecrease: UIButton!
     @IBOutlet weak var txtQty: UITextField!
     @IBOutlet weak var btnIncrease: UIButton!
-    @IBOutlet weak var lblProductPrice: UILabel!
     @IBOutlet weak var line2: UIView!
     @IBOutlet weak var viewPrice: UIView!
     @IBOutlet weak var lblTotalCost: UILabel!
@@ -33,10 +33,26 @@ class PurchaseVC: UIViewController {
     @IBOutlet weak var headerHeightConst: NSLayoutConstraint!
     @IBOutlet weak var loader: ErrorView!
     
+    @IBOutlet weak var lblProductPrice: UILabel!
+
+    
+    @IBOutlet weak var line4View: UIView!
+    @IBOutlet weak var retailPriceView: UIView!
+    
+    @IBOutlet weak var recRetalPriceLabel: LblSmallRegularFont!
+    @IBOutlet weak var tRRetPriceLabel: LblSmallRegularFont!
+    @IBOutlet weak var recVatLabel: LblSmallRegularFont!
+    
+    @IBOutlet weak var retailPriceValueLabel: LblSmallRegularFont!
+    @IBOutlet weak var totalRetailPriceValueLabel: LblSmallRegularFont!
+    @IBOutlet weak var retailVatPriceValueLabel: LblSmallRegularFont!
+    
+    
     var product: Product?
     var radius: CGFloat = UIDevice.isPad ? 20 : 15
     var currency = ""
     var showCost = false
+    var showRetailPrice = false
     var min = 1
     var max = 1
     var qty = 1
@@ -44,6 +60,7 @@ class PurchaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        print("joeProduct", product)
         
     }
     
@@ -51,11 +68,14 @@ class PurchaseVC: UIViewController {
         if (qty > min){
             qty -= 1
             txtQty.text = "\(qty)"
+            
             setupCost()
+            setupRetail()
         }else{
             qty = min
             txtQty.text = "\(qty)"
             setupCost()
+            setupRetail()
         }
     }
     
@@ -64,6 +84,7 @@ class PurchaseVC: UIViewController {
             qty += 1
             txtQty.text = "\(qty)"
             setupCost()
+            setupRetail()
         }
     }
     
@@ -84,6 +105,25 @@ extension PurchaseVC {
         if let user = DataService.getUserData() , let reseller = user.reseller , let product = product{
             currency = reseller.Currency
             showCost = reseller.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_PRODUCT_DISCOUNT.rawValue})!.Enabled
+            
+            showRetailPrice = reseller.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.RECOMMENDED_RETAIL_PRICE.rawValue})!.Enabled
+            
+            recRetalPriceLabel.text = "\(purchaseStrings.recommended_cost_price.localizedValue)"
+            tRRetPriceLabel.text = "\(purchaseStrings.totalRecommended_cost_price.localizedValue)"
+            recVatLabel.text = "\(purchaseStrings.totalRecommended_cost_price_after_vat.localizedValue)"
+
+            retailPriceValueLabel.text = "\(product.recommendedRetailPrice ?? "") \(currency)"
+
+            if showRetailPrice{
+                retailPriceView.isHidden = false
+                line4View.isHidden = false
+            }else{
+                retailPriceView.isHidden = true
+                line4View.isHidden = true
+            }
+            
+
+            
             viewHeader.showX(product.name) {
                 self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
             }
@@ -109,9 +149,18 @@ extension PurchaseVC {
                 viewPrice.isHidden = true
                 line3.isHidden = true
             }
+            lblProductPrice.text = "\(purchaseStrings.product_cost_price.localizedValue) \(product.Price) \(currency)"
+
+            if !showCost && showRetailPrice{
+                
+                lblProductPrice.text = "\(purchaseStrings.recommended_cost_price.localizedValue) \(product.recommendedRetailPrice ?? "") \(currency)"
+                lblProductPrice.isHidden = false
+                retailPriceValueLabel.isHidden = true
+                recRetalPriceLabel.isHidden = true
+            }
+            
             qty = min
             txtQty.text = "\(qty)"
-            lblProductPrice.text = "\(purchaseStrings.product_cost_price.localizedValue) \(product.Price) \(currency)"
             lblTotalCost.text = purchaseStrings.total_cost_price.localizedValue
             lblVat.text = purchaseStrings.vat_amount_per.localizedValue.replacingOccurrences(of: "%", with: "\(product.vatePercentage ?? "")")
             lblTotalCostWithVat.text = purchaseStrings.total_cost_after_vat.localizedValue
@@ -125,6 +174,7 @@ extension PurchaseVC {
             txtQty.delegate = self
             txtQty.drawBorder(.accentColor, radius, 1)
             setupCost()
+            setupRetail()
         }
     }
     
@@ -133,6 +183,15 @@ extension PurchaseVC {
         lblTotalCostValue.text = "\((product.priceDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
         lblVatValue.text = "\((product.vatDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
         lblTotalCostWithVatValue.text = "\((product.priceAfterVatDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+    }
+  
+
+
+    func setupRetail(){
+        guard let product = product else {return;}
+        totalRetailPriceValueLabel.text = "\((product.recRetailDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+//        lblVatValue.text = "\((product.vatDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
+        retailVatPriceValueLabel.text = "\((product.recAfterVatRetailDouble * Double(qty)).removeZerosFromEnd()) \(currency)"
     }
     
 }
@@ -146,6 +205,7 @@ extension PurchaseVC: UITextFieldDelegate {
                     if (quantity >= min && quantity <= max){
                         qty = quantity
                         setupCost()
+                        setupRetail()
                         return true
                     }else if (quantity > max){
                         return false
@@ -153,6 +213,7 @@ extension PurchaseVC: UITextFieldDelegate {
                 }else if (txtAfterUpdate.isEmpty){
                     qty = min
                     setupCost()
+                    setupRetail()
                     return true
                 }
             }else{
@@ -169,15 +230,18 @@ extension PurchaseVC: UITextFieldDelegate {
             if (quantity >= min && quantity <= max){
                 qty = quantity
                 setupCost()
+                setupRetail()
             }else{
                 textField.text = "\(min)"
                 qty = min
                 setupCost()
+                setupRetail()
             }
         }else{
             textField.text = "\(min)"
             qty = min
             setupCost()
+            setupRetail()
         }
     }
     
@@ -188,6 +252,7 @@ extension PurchaseVC: UITextFieldDelegate {
         return predicate.evaluate(with: str)
     }
 }
+
 extension PurchaseVC: OnFinishDelegate {
     func onSuccess(_ productDetails: ProductDetails) {
         loader.stopLoading()

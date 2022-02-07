@@ -78,6 +78,7 @@ class PurchaseAPIs {
                         if let result = response.result.value, response.response?.statusCode == 200{
                             if let dataResult = try? JSONDecoder().decode(ProductListResult.self, from: result){
                                 if let products = dataResult.products{
+                                    print("joeResp", products)
                                     delegate.onSuccess(products)
                                 }else{
                                     delegate.onFailed(err: .custom(ErrorMessage(btrrStrings.btrr_no_data.localizedValue, "\(ErrorType.Empty.rawValue)")))

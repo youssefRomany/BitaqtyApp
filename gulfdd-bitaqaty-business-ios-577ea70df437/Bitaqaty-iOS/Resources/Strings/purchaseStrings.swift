@@ -26,7 +26,10 @@ enum purchaseStrings: String {
     case product_cost_price = "Product Cost Price";
     case date = "Date";
     case product = "Product:";
-    
+    case recommended_cost_price = "Recommended Retail Price"
+    case totalRecommended_cost_price = "Total Recommended Retail Price"
+    case totalRecommended_cost_price_after_vat = "Total Recommended Retail Price after VAT"
+
     var localizedValue: String{
         switch self {
         case .shopping_categories:
@@ -105,7 +108,22 @@ enum purchaseStrings: String {
             if (lang != "en") {
                 return "المنتج:"
             }
+        case .recommended_cost_price:
+            if (lang != "en") {
+                return "سعر البيع المقترح"
+        }
+            
+        case .totalRecommended_cost_price:
+            if (lang != "en") {
+                return "إجمالي سعر البيع المقترح"
+        }
+        case .totalRecommended_cost_price_after_vat:
+            if (lang != "en") {
+                return "إجمالي سعر البيع المقترح بعد إضافة الضريبة"
+        }
+            
         }
         return self.rawValue
+
     }
 }

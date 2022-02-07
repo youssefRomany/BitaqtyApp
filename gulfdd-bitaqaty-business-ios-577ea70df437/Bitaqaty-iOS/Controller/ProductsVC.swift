@@ -8,6 +8,7 @@
 import UIKit
 
 class ProductsVC: UIViewController {
+    
     @IBOutlet weak var scv: UIScrollView!
     @IBOutlet weak var viewHeader: PurchaseHeaderView!
     @IBOutlet weak var stackDescription: UIStackView!

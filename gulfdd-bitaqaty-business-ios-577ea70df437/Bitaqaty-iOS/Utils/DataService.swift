@@ -221,6 +221,7 @@ class DataService {
         if(data != nil){
             do {
                 let user = try JSONDecoder().decode(User.self, from: data!);
+                print("fffffffff", user)
                 return user
             } catch {
                 KeychainWrapper.standard.removeObject(forKey: USER_DATA);

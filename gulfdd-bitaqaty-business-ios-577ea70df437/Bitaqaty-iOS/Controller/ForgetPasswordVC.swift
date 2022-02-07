@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 class ForgetPasswordVC: UIViewController {
     @IBOutlet weak var loaderView: ErrorView!
     @IBOutlet weak var header: SignHeaderView!

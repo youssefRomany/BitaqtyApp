@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,9 +29,17 @@
                 <outlet property="line1" destination="VAl-pk-t7O" id="FHu-cM-3Gp"/>
                 <outlet property="line2" destination="oYF-gy-Dd2" id="xjQ-eD-DG7"/>
                 <outlet property="line3" destination="Qq0-4g-qW9" id="fIz-Er-K17"/>
+                <outlet property="line4View" destination="z1n-J1-DIL" id="JV9-Ad-4p0"/>
                 <outlet property="loader" destination="pGX-Ty-EFf" id="TZN-HS-Mue"/>
+                <outlet property="recRetalPriceLabel" destination="Nfi-hV-odU" id="dB2-wm-9xu"/>
+                <outlet property="recVatLabel" destination="gdB-2R-N2b" id="9Gb-WH-CIs"/>
+                <outlet property="retailPriceValueLabel" destination="6Kb-Sb-QW9" id="jT9-hl-G21"/>
+                <outlet property="retailPriceView" destination="0bc-zd-Xqo" id="SPM-rz-nPc"/>
+                <outlet property="retailVatPriceValueLabel" destination="Iih-jf-ZJ9" id="kai-Tw-Png"/>
                 <outlet property="scv" destination="LHE-mo-jeq" id="6uV-9b-L1t"/>
                 <outlet property="stackQty" destination="RjT-MG-aXj" id="4mK-9A-dDL"/>
+                <outlet property="tRRetPriceLabel" destination="0Dx-qG-qwC" id="QxY-AZ-gZT"/>
+                <outlet property="totalRetailPriceValueLabel" destination="WfE-Su-nZl" id="wcR-4z-5nh"/>
                 <outlet property="txtQty" destination="uzu-hK-3md" id="gSo-MA-dAg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewHeader" destination="j2A-mN-gVm" id="KiQ-ZO-fMt"/>
@@ -51,6 +59,10 @@
                         <constraint firstAttribute="height" constant="50" id="ePv-Pt-rzi"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGX-Ty-EFf" customClass="ErrorView" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="j2A-mN-gVm" customClass="CloseHeaderView" customModule="Bitaqaty_iOS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <color key="backgroundColor" name="ColorBackground"/>
@@ -62,7 +74,7 @@
                     <rect key="frame" x="20" y="108" width="374" height="754"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cC9-Q3-gsP">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="575"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="727.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nerd" translatesAutoresizingMaskIntoConstraints="NO" id="mN4-n2-Ins">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -216,8 +228,75 @@
                                         <constraint firstAttribute="height" constant="1" id="jT7-Ni-U69"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bc-zd-Xqo">
+                                    <rect key="frame" x="0.0" y="525" width="374" height="111.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-cV-FVk">
+                                            <rect key="frame" x="0.0" y="10" width="41.5" height="91.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfi-hV-odU" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dx-qG-qwC" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="38" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-2R-N2b" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="73.5" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KPd-NL-vYm">
+                                            <rect key="frame" x="332.5" y="10" width="41.5" height="91.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kb-Sb-QW9" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfE-Su-nZl" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="35.5" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iih-jf-ZJ9" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="71" width="41.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="KPd-NL-vYm" secondAttribute="bottom" constant="10" id="CvC-s8-k1C"/>
+                                        <constraint firstItem="WoB-cV-FVk" firstAttribute="leading" secondItem="0bc-zd-Xqo" secondAttribute="leading" id="FDx-ko-rmE"/>
+                                        <constraint firstItem="WoB-cV-FVk" firstAttribute="top" secondItem="0bc-zd-Xqo" secondAttribute="top" constant="10" id="Fz7-Uu-cOi"/>
+                                        <constraint firstAttribute="bottom" secondItem="WoB-cV-FVk" secondAttribute="bottom" constant="10" id="GnR-KE-dFA"/>
+                                        <constraint firstItem="KPd-NL-vYm" firstAttribute="top" secondItem="0bc-zd-Xqo" secondAttribute="top" constant="10" id="bJX-4W-SwO"/>
+                                        <constraint firstAttribute="trailing" secondItem="KPd-NL-vYm" secondAttribute="trailing" id="hze-Rg-MDK"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1n-J1-DIL">
+                                    <rect key="frame" x="0.0" y="656.5" width="374" height="1"/>
+                                    <color key="backgroundColor" name="ColorLightBorder"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="eCc-wp-yxM"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vwa-vm-FXu">
-                                    <rect key="frame" x="0.0" y="525" width="374" height="50"/>
+                                    <rect key="frame" x="0.0" y="677.5" width="374" height="50"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veB-8g-ehv" customClass="BtnMediumRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="10" width="168.5" height="30"/>
@@ -272,10 +351,6 @@
                         <constraint firstItem="cC9-Q3-gsP" firstAttribute="width" secondItem="LHE-mo-jeq" secondAttribute="width" id="p1U-kC-BQ5"/>
                     </constraints>
                 </scrollView>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGX-Ty-EFf" customClass="ErrorView" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

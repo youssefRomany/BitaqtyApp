@@ -10,6 +10,7 @@ import UIKit
 import XLPagerTabStrip
 
 class StoreVC: UIViewController {
+    
     @IBOutlet weak var errorView: ErrorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblTitle: LblMediumBoldFont!

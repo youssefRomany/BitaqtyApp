@@ -36,8 +36,8 @@ enum accountStrings: String{
     case pass_change_success = "Password is changed successfully, you can now login with the new password"
     
     case reset_password = "Restore Password"
-    case reset_instruction = "To restore your forgotten password, please enter your email address, and click Send. An email message containing a link to reset your password will be sent to your email. Please note that this link is valid within one hour"
-    case reset_email = "Email Address*"
+    case reset_instruction = "To restore your forgotten password, please enter your email address or username, and click [Send]. A message containing verification code will be sent to you, please use that code to change your password. Please note that this code is valid within one hour"
+    case reset_email = "Email Address/UserName*"
     case reset_link_sent = "Link is resent"
     case reset_resend = "Resend link"
     case reset_success_msg = "An email has been sent to EMAIL_TXT, To reset your password, Please click on the verification link from Bitaqaty via email\n\nFor help: You can contact our Resellers support now\n\n\nIf you do not receive the message, you can click resend link"
@@ -211,12 +211,12 @@ enum accountStrings: String{
             return self.rawValue;
         case .reset_instruction:
             if (lang != "en") {
-                return "لاستعادة كلمة السر الخاصة بك، يرجى ادخال البريد الإلكتروني الخاص بك، ثم انقر 'إرسال'. سوف يقوم النظام بإرسال رسالة تحتوى على رابط على بريدك الإلكتروني .قم باستخدام هذا الرابط لتغيير كلمة السر الخاصة بك ,ملحوظة هذا الرابط صالح لمدة ساعة واحدة فقط";
+                return "لاستعادة كلمة السر الخاصة بك، يرجى ادخال البريد الإلكتروني أو اسم المستخدم  الخاص بك، ثم انقر إرسال, سوف يقوم النظام بإرسال رسالة تحتوى على كود التحقيق .قم باستخدام هذا الكود لتغيير كلمة السر الخاصة بك ,ملحوظة هذا الكود صالح لمدة السر الخاصة بك  ,ملحوظة هذا الرابط صالح لمدة ساعة";
             }
             return self.rawValue;
         case .reset_email:
             if (lang != "en") {
-                return "البريد الإلكتروني*";
+                return "عنوان البريد الإلكتروني / اسم المستخدم *";
             }
             return self.rawValue;
         case .reset_resend:
