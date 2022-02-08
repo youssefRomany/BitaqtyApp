@@ -21,6 +21,9 @@ class SalesReportVC: UIViewController {
     @IBOutlet weak var viewDate: DropDownFilterView!
     @IBOutlet weak var viewChannels: DropDownFilterView!
     @IBOutlet weak var viewDatePicker: DatePickerView!
+    @IBOutlet weak var viewShowRecommendedRetailPrice: UIView!
+    @IBOutlet weak var lblShowRecommendedRetailPrice: LblSmallRegularFont!
+    @IBOutlet weak var imageShowRecommendedRetail: UIImageView!
     @IBOutlet weak var btnFilter: BtnMediumRegularFont!
     @IBOutlet weak var btnExport: BtnMediumRegularFont!
     @IBOutlet weak var viewTransactionsNo: UIView!
@@ -29,6 +32,12 @@ class SalesReportVC: UIViewController {
     @IBOutlet weak var viewCost: UIView!
     @IBOutlet weak var lblCost: UILabel!
     @IBOutlet weak var lblCostValue: UILabel!
+    @IBOutlet weak var viewRecommendedRetailPrice: UIView!
+    @IBOutlet weak var lblRecommendedRetailPrice: UILabel!
+    @IBOutlet weak var lblRecommendedRetailPriceValue: UILabel!
+    @IBOutlet weak var viewTotalProfit: UIView!
+    @IBOutlet weak var lblTotalProfit: UILabel!
+    @IBOutlet weak var lblTotalProfitValue: UILabel!
     @IBOutlet weak var stackData: UIStackView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var constHeight: NSLayoutConstraint!
@@ -60,6 +69,8 @@ class SalesReportVC: UIViewController {
     
     var showAllAccounts = false
     var showPrice = false
+    var isHasShowRecomendPrice = false
+    var isRecomendPriceChecked = false
     var user: UserInfo?
     var cellSize: CGFloat = 176
     
@@ -68,6 +79,7 @@ class SalesReportVC: UIViewController {
         super.viewDidLoad()
         showAllAccounts = DataService.showAllAccounts()
         showPrice = DataService.showCost()
+        isHasShowRecomendPrice = DataService.showRecomendPrice()
         cellSize = showPrice ? 176 : 155
         user = DataService.getUserData()?.reseller
         if (!showAllAccounts){
@@ -84,6 +96,14 @@ class SalesReportVC: UIViewController {
     @IBAction func showMoreData(_ sender: Any) {
         filterBody.pageNumber += 1
         loadData()
+    }
+    
+    @IBAction func showRecomendPriceClicked(_ sender: Any) {
+        isRecomendPriceChecked = !isRecomendPriceChecked
+        
+        handelShowRecomendPriceChanges()
+        // close all open table view tabed later
+        tableView.reloadData()
     }
     
     @IBAction func export(_ sender: UIButton) {
@@ -110,6 +130,10 @@ extension SalesReportVC{
     }
     
     func setupUI(){
+        lblTotalProfit.textAlignment = lang == "en" ? .left : .right
+        lblRecommendedRetailPrice.textAlignment = lang == "en" ? .left : .right
+        lblTotalProfitValue.textAlignment = lang == "en" ? .left : .right
+        lblRecommendedRetailPriceValue.textAlignment = lang == "en" ? .left : .right
         lblTransactionsNo.textAlignment = lang == "en" ? .left : .right
         lblTransactionsNoValue.textAlignment = lang == "en" ? .left : .right
         lblCost.textAlignment = lang == "en" ? .left : .right
@@ -207,12 +231,42 @@ extension SalesReportVC{
         setupTableView()
         viewTransactionsNo.round(to: UIDevice.isPad ? 8 : 4)
         viewCost.round(to: UIDevice.isPad ? 8 : 4)
+        viewRecommendedRetailPrice.round(to: UIDevice.isPad ? 8 : 4)
+        viewTotalProfit.round(to: UIDevice.isPad ? 8 : 4)
+        lblShowRecommendedRetailPrice.text = reportStrings.show_sales_in_recommended_retail_price.localizedValue
         lblTransactionsNo.text = reportStrings.no_of_transactions.localizedValue
         lblCost.text = reportStrings.total_cost_price.localizedValue
+        lblRecommendedRetailPrice.text = reportStrings.total_recommended_retail_price.localizedValue
+        lblTotalProfit.text = reportStrings.total_expected_profit.localizedValue
         if showPrice{
             viewCost.isHidden = false
         }else{
             viewCost.isHidden = true
+        }
+        
+        if isHasShowRecomendPrice {
+            viewShowRecommendedRetailPrice.isHidden = false
+        }else {
+            viewShowRecommendedRetailPrice.isHidden = false
+        }
+        
+        if isRecomendPriceChecked {
+            viewTotalProfit.isHidden = false
+            viewRecommendedRetailPrice.isHidden = false
+        }else {
+            viewTotalProfit.isHidden = true
+            viewRecommendedRetailPrice.isHidden = true
+        }
+    }
+    
+    func handelShowRecomendPriceChanges() {
+        imageShowRecommendedRetail.image = isRecomendPriceChecked ? UIImage(named: "ic_checkbox_checked") : UIImage(named: "ic_checkbox_unchecked")
+        if isRecomendPriceChecked {
+            viewTotalProfit.isHidden = false
+            viewRecommendedRetailPrice.isHidden = false
+        }else {
+            viewTotalProfit.isHidden = true
+            viewRecommendedRetailPrice.isHidden = true
         }
     }
     
@@ -221,6 +275,8 @@ extension SalesReportVC{
         if showPrice{
             lblCostValue.text = "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
         }
+        lblTotalProfitValue.text = "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblRecommendedRetailPriceValue.text = "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
     }
     
     func openDropDownList(_ type: Int){
@@ -524,7 +580,7 @@ extension SalesReportVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SalesReportCell", for: indexPath) as? SalesReportCell{
-            cell.setupData(with: reports[indexPath.row], showPrice, user?.Currency ?? "")
+            cell.setupData(with: reports[indexPath.row], showPrice, user?.Currency ?? "", isHasShowRecomendPrice)
             return cell
         }
         return UITableViewCell()

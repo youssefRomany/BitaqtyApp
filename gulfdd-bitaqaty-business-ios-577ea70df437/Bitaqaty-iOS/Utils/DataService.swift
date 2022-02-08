@@ -237,6 +237,11 @@ class DataService {
         return user?.accountType == Roles.MASTER_ACCOUNT.rawValue || user?.reseller?.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_PRODUCT_DISCOUNT.rawValue})?.Enabled == true
     }
     
+    static func showRecomendPrice() -> Bool{
+        let user = getUserData()
+        return user?.accountType == Roles.MASTER_ACCOUNT.rawValue || user?.reseller?.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.RECOMMENDED_RETAIL_PRICE.rawValue})?.Enabled == true
+    }
+    
     static func showAllAccounts() -> Bool{
         let user = getUserData()
         return user?.accountType == Roles.MASTER_ACCOUNT.rawValue || user?.reseller?.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_REPORTS.rawValue})?.ChildPermissions.first(where: {$0.id == 22})?.Enabled == true

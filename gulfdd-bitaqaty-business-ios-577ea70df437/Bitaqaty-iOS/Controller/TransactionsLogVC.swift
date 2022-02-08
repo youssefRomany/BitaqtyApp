@@ -123,6 +123,7 @@ class TransactionsLogVC: UIViewController {
     //          }
     //
     //    }
+    
     func setupPermissions(){
         if let user = DataService.getUserData(), user.accountType == Roles.SUB_ACCOUNT.rawValue{
             if user.reseller!.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.VIEW_TRANSACTION_LOG.rawValue})!.Enabled{

@@ -15,8 +15,11 @@ enum reportStrings: String{
     case channel = "Channel";
     case total_cost_price = "Total Cost Price";
     case no_of_transactions = "No. of Transactions";
+    case show_sales_in_recommended_retail_price = "Show Sales in Recommended Retail Price";
     case trans_no = "Trans. No.";
     case cost_price = "Cost Price";
+    case total_recommended_retail_price = "Total Recommended Retail Price";
+    case total_expected_profit = "Total Expected Profit";
     case all = "All";
     case this_month = "This Month";
     case last_month = "Last Month";
@@ -140,6 +143,21 @@ enum reportStrings: String{
         case .export_file_name:
             if (lang != "en") {
                 return "تقرير المبيعات.csv"
+            }
+            return self.rawValue
+        case .show_sales_in_recommended_retail_price:
+            if (lang != "en") {
+                return "إظهار المبيعات بسعر البيع المقترح"
+            }
+            return self.rawValue
+        case .total_recommended_retail_price:
+            if (lang != "en") {
+                return "إجمالي سعر البيع المقترح"
+            }
+            return self.rawValue
+        case .total_expected_profit:
+            if (lang != "en") {
+                return "إجمالي الربح المتوقع"
             }
             return self.rawValue
         }

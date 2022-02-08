@@ -9,6 +9,7 @@ import UIKit
 
 class SalesReportCell: UITableViewCell {
     @IBOutlet weak var viewProduct: UIView!
+    @IBOutlet weak var imgArr: UIImageView!
     @IBOutlet weak var lblProduct: UILabel!
     @IBOutlet weak var viewLine: UIView!
     @IBOutlet weak var stackView: UIStackView!
@@ -34,7 +35,7 @@ class SalesReportCell: UITableViewCell {
         lblTransNo.text = reportStrings.trans_no.localizedValue
     }
     
-    func setupData(with report: Report,_ showCost: Bool,_ currency: String){
+    func setupData(with report: Report,_ showCost: Bool,_ currency: String, _ showRecomendPrice: Bool){
         lblProduct.text = report.getProductName()
         lblServiceValue.text = report.getMerchantName()
         lblTransNoValue.text = "\(report.numberOfTrans ?? 0)"
@@ -53,6 +54,7 @@ class SalesReportCell: UITableViewCell {
             lblOther.text = reportStrings.username.localizedValue
             lblOtherValue.text = "\(report.subAccountName ?? "")"
         }
+        imgArr.isHidden = !showRecomendPrice
         drawDashedLine()
     }
     
