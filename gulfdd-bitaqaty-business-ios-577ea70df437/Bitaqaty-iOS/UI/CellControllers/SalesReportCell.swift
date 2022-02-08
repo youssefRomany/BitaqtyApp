@@ -27,18 +27,74 @@ class SalesReportCell: UITableViewCell {
     @IBOutlet weak var lblTotalCost: UILabel!
     @IBOutlet weak var lblTotalCostValue: UILabel!
     
+    @IBOutlet weak var viewFullInfo: UIView!
+    @IBOutlet weak var lblTransNo1: UILabel!
+    @IBOutlet weak var lblTransNoValue1: UILabel!
+    
+    @IBOutlet weak var lblService1: UILabel!
+    @IBOutlet weak var lblServiceValue1: UILabel!
+    
+    @IBOutlet weak var stackCost1: UIStackView!
+    @IBOutlet weak var lblTotalCost1: UILabel!
+    @IBOutlet weak var lblTotalCostValue1: UILabel!
+    
+    @IBOutlet weak var stackRetailPrice: UIStackView!
+    @IBOutlet weak var lblRetailPriceTitle: UILabel!
+    @IBOutlet weak var lblRetailPriceValue: UILabel!
+    
+    @IBOutlet weak var stackTotalRetailPrice: UIStackView!
+    @IBOutlet weak var lblTotalRetailPriceTitle: UILabel!
+    @IBOutlet weak var lblTotalRetailPriceValue: UILabel!
+    
+    @IBOutlet weak var stackProfit: UIStackView!
+    @IBOutlet weak var lblProfitTitle: UILabel!
+    @IBOutlet weak var lblProfitValue: UILabel!
+    
+    var ic_back = lang == "en" ? "ic_back_left" : "ic_back"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+    
+    func setupUI() {
         viewInfo.setupWithRoundNoShadow(UIDevice.isPad ? 8 : 4)
+        viewFullInfo.setupWithRoundNoShadow(UIDevice.isPad ? 8 : 4)
         viewProduct.drawBorder(.borderColor, UIDevice.isPad ? 4 : 2, 1)
+        
         lblService.text = reportStrings.service.localizedValue
         lblTransNo.text = reportStrings.trans_no.localizedValue
+        lblService1.text = reportStrings.service.localizedValue
+        lblTransNo1.text = reportStrings.trans_no.localizedValue
+        lblTotalCost1.text = reportStrings.total_cost_price.localizedValue
+        lblRetailPriceTitle.text = reportStrings.recommended_retail_price.localizedValue
+        lblTotalRetailPriceTitle.text = reportStrings.total_recommended_retail_price.localizedValue
+        lblProfitTitle.text = reportStrings.total_expected_profit.localizedValue
+        
+        lblProduct.textAlignment = lang == "en" ? .left : .right
+        lblUsernameValue.textAlignment = lang == "en" ? .left : .right
+        lblTransNo1.textAlignment = lang == "en" ? .left : .right
+        lblTransNoValue1.textAlignment = lang == "en" ? .left : .right
+        lblService1.textAlignment = lang == "en" ? .left : .right
+        lblServiceValue1.textAlignment = lang == "en" ? .left : .right
+        lblTotalCost1.textAlignment = lang == "en" ? .left : .right
+        lblTotalCostValue1.textAlignment = lang == "en" ? .left : .right
+        lblRetailPriceTitle.textAlignment = lang == "en" ? .left : .right
+        lblRetailPriceValue.textAlignment = lang == "en" ? .left : .right
+        lblTotalRetailPriceTitle.textAlignment = lang == "en" ? .left : .right
+        lblTotalRetailPriceValue.textAlignment = lang == "en" ? .left : .right
+        lblProfitTitle.textAlignment = lang == "en" ? .left : .right
+        lblProfitValue.textAlignment = lang == "en" ? .left : .right
+        
+        imgArr.image = UIImage(named: ic_back)
     }
     
     func setupData(with report: Report,_ showCost: Bool,_ currency: String, _ showRecomendPrice: Bool){
         lblProduct.text = report.getProductName()
         lblServiceValue.text = report.getMerchantName()
         lblTransNoValue.text = "\(report.numberOfTrans ?? 0)"
+        lblServiceValue1.text = report.getMerchantName()
+        lblTransNoValue1.text = "\(report.numberOfTrans ?? 0)"
         if (showCost){
             stackUsername.isHidden = false
             stackCost.isHidden = false
@@ -54,7 +110,27 @@ class SalesReportCell: UITableViewCell {
             lblOther.text = reportStrings.username.localizedValue
             lblOtherValue.text = "\(report.subAccountName ?? "")"
         }
-        imgArr.isHidden = !showRecomendPrice
+        
+        lblTotalCostValue1.text = "\(report.totalTransAmount?.removeZerosFromEnd() ?? "") \(currency)"
+        lblRetailPriceValue.text = "\(report.recommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
+        lblTotalRetailPriceValue.text = "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
+        lblProfitValue.text = "\(report.totalExpectedProfit ?? "") \(currency)"
+        
+        if showRecomendPrice {
+            stackRetailPrice.isHidden = false
+            stackTotalRetailPrice.isHidden = false
+        }else {
+            stackRetailPrice.isHidden = true
+            stackTotalRetailPrice.isHidden = true
+        }
+        
+        if showCost && showRecomendPrice {
+            stackProfit.isHidden = false
+        }else {
+            stackProfit.isHidden = true
+        }
+        
+//        
         drawDashedLine()
     }
     

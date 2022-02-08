@@ -18,6 +18,7 @@ enum reportStrings: String{
     case show_sales_in_recommended_retail_price = "Show Sales in Recommended Retail Price";
     case trans_no = "Trans. No.";
     case cost_price = "Cost Price";
+    case recommended_retail_price = "Recommended Retail Price";
     case total_recommended_retail_price = "Total Recommended Retail Price";
     case total_expected_profit = "Total Expected Profit";
     case all = "All";
@@ -158,6 +159,11 @@ enum reportStrings: String{
         case .total_expected_profit:
             if (lang != "en") {
                 return "إجمالي الربح المتوقع"
+            }
+            return self.rawValue
+        case .recommended_retail_price:
+            if (lang != "en") {
+                return "سعر البيع المقترح"
             }
             return self.rawValue
         }

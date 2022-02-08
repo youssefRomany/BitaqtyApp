@@ -89,6 +89,22 @@ class SalesReportVC: UIViewController {
         filterBody.searchPeriod = searchPeriod
         loadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentSize"{
+            if let newValue = change?[.newKey]{
+                let newSize = newValue as! CGSize
+                self.constHeight.constant = newSize.height
+            }
+        }
+    }
+    
     @IBAction func filterData(_ sender: UIButton) {
         filterBody.pageNumber = 1
         loadData()
@@ -130,6 +146,7 @@ extension SalesReportVC{
     }
     
     func setupUI(){
+        lblShowRecommendedRetailPrice.textAlignment = lang == "en" ? .left : .right
         lblTotalProfit.textAlignment = lang == "en" ? .left : .right
         lblRecommendedRetailPrice.textAlignment = lang == "en" ? .left : .right
         lblTotalProfitValue.textAlignment = lang == "en" ? .left : .right
@@ -275,8 +292,8 @@ extension SalesReportVC{
         if showPrice{
             lblCostValue.text = "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
         }
-        lblTotalProfitValue.text = "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
-        lblRecommendedRetailPriceValue.text = "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblRecommendedRetailPriceValue.text = "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblTotalProfitValue.text = "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
     }
     
     func openDropDownList(_ type: Int){
@@ -580,6 +597,9 @@ extension SalesReportVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SalesReportCell", for: indexPath) as? SalesReportCell{
+            cell.imgArr.isHidden = !(isRecomendPriceChecked)
+            cell.viewFullInfo.isHidden = !((cell.imgArr.tag == 1) && isRecomendPriceChecked)
+            cell.viewInfo.isHidden = ((cell.imgArr.tag == 1) && isRecomendPriceChecked)
             cell.setupData(with: reports[indexPath.row], showPrice, user?.Currency ?? "", isHasShowRecomendPrice)
             return cell
         }
@@ -593,6 +613,29 @@ extension SalesReportVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isRecomendPriceChecked {
+            if let cell = tableView.cellForRow(at: indexPath) as? SalesReportCell{
+                if cell.imgArr.tag == 0{
+                    cell.imgArr.tag = 1
+                    cell.viewFullInfo.isHidden = false
+                    cell.viewInfo.isHidden = true
+                    cell.imgArr.image = UIImage(named: "ic_arrow_up")
+                }else{
+                    cell.imgArr.tag = 0
+                    cell.viewInfo.isHidden = false
+                    cell.viewFullInfo.isHidden = true
+                    cell.imgArr.image = UIImage(named: cell.ic_back)
+                    
+                }
+                tableView.beginUpdates()
+                tableView.endUpdates()
+            }
+        }
+
+    }
+
 }
 extension SalesReportVC: ReloadDataDelegate{
     func reloadData() {

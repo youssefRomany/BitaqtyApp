@@ -185,6 +185,149 @@
                                             <constraint firstItem="TL2-T8-ffI" firstAttribute="leading" secondItem="zpZ-RA-pBJ" secondAttribute="leading" constant="10" id="zsd-x1-bzV"/>
                                         </constraints>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwM-fU-Xxr">
+                                        <rect key="frame" x="0.0" y="189" width="403" height="240"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p8G-XP-K4q">
+                                                <rect key="frame" x="10" y="0.0" width="383" height="240"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYT-dD-iMg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="383" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-vO-nAH" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-bv-ac2" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="210.5" y="0.0" width="172.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="5qh-JF-DI4"/>
+                                                            <constraint firstItem="3Dr-vO-nAH" firstAttribute="width" secondItem="qYT-dD-iMg" secondAttribute="width" multiplier="0.55" id="Ocg-Cm-v0d"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-pQ-R8H">
+                                                        <rect key="frame" x="0.0" y="40" width="383" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jA-ju-yIA" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNc-wJ-U2I" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="210.5" y="0.0" width="172.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="7jA-ju-yIA" firstAttribute="width" secondItem="Ek9-pQ-R8H" secondAttribute="width" multiplier="0.55" id="EOk-qp-gaK"/>
+                                                            <constraint firstAttribute="height" constant="40" id="sRk-ld-Cjp"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-um-A7I">
+                                                        <rect key="frame" x="0.0" y="80" width="383" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ6-3A-8K1" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32T-eS-Df0" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="210.5" y="0.0" width="172.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="8Iy-LH-Aa6"/>
+                                                            <constraint firstItem="pZ6-3A-8K1" firstAttribute="width" secondItem="fhS-um-A7I" secondAttribute="width" multiplier="0.55" id="ZTc-t4-g41"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-b6-0U8">
+                                                        <rect key="frame" x="0.0" y="120" width="383" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtK-YD-sZ1" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pex-yw-lho" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="210.5" y="0.0" width="172.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="kcP-Gu-Mwy"/>
+                                                            <constraint firstItem="qtK-YD-sZ1" firstAttribute="width" secondItem="bTa-b6-0U8" secondAttribute="width" multiplier="0.55" id="xCz-lP-jHq"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncC-q5-DPe">
+                                                        <rect key="frame" x="0.0" y="160" width="383" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-Qa-P9D" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngn-W8-W8j" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="210.5" y="0.0" width="172.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="04X-Yc-5Yf"/>
+                                                            <constraint firstItem="8Zh-Qa-P9D" firstAttribute="width" secondItem="ncC-q5-DPe" secondAttribute="width" multiplier="0.55" id="g1x-5q-hHT"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5i-Xd-LgV">
+                                                        <rect key="frame" x="0.0" y="200" width="383" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-vJ-iAv" customClass="LblSmallRegularFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="210.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rY-Oy-aIe" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="210.5" y="0.0" width="172.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="quZ-Hu-7PR"/>
+                                                            <constraint firstItem="4yh-vJ-iAv" firstAttribute="width" secondItem="t5i-Xd-LgV" secondAttribute="width" multiplier="0.55" id="wbT-gA-iXX"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="p8G-XP-K4q" secondAttribute="trailing" constant="10" id="Kqj-oN-TNM"/>
+                                            <constraint firstItem="p8G-XP-K4q" firstAttribute="leading" secondItem="cwM-fU-Xxr" secondAttribute="leading" constant="10" id="Pgd-zy-3Kh"/>
+                                            <constraint firstItem="p8G-XP-K4q" firstAttribute="top" secondItem="cwM-fU-Xxr" secondAttribute="top" id="Wac-zX-JWO"/>
+                                            <constraint firstAttribute="bottom" secondItem="p8G-XP-K4q" secondAttribute="bottom" id="ZO0-Ug-PDg"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1eF-3M-ga7" firstAttribute="width" secondItem="imS-6z-mST" secondAttribute="width" multiplier="0.6" id="9W7-x0-vek"/>
@@ -213,17 +356,34 @@
                 <outlet property="lblOther" destination="Ju3-Nc-JY1" id="XbX-28-Q70"/>
                 <outlet property="lblOtherValue" destination="b4M-7a-rQ9" id="Hcf-D5-dPE"/>
                 <outlet property="lblProduct" destination="4Cq-eL-KBO" id="hw7-U0-A05"/>
+                <outlet property="lblProfitTitle" destination="4yh-vJ-iAv" id="HDN-vf-644"/>
+                <outlet property="lblProfitValue" destination="0rY-Oy-aIe" id="MyA-JR-AsT"/>
+                <outlet property="lblRetailPriceTitle" destination="qtK-YD-sZ1" id="jjE-7T-iyA"/>
+                <outlet property="lblRetailPriceValue" destination="pex-yw-lho" id="cuD-HI-4mH"/>
                 <outlet property="lblService" destination="mF6-wS-uwF" id="Uxb-2F-GVk"/>
+                <outlet property="lblService1" destination="7jA-ju-yIA" id="jT8-Rt-uyq"/>
                 <outlet property="lblServiceValue" destination="zDh-Zp-mdy" id="vcB-R2-Msi"/>
+                <outlet property="lblServiceValue1" destination="VNc-wJ-U2I" id="Xhc-Gd-B2K"/>
                 <outlet property="lblTotalCost" destination="WWw-9Y-Aut" id="5ly-V8-1YP"/>
+                <outlet property="lblTotalCost1" destination="pZ6-3A-8K1" id="y8n-hZ-UHm"/>
                 <outlet property="lblTotalCostValue" destination="6xS-WF-pLE" id="N2f-86-3QW"/>
+                <outlet property="lblTotalCostValue1" destination="32T-eS-Df0" id="mn2-Vw-ibM"/>
+                <outlet property="lblTotalRetailPriceTitle" destination="8Zh-Qa-P9D" id="nbq-5c-aKU"/>
+                <outlet property="lblTotalRetailPriceValue" destination="ngn-W8-W8j" id="PqS-d3-ZjJ"/>
                 <outlet property="lblTransNo" destination="21l-I3-sw0" id="wK3-Ib-6z7"/>
+                <outlet property="lblTransNo1" destination="3Dr-vO-nAH" id="eXO-rM-ihx"/>
                 <outlet property="lblTransNoValue" destination="CWh-cQ-mfZ" id="CJb-mB-VWV"/>
+                <outlet property="lblTransNoValue1" destination="XzQ-bv-ac2" id="tA7-au-yOK"/>
                 <outlet property="lblUsername" destination="nab-xZ-X1k" id="zXF-S6-ePN"/>
                 <outlet property="lblUsernameValue" destination="1oW-q5-Jfy" id="E7S-4e-t8f"/>
                 <outlet property="stackCost" destination="dYy-No-tQK" id="rjb-x3-LiZ"/>
+                <outlet property="stackCost1" destination="fhS-um-A7I" id="sBJ-z7-BzJ"/>
+                <outlet property="stackProfit" destination="t5i-Xd-LgV" id="hXR-iX-iaS"/>
+                <outlet property="stackRetailPrice" destination="bTa-b6-0U8" id="dMR-D0-WYU"/>
+                <outlet property="stackTotalRetailPrice" destination="ncC-q5-DPe" id="TFR-n8-849"/>
                 <outlet property="stackUsername" destination="yHc-Hl-Nwv" id="dJ8-rb-grs"/>
                 <outlet property="stackView" destination="o1c-eT-Ceh" id="ScM-6Q-0tD"/>
+                <outlet property="viewFullInfo" destination="cwM-fU-Xxr" id="2WL-ni-ILF"/>
                 <outlet property="viewInfo" destination="zpZ-RA-pBJ" id="jbC-LP-aqS"/>
                 <outlet property="viewLine" destination="uIu-eD-FU9" id="Qzl-cc-NWq"/>
                 <outlet property="viewProduct" destination="Mj2-9R-GRr" id="7f2-ct-GYA"/>
