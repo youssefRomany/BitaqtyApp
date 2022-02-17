@@ -93,6 +93,12 @@ enum Roles: String {
     case SUB_ACCOUNT = "SUB_ACCOUNT"
 }
 
+enum Reseller_ACCOUNT_Type: String {
+    case BALANCE = "BALANCE"
+    case LIMIT = "LIMIT"
+}
+
+
 enum SUB_ACCOUNT_TYPE: String {
     case LIMIT = "LIMIT"
     case NO_LIMIT = "NO_LIMIT"
@@ -167,6 +173,7 @@ enum PERMISSIONS_IDS: Int {
     case RECOMMENDED_RETAIL_PRICE = 25
     case EDIT_HOME_PAGE = 26
 }
+
 enum CHILD_RECHARGE_PERMISSIONS_IDS: Int {
     case RECHARGE_LOG = 10
     case CHOOSE_RECHARGE_LOG = 11

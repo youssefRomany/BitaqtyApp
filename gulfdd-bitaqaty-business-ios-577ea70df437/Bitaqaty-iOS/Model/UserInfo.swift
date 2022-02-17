@@ -44,7 +44,8 @@ class UserInfo: Codable, Copying {
     var parentResellerEmail: String? = nil
     
     private var permissions : [Permissions]?
-    
+    var resellerType: String? = ""
+
     
     var LastLoginDate: Double{
         return lastLoginDate ?? 0.0

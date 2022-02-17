@@ -40,6 +40,11 @@ enum TransactionStrings: String{
     case recommended_retail_price = "Recommended Retail Price"
     case recommended_retail_price_after_vat = "Recommended Retail Price after VAT"
     case expected_profit = "Expected Profit"
+    case profit = "Profit"
+
+    case SubAccountBalanse = "Sub Account Balance"
+    case SubAccountBriceAfterVat = "Sub Account Price after VAT"
+    case SubAccountBrice = "Sub Account Price"
 
     var localizedValue: String{
         switch self {
@@ -209,6 +214,29 @@ enum TransactionStrings: String{
                 return "الربح المتوقع"
             }
             return self.rawValue;
+        case .profit:
+            if (lang != "en"){
+                return "الربح"
+            }
+            return self.rawValue;
+
+        case .SubAccountBalanse:
+            if (lang != "en"){
+                return "رصيد الحساب الفرعي"
+            }
+            return self.rawValue;
+        case .SubAccountBriceAfterVat:
+            if (lang != "en"){
+                return "سعر الحساب الفرعي بعد الضريبة"
+            }
+            return self.rawValue;
+            
+        case .SubAccountBrice:
+            if (lang != "en"){
+                return "سعر الحساب الفرعي"
+            }
+            return self.rawValue;
+            
         }
     }
 }

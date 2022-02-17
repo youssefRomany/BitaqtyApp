@@ -36,6 +36,14 @@ class MainVC: ButtonBarPagerTabStripViewController {
     var loadProfile = false
     override func viewDidLoad() {
         user = DataService.getUserData()
+        let permissions = user.reseller?.PermissionsArr.filter{$0.Enabled}
+        for item in permissions ?? []{
+            print("joePerm",item.id ?? 0, item.name ?? "")
+        }
+        print("rrrrrrrrr",user.reseller?.AccessType)
+        print("rrrrrrrrr",user.reseller?.authenticationType)
+        print(user.accountType)
+        print(user.reseller?.AccessType)
         if user.accountType == Roles.SUB_ACCOUNT.rawValue{
             setupSubAccountTabs()
         }else{

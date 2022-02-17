@@ -40,7 +40,11 @@ struct TransactionLog : Codable {
     private var showPin : Bool? = false
     private var transactionID : String?
     var productType : String?
-
+    var subTransactionPrice: Double?
+    var subTransactionBalanceAfter: Double?
+    var subTransactionCost: Double?
+    var subTransactionPrintCounter: Double?
+    
     var Currency: String{
         if lang == "ar"{
             return currencyAr ?? ""

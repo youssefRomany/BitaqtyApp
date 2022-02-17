@@ -62,7 +62,7 @@
                                             <constraint firstItem="xwc-XO-W0c" firstAttribute="top" secondItem="xSC-dr-uXV" secondAttribute="top" id="uvV-iR-Oyf"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mKf-ed-zDg">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mKf-ed-zDg">
                                         <rect key="frame" x="266" y="25" width="133" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" text="Label Label Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjW-Td-e0R" customClass="LblSmallerLightFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
@@ -196,7 +196,7 @@
                                         </constraints>
                                     </view>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jhf-mL-DTJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="440"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="240"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EI-Sx-oGQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
@@ -219,7 +219,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="kta-wI-WhK"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijU-6e-WjF">
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijU-6e-WjF">
                                                 <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oG-C5-Udm" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
@@ -240,8 +240,8 @@
                                                     <constraint firstAttribute="height" constant="40" id="p9y-Cd-sHV"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cii-vr-Ffg">
-                                                <rect key="frame" x="0.0" y="80" width="390" height="40"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cii-vr-Ffg">
+                                                <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqy-3w-5gU" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -261,8 +261,8 @@
                                                     <constraint firstItem="jqy-3w-5gU" firstAttribute="width" secondItem="Cii-vr-Ffg" secondAttribute="width" multiplier="0.55" id="KCL-D0-Qjm"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luO-lg-5Ha">
-                                                <rect key="frame" x="0.0" y="120" width="390" height="40"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luO-lg-5Ha">
+                                                <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlq-Vm-HfV" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -282,8 +282,8 @@
                                                     <constraint firstAttribute="height" constant="40" id="y4C-AY-hoy"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-U8-fAc">
-                                                <rect key="frame" x="0.0" y="160" width="390" height="40"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-U8-fAc">
+                                                <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n57-7q-NE7" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -304,7 +304,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTe-AE-nSV">
-                                                <rect key="frame" x="0.0" y="200" width="390" height="40"/>
+                                                <rect key="frame" x="0.0" y="40" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-YQ-aVu" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -324,8 +324,8 @@
                                                     <constraint firstAttribute="height" constant="40" id="fvW-Wi-rZH"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW7-Sl-whS">
-                                                <rect key="frame" x="0.0" y="240" width="390" height="40"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW7-Sl-whS">
+                                                <rect key="frame" x="0.0" y="80" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocu-mU-sbj" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -346,7 +346,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-OC-SjA">
-                                                <rect key="frame" x="0.0" y="280" width="390" height="40"/>
+                                                <rect key="frame" x="0.0" y="80" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7u-UT-OTe" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -367,7 +367,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CC6-hT-5Dx">
-                                                <rect key="frame" x="0.0" y="320" width="390" height="40"/>
+                                                <rect key="frame" x="0.0" y="120" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hl-rE-agc" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -388,7 +388,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-Ac-oFN">
-                                                <rect key="frame" x="0.0" y="360" width="390" height="40"/>
+                                                <rect key="frame" x="0.0" y="160" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-hG-ae3" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>
@@ -409,7 +409,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X57-yg-6Qn">
-                                                <rect key="frame" x="0.0" y="400" width="390" height="40"/>
+                                                <rect key="frame" x="0.0" y="200" width="390" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia2-Vd-TIb" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="214.5" height="40"/>

@@ -55,7 +55,6 @@ class ProductSearchCell: UITableViewCell {
                     showRecommendedRetailprice = true
                         self.recomendRetailPriceTitleLabel.isHidden = false
                         self.retailBtn.isHidden = false
-
                 }else{
                     showRecommendedRetailprice = false
                     self.recomendRetailPriceTitleLabel.isHidden = true

@@ -66,6 +66,7 @@ class TransactionLogCell: UITableViewCell {
     var isHasSupportPermission: Bool = true
     var isHasDiscountPermission: Bool = true
     var isHasViewBalancePermission: Bool = true
+    var RessellerBalanceAccount = true
     
     var ic_back = lang == "en" ? "ic_back_left" : "ic_back"
     weak var delegate: TransactionLogDelegate? = nil
@@ -199,30 +200,78 @@ class TransactionLogCell: UITableViewCell {
         heightConst.constant = isHasSupportPermission ? 25 : 0
         stackBalance.isHidden = !isHasViewBalancePermission
         
-        if isHasDiscountPermission{
-            stackCostAfterVat.isHidden = false
-            stackCost.isHidden = false
-            stackVat.isHidden = false
-        }else{
-            stackCostAfterVat.isHidden = true
-            stackCost.isHidden = true
-            stackVat.isHidden = true
+        if let user = DataService.getUserData(), let reseller = user.reseller{
+            RessellerBalanceAccount = (reseller.resellerType == (Reseller_ACCOUNT_Type.BALANCE.rawValue))
+            if user.accountType == Roles.SUB_ACCOUNT.rawValue{
+                // subAccount or resseller limit
+                if isHasDiscountPermission{
+                    stackCostAfterVat.isHidden = false
+                    stackCost.isHidden = false
+                    stackVat.isHidden = false
+                }else{
+                    stackCostAfterVat.isHidden = true
+                    stackCost.isHidden = true
+                    stackVat.isHidden = true
+                }
+                
+                if isHasViewRecommendedRetailPrice {
+                    stackRetailPrice.isHidden = false
+                    stackRetailPriceAfterVat.isHidden = false
+                }else {
+                    stackRetailPrice.isHidden = true
+                    stackRetailPriceAfterVat.isHidden = true
+                }
+                
+                if isHasDiscountPermission && isHasViewRecommendedRetailPrice {
+                    stackProfit.isHidden = false
+                }else {
+                    stackProfit.isHidden = true
+                }
+                print("ddddddddddddd sub")
+
+            }else if RessellerBalanceAccount{
+                // resseller balanse
+                print("ddddddddddddd bb")
+                lblBalanceTitle.text = TransactionStrings.SubAccountBalanse.localizedValue
+                lblRetailPriceTitle.text = TransactionStrings.SubAccountBrice.localizedValue
+                lblRetailPriceAfterVatTitle.text = TransactionStrings.SubAccountBriceAfterVat.localizedValue
+                lblProfitTitle.text = TransactionStrings.profit.localizedValue
+                stackRetailPrice.isHidden = false
+                stackRetailPriceAfterVat.isHidden = false
+                stackVat.isHidden = false
+                stackProfit.isHidden = false
+                stackCostAfterVat.isHidden = false
+                stackCost.isHidden = false
+
+            }else{
+                // resseller limit
+                print("ddddddddddddd limit")
+
+                stackProfit.isHidden = false
+                stackRetailPrice.isHidden = false
+                stackRetailPriceAfterVat.isHidden = false
+                stackCostAfterVat.isHidden = false
+                stackCost.isHidden = false
+                stackVat.isHidden = false
+                lblProfitTitle.text = TransactionStrings.profit.localizedValue
+
+
+
+            }
         }
         
+//        if isHasDiscountPermission{
+//            stackCostAfterVat.isHidden = false
+//            stackCost.isHidden = false
+//            stackVat.isHidden = false
+//        }else{
+//            stackCostAfterVat.isHidden = true
+//            stackCost.isHidden = true
+//            stackVat.isHidden = true
+//        }
         
-        if isHasViewRecommendedRetailPrice {
-            stackRetailPrice.isHidden = false
-            stackRetailPriceAfterVat.isHidden = false
-        }else {
-            stackRetailPrice.isHidden = true
-            stackRetailPriceAfterVat.isHidden = true
-        }
         
-        if isHasDiscountPermission && isHasViewRecommendedRetailPrice {
-            stackProfit.isHidden = false
-        }else {
-            stackProfit.isHidden = true
-        }
+
         
     }
     @IBAction func onSupportClicked(_ sender: Any) {
