@@ -15,11 +15,15 @@ enum reportStrings: String{
     case channel = "Channel";
     case total_cost_price = "Total Cost Price";
     case no_of_transactions = "No. of Transactions";
+    case show_sales_in_sub_account_price = "Show Sales in Sub Account Price"
     case show_sales_in_recommended_retail_price = "Show Sales in Recommended Retail Price";
     case trans_no = "Trans. No.";
     case cost_price = "Cost Price";
     case recommended_retail_price = "Recommended Retail Price";
     case total_recommended_retail_price = "Total Recommended Retail Price";
+    case total_profit = "Total Profit";
+    case sub_account_price = "Sub Account Price";
+    case total_sub_account_price = "Total Sub Account Price";
     case total_expected_profit = "Total Expected Profit";
     case all = "All";
     case this_month = "This Month";
@@ -164,6 +168,26 @@ enum reportStrings: String{
         case .recommended_retail_price:
             if (lang != "en") {
                 return "سعر البيع المقترح"
+            }
+            return self.rawValue
+        case .show_sales_in_sub_account_price:
+            if (lang != "en") {
+                return "إظهار المبيعات بسعر الحساب الفرعي"
+            }
+            return self.rawValue
+        case .total_profit:
+            if (lang != "en") {
+                return "إجمالي الربح"
+            }
+            return self.rawValue
+        case .sub_account_price:
+            if (lang != "en") {
+                return "سعر الحساب الفرعي"
+            }
+            return self.rawValue
+        case .total_sub_account_price:
+            if (lang != "en") {
+                return "إجمالي سعر الحساب الفرعي"
             }
             return self.rawValue
         }

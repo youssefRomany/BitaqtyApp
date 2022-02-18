@@ -67,9 +67,6 @@ class SalesReportCell: UITableViewCell {
         lblService1.text = reportStrings.service.localizedValue
         lblTransNo1.text = reportStrings.trans_no.localizedValue
         lblTotalCost1.text = reportStrings.total_cost_price.localizedValue
-        lblRetailPriceTitle.text = reportStrings.recommended_retail_price.localizedValue
-        lblTotalRetailPriceTitle.text = reportStrings.total_recommended_retail_price.localizedValue
-        lblProfitTitle.text = reportStrings.total_expected_profit.localizedValue
         
         lblProduct.textAlignment = lang == "en" ? .left : .right
         lblUsernameValue.textAlignment = lang == "en" ? .left : .right
@@ -89,7 +86,7 @@ class SalesReportCell: UITableViewCell {
         imgArr.image = UIImage(named: ic_back)
     }
     
-    func setupData(with report: Report,_ showCost: Bool,_ currency: String, _ showRecomendPrice: Bool){
+    func setupData(with report: Report,_ showCost: Bool,_ currency: String, _ showRecomendPrice: Bool, _ isRessellerBalanceAccount: Bool){
         lblProduct.text = report.getProductName()
         lblServiceValue.text = report.getMerchantName()
         lblTransNoValue.text = "\(report.numberOfTrans ?? 0)"
@@ -111,10 +108,15 @@ class SalesReportCell: UITableViewCell {
             lblOtherValue.text = "\(report.subAccountName ?? "")"
         }
         
-        lblTotalCostValue1.text = "\(report.totalTransAmount?.removeZerosFromEnd() ?? "") \(currency)"
+        lblRetailPriceTitle.text = isRessellerBalanceAccount ? reportStrings.sub_account_price.localizedValue : reportStrings.recommended_retail_price.localizedValue
+        lblTotalRetailPriceTitle.text = isRessellerBalanceAccount ? reportStrings.total_sub_account_price.localizedValue : reportStrings.total_recommended_retail_price.localizedValue
+        lblProfitTitle.text = isRessellerBalanceAccount ? reportStrings.total_profit.localizedValue : reportStrings.total_expected_profit.localizedValue
+        
+        //@Pending
+        lblTotalCostValue1.text = isRessellerBalanceAccount ? "\(report.totalTransAmount?.removeZerosFromEnd() ?? "") \(currency)" : "\(report.totalTransAmount?.removeZerosFromEnd() ?? "") \(currency)"
         lblRetailPriceValue.text = "\(report.recommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
-        lblTotalRetailPriceValue.text = "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
-        lblProfitValue.text = "\(report.totalExpectedProfit ?? "") \(currency)"
+        lblTotalRetailPriceValue.text = isRessellerBalanceAccount ? "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)" : "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
+        lblProfitValue.text = isRessellerBalanceAccount ? "\(report.totalExpectedProfit ?? "") \(currency)" : "\(report.totalExpectedProfit ?? "") \(currency)"
         
         if showRecomendPrice {
             stackRetailPrice.isHidden = false

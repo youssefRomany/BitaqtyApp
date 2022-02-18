@@ -71,6 +71,7 @@ class SalesReportVC: UIViewController {
     var showPrice = false
     var isHasShowRecomendPrice = false
     var isRecomendPriceChecked = false
+    var isRessellerBalanceAccount = false
     var user: UserInfo?
     var cellSize: CGFloat = 176
     
@@ -80,6 +81,7 @@ class SalesReportVC: UIViewController {
         showAllAccounts = DataService.showAllAccounts()
         showPrice = DataService.showCost()
         isHasShowRecomendPrice = DataService.showRecomendPrice()
+        isRessellerBalanceAccount = DataService.showRessellerBalanceAccountPrices()
         cellSize = showPrice ? 176 : 155
         user = DataService.getUserData()?.reseller
         if (!showAllAccounts){
@@ -250,11 +252,13 @@ extension SalesReportVC{
         viewCost.round(to: UIDevice.isPad ? 8 : 4)
         viewRecommendedRetailPrice.round(to: UIDevice.isPad ? 8 : 4)
         viewTotalProfit.round(to: UIDevice.isPad ? 8 : 4)
-        lblShowRecommendedRetailPrice.text = reportStrings.show_sales_in_recommended_retail_price.localizedValue
+        lblShowRecommendedRetailPrice.text = isRessellerBalanceAccount ? reportStrings.show_sales_in_sub_account_price.localizedValue : reportStrings.show_sales_in_recommended_retail_price.localizedValue
         lblTransactionsNo.text = reportStrings.no_of_transactions.localizedValue
-        lblCost.text = reportStrings.total_cost_price.localizedValue
-        lblRecommendedRetailPrice.text = reportStrings.total_recommended_retail_price.localizedValue
-        lblTotalProfit.text = reportStrings.total_expected_profit.localizedValue
+        
+        lblCost.text = isRessellerBalanceAccount ? reportStrings.total_cost_price.localizedValue : reportStrings.total_cost_price.localizedValue
+        lblRecommendedRetailPrice.text = isRessellerBalanceAccount ? reportStrings.total_sub_account_price.localizedValue : reportStrings.total_recommended_retail_price.localizedValue
+        lblTotalProfit.text = isRessellerBalanceAccount ? reportStrings.total_profit.localizedValue : reportStrings.total_expected_profit.localizedValue
+        
         if showPrice{
             viewCost.isHidden = false
         }else{
@@ -264,8 +268,9 @@ extension SalesReportVC{
         if isHasShowRecomendPrice {
             viewShowRecommendedRetailPrice.isHidden = false
         }else {
-            viewShowRecommendedRetailPrice.isHidden = false
+            viewShowRecommendedRetailPrice.isHidden = true
         }
+        
         
         if isRecomendPriceChecked {
             viewTotalProfit.isHidden = false
@@ -289,11 +294,12 @@ extension SalesReportVC{
     
     func setupInfo(){
         lblTransactionsNoValue.text = "\(reportLog?.numberOfTransactions ?? 0)"
+        //@Pending
         if showPrice{
-            lblCostValue.text = "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+            lblCostValue.text = isRessellerBalanceAccount ? "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
         }
-        lblRecommendedRetailPriceValue.text = "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
-        lblTotalProfitValue.text = "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblRecommendedRetailPriceValue.text = isRessellerBalanceAccount ? "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblTotalProfitValue.text = isRessellerBalanceAccount ? "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
     }
     
     func openDropDownList(_ type: Int){
@@ -600,7 +606,7 @@ extension SalesReportVC: UITableViewDelegate,UITableViewDataSource{
             cell.imgArr.isHidden = !(isRecomendPriceChecked)
             cell.viewFullInfo.isHidden = !((cell.imgArr.tag == 1) && isRecomendPriceChecked)
             cell.viewInfo.isHidden = ((cell.imgArr.tag == 1) && isRecomendPriceChecked)
-            cell.setupData(with: reports[indexPath.row], showPrice, user?.Currency ?? "", isHasShowRecomendPrice)
+            cell.setupData(with: reports[indexPath.row], showPrice, user?.Currency ?? "", isHasShowRecomendPrice, isRessellerBalanceAccount)
             return cell
         }
         return UITableViewCell()

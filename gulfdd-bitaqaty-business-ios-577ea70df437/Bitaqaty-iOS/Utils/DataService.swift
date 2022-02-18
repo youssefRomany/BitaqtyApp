@@ -154,8 +154,8 @@ class DataService {
                 "OS" : "IOS",
                 "locale": lang,
                 "Accept-Language": lang,
-        //      "device-id": "641C2812-DAB1-4CD0-89E4-914BE462E6A8", // sub Balance account
-                "device-id": getDeviceId(),
+                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
+                //"device-id": getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // ""
             ];
         }else{
@@ -164,8 +164,8 @@ class DataService {
                 "locale": lang,
                 "OS" : "IOS",
                 "Accept-Language": lang,
-//                "device-id": "641C2812-DAB1-4CD0-89E4-914BE462E6A8", // sub Balance account
-                "device-id": getDeviceId(),
+                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
+               // "device-id": getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // "BITAQATY_BUSINESS_MOBILE"
             ];
         }
@@ -242,6 +242,11 @@ class DataService {
     static func showRecomendPrice() -> Bool{
         let user = getUserData()
         return user?.accountType == Roles.MASTER_ACCOUNT.rawValue || user?.reseller?.PermissionsArr.first(where: {$0.id == PERMISSIONS_IDS.RECOMMENDED_RETAIL_PRICE.rawValue})?.Enabled == true
+    }
+    
+    static func showRessellerBalanceAccountPrices() -> Bool{
+        let user = getUserData()
+        return (user?.reseller?.resellerType == (Reseller_ACCOUNT_Type.BALANCE.rawValue) && user?.accountType == Roles.MASTER_ACCOUNT.rawValue )
     }
     
     static func showAllAccounts() -> Bool{
