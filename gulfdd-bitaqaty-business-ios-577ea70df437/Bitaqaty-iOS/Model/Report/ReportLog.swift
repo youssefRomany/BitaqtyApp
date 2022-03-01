@@ -17,5 +17,9 @@ struct ReportLog: Codable {
     var numberOfTransactions: Int = 0
     var totalRecommendedPrice: Double? = nil
     var totalExpectedProfit: Double? = nil
-    
+    var transactionsTotalAmountForSubResellerPrice: Double? = nil
+    var totalSubResellerPrice: Double? = nil
+    var totalProfit: Double? = nil
+
 }
+

@@ -78,6 +78,7 @@ class SalesReportVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("eeeeeeeeeedededewde")
         showAllAccounts = DataService.showAllAccounts()
         showPrice = DataService.showCost()
         isHasShowRecomendPrice = DataService.showRecomendPrice()
@@ -298,8 +299,8 @@ extension SalesReportVC{
         if showPrice{
             lblCostValue.text = isRessellerBalanceAccount ? "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.transactionsTotalAmount ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
         }
-        lblRecommendedRetailPriceValue.text = isRessellerBalanceAccount ? "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
-        lblTotalProfitValue.text = isRessellerBalanceAccount ? "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblRecommendedRetailPriceValue.text = isRessellerBalanceAccount ? "\((reportLog?.totalSubResellerPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.totalRecommendedPrice ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
+        lblTotalProfitValue.text = isRessellerBalanceAccount ? "\((reportLog?.totalProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")" : "\((reportLog?.totalExpectedProfit ?? 0.0).removeZerosFromEnd()) \(user?.Currency ?? "")"
     }
     
     func openDropDownList(_ type: Int){

@@ -114,9 +114,12 @@ class SalesReportCell: UITableViewCell {
         
         //@Pending
         lblTotalCostValue1.text = isRessellerBalanceAccount ? "\(report.totalTransAmount?.removeZerosFromEnd() ?? "") \(currency)" : "\(report.totalTransAmount?.removeZerosFromEnd() ?? "") \(currency)"
-        lblRetailPriceValue.text = "\(report.recommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
-        lblTotalRetailPriceValue.text = isRessellerBalanceAccount ? "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)" : "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
-        lblProfitValue.text = isRessellerBalanceAccount ? "\(report.totalExpectedProfit ?? "") \(currency)" : "\(report.totalExpectedProfit ?? "") \(currency)"
+        
+        lblRetailPriceValue.text = isRessellerBalanceAccount ? "\(report.subResellerPrice?.removeZerosFromEnd() ?? "") \(currency)" : "\(report.recommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
+        
+        lblTotalRetailPriceValue.text = isRessellerBalanceAccount ? "\(report.totalSubResellerPrice?.removeZerosFromEnd() ?? "") \(currency)" : "\(report.totalRecommendedPrice?.removeZerosFromEnd() ?? "") \(currency)"
+        
+        lblProfitValue.text = isRessellerBalanceAccount ? "\(report.totalProfit ?? "") \(currency)" : "\(report.totalExpectedProfit ?? "") \(currency)"
         
         if showRecomendPrice {
             stackRetailPrice.isHidden = false

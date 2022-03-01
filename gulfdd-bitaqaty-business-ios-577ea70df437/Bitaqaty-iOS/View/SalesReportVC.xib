@@ -220,16 +220,16 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="182" height="80"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="55B-l0-xv9">
-                                                                    <rect key="frame" x="20" y="14.5" width="95" height="51"/>
+                                                                    <rect key="frame" x="20" y="4.5" width="95" height="71.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Uc-UR-PbM" customClass="LblSmallerBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="95" height="20.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. of Transactions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Uc-UR-PbM" customClass="LblSmallerBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="95" height="41"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcK-if-dX6" customClass="LblSmallBoldFont" customModule="Bitaqaty_iOS" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="30.5" width="95" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="51" width="95" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>

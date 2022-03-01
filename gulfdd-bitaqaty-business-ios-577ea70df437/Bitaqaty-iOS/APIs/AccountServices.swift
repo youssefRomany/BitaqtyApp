@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 
-
 class AccountServices {
     static func validateAndLogin(_ username: String,_ password: String,_ delegate: OnFinishDelegate){
         var valid = true
@@ -40,6 +39,7 @@ class AccountServices {
                             if let loginToken = dataResult.loginProcessToken{
                                 DataService.saveLoginToken(loginToken)
                             }
+                            print(dataResult,"rrrrrrrr")
                             if let errors = dataResult.errors{
                                 delegate.onFailed(err: ServiceError(errors))
                             }else{
@@ -53,6 +53,67 @@ class AccountServices {
                     }
                 }
             }else{
+                delegate.onFailed(err: .noInternetConnection)
+            }
+        }
+    }
+    
+    
+    static func requestWhiteLAbel(_ delegate: OnFinishDelegate){
+
+        DataService.ds.isConnectedToNetwork { connectionSuccess in
+            if(connectionSuccess){
+                if let token = DataService.getLoginToken(){
+                    let url = "\(API.BASE_URL)\(AUTH_API.whiteLabel)"
+                    //let param = ["loginProcessToken": token]
+
+                    var request = URLRequest(url: URL(string: url)!)
+                    request.httpMethod = HTTPMethod.post.rawValue
+                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+                    let pjson = "whitelabel.ocstaging.net"
+                    let data = (pjson.data(using: .utf8))! as Data
+
+                    request.httpBody = data
+
+                    Alamofire.request(request).responseData { (response) in
+                        if let result = response.result.value, response.response?.statusCode == 200{
+                            do{
+                                let resp = try JSONDecoder().decode(WhiteLabelResp.self, from: result)
+                                if let _ = resp.id{
+                                    print(resp, "hhhhhhhhhhhh")
+                                    delegate.onSuccess()
+                                }else if let errors = resp.errors{
+                                    print(resp, "hhhhhhhhhhhh errrr")
+
+//                                    delegate.onFailed(err: ServiceError(errors))
+                                }else{
+                                    print( "hhhhhhhhhhhh faild")
+
+                                    delegate.onFailed(err: .other)
+                                }
+                            }catch{
+                                print ("hhhhhhhhhhhh other")
+
+                                delegate.onFailed(err: .other)
+                            }
+                        }else{
+                            print(response, "hhhhhhhhhhhh els")
+                            print(response.response, "hhhhhhhhhhhh els")
+                            print(response.response?.statusCode, "hhhhhhhhhhhh els")
+
+                            delegate.onFailed(err: .other)
+                        }
+                    }
+
+                }else{
+                    print ("hhhhhhhhhhhh tttttt")
+
+                    delegate.onFailed(err: .custom(ErrorMessage(errorMsgs.session_ended.localizedValue)))
+                }
+            }else{
+                print ("hhhhhhhhhhhh mmmmm")
+
                 delegate.onFailed(err: .noInternetConnection)
             }
         }

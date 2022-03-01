@@ -27,6 +27,8 @@ protocol OnFinishDelegate: AnyObject {
     func onSuccess(_ productDetails: ProductDetails)
     func onSuccess(_ users: [TransactionUser])
     func onSuccess(_ reportLog: ReportLog)
+    func onSuccess(_ model: WhiteLabelResp)
+
     func onFailed()
     func onFailed(err: ServiceError)
     func onFailed(err: ServiceError,_ tag: Int)
@@ -64,6 +66,10 @@ extension OnFinishDelegate{
     }
     
     func onSuccess(_ products: [Product]){
+        
+    }
+    
+    func onSuccess(_ model: WhiteLabelResp){
         
     }
     

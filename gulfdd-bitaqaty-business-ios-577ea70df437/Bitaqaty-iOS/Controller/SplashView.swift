@@ -9,6 +9,7 @@ import Foundation
 import Lottie
 
 class SplashView: UIViewController{
+
     
     @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var lblCR: UILabel!
@@ -21,6 +22,8 @@ class SplashView: UIViewController{
         
     }
     func loadSettings(){
+        AccountServices.requestWhiteLAbel(self)
+        
         if let _ = DataService.getUserData(){
             GeneralAPIs.getSettings {
                 AccountServices.getProfile {
@@ -54,4 +57,11 @@ class SplashView: UIViewController{
         }
         DataService.loadHome(sessionEnded: resetAccess)
     }
+}
+
+extension SplashView: OnFinishDelegate {
+    func onSuccess(_ model: WhiteLabelResp) {
+        print("rrrrrrr", model)
+    }
+
 }

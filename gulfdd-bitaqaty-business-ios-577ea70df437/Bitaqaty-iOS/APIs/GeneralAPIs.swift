@@ -17,6 +17,7 @@ class GeneralAPIs{
                     let url = "\(API.BASE_URL)\(SYSTEM_API.SYSTEM_SETTINGS)";
                     print("\(url)")
                     Alamofire.request(url, method: .post,encoding: JSONEncoding(), headers: DataService.getHeader()).responseData{ response in
+                        print("response.response?.statusCode", response.response?.statusCode)
                         if response.response?.statusCode == 401{
                             failed(ErrorMessage( errorMsgs.session_ended.localizedValue, "\(ErrorType.Auth.rawValue)"));
                         }else if response.response?.statusCode == 200{

@@ -85,6 +85,7 @@ class TransactionLogAPIs{
                             if let result = response.result.value {
                                 do{
                                     let transactionResult = try JSONDecoder().decode(TransactionLogResult.self, from: result);
+                                    print(transactionResult, "dddddewdwedwedwed")
                                     if transactionResult.TranscationList.count > 0{
                                         completed(transactionResult.TranscationList)
                                     }else if let errors = transactionResult.errors{

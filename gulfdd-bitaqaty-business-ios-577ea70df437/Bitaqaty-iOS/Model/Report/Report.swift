@@ -25,6 +25,13 @@ struct Report: Codable {
     var totalExpectedProfit: String? = nil
     var totalTransAmountForRecommendedPrice: Double? = nil
 
+    var subResellerPrice: Double? = nil
+    var totalSubResellerPrice: Double? = nil
+    var totalProfit: String? = nil
+    var totalTransAmountForSubResellerPrice: Double? = nil
+
+    
+    
     func getMerchantName()-> String{
         if (lang == "en"){
             return merchantNameEn ?? merchantNameAr ?? ""

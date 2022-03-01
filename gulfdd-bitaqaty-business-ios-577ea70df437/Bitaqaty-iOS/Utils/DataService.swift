@@ -154,8 +154,8 @@ class DataService {
                 "OS" : "IOS",
                 "locale": lang,
                 "Accept-Language": lang,
-                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
-                //"device-id": getDeviceId(),
+//                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
+                "device-id": getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // ""
             ];
         }else{
@@ -164,8 +164,8 @@ class DataService {
                 "locale": lang,
                 "OS" : "IOS",
                 "Accept-Language": lang,
-                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
-               // "device-id": getDeviceId(),
+//                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
+                "device-id": getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // "BITAQATY_BUSINESS_MOBILE"
             ];
         }

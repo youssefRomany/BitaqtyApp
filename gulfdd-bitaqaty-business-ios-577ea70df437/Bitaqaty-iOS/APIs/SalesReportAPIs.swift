@@ -139,6 +139,7 @@ class SalesReportAPIs{
                         }else{
                             if let result = response.result.value, response.response?.statusCode == 200{
                                 if let dataResult = try? JSONDecoder().decode(ReportLog.self, from: result){
+                                    print(dataResult, "reportResp")
                                     delegate?.onSuccess(dataResult)
                                 }else{
                                     delegate?.onFailed(err: .other, 1)

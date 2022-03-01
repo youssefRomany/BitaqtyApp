@@ -336,6 +336,7 @@
 		41F487B82696E71C001948D2 /* SignHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F487B72696E71C001948D2 /* SignHeaderView.xib */; };
 		41F487BB2696E734001948D2 /* SignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F487BA2696E734001948D2 /* SignHeaderView.swift */; };
 		9015A6E3FF5597216AD68CAD /* Pods_Bitaqaty_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5B1075F3A63C8797DE77F /* Pods_Bitaqaty_iOS.framework */; };
+		FA890B2D27CEBFDB007D13F5 /* WhiteLabelResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA890B2C27CEBFDB007D13F5 /* WhiteLabelResp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -686,6 +687,7 @@
 		41F487BA2696E734001948D2 /* SignHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignHeaderView.swift; sourceTree = "<group>"; };
 		B655DBE41BBD4996F837102C /* Pods-Bitaqaty-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitaqaty-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Bitaqaty-iOS/Pods-Bitaqaty-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C7E5B1075F3A63C8797DE77F /* Pods_Bitaqaty_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitaqaty_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA890B2C27CEBFDB007D13F5 /* WhiteLabelResp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteLabelResp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1179,6 +1181,7 @@
 		417B58522696F504009B8D08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA890B2B27CEBFCB007D13F5 /* WhiteLAbel */,
 				14C9862A271427DE0045B9FF /* Home */,
 				4116B0632700860000D46F83 /* Report */,
 				14A5FA2E26F9D87A00941A13 /* Recharge */,
@@ -1255,6 +1258,14 @@
 				C7E5B1075F3A63C8797DE77F /* Pods_Bitaqaty_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA890B2B27CEBFCB007D13F5 /* WhiteLAbel */ = {
+			isa = PBXGroup;
+			children = (
+				FA890B2C27CEBFDB007D13F5 /* WhiteLabelResp.swift */,
+			);
+			path = WhiteLAbel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1593,6 +1604,7 @@
 				4116B0672700863400D46F83 /* Report.swift in Sources */,
 				1476528C270CBD0100996463 /* ViewNoPermission.swift in Sources */,
 				146B528326F08F0700963CC6 /* Category.swift in Sources */,
+				FA890B2D27CEBFDB007D13F5 /* WhiteLabelResp.swift in Sources */,
 				145BA85D26B032D80074EC67 /* Permissions.swift in Sources */,
 				14ACF1CE271DC80900BE18F9 /* RectMarker.swift in Sources */,
 				419B651927184577001FE582 /* SubResellerHomeAPIs.swift in Sources */,
