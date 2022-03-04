@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="animationView" destination="eLo-eR-ofb" id="xyC-ja-ARR"/>
                 <outlet property="lblCR" destination="fU7-YN-8hj" id="d1k-R9-Sus"/>
+                <outlet property="splashLogo" destination="Uzc-gx-ovX" id="wxI-xJ-W5P"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2KS-y2-JQB"/>
             </connections>
         </placeholder>
@@ -22,10 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Uzc-gx-ovX">
-                    <rect key="frame" x="143.5" y="349.5" width="127" height="197"/>
+                    <rect key="frame" x="62" y="303" width="290" height="290"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Uzc-gx-ovX" secondAttribute="height" multiplier="1:1" id="0jT-nX-Z1N"/>
+                    </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLo-eR-ofb" customClass="AnimationView" customModule="Lottie">
-                    <rect key="frame" x="207" y="526.5" width="0.0" height="100"/>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLo-eR-ofb" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="207" y="573" width="0.0" height="100"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="0Y1-Yd-Moq"/>
@@ -47,6 +51,7 @@
                 <constraint firstItem="eLo-eR-ofb" firstAttribute="top" secondItem="Uzc-gx-ovX" secondAttribute="bottom" constant="-20" id="4fj-9v-jpE"/>
                 <constraint firstItem="eLo-eR-ofb" firstAttribute="centerX" secondItem="Uzc-gx-ovX" secondAttribute="centerX" id="5EQ-SU-Kuf"/>
                 <constraint firstItem="Uzc-gx-ovX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PMh-RI-3Hq"/>
+                <constraint firstItem="Uzc-gx-ovX" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.7" id="STd-6j-dwW"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fU7-YN-8hj" secondAttribute="bottom" constant="30" id="WX0-cr-g8o"/>
                 <constraint firstItem="Uzc-gx-ovX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fh4-WQ-2Ge"/>
                 <constraint firstItem="fU7-YN-8hj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l2Z-mX-e8A"/>
@@ -55,9 +60,6 @@
             <point key="canvasLocation" x="-186" y="45"/>
         </view>
     </objects>
-    <designables>
-        <designable name="eLo-eR-ofb"/>
-    </designables>
     <resources>
         <image name="Logo" width="127" height="197"/>
         <systemColor name="systemBackgroundColor">

@@ -39,11 +39,15 @@ class AgreementVC: UIViewController {
     fileprivate func setupUI(){
         viewMain.layer.cornerRadius = 2
         viewMain.clipsToBounds = true
+        if lang == "en"{
+            lblCR.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+        }else{
+            lblCR.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+        }
         header.setData(accountStrings.sign_welcome.localizedValue)
         
         lblTitle.text = accountStrings.agreement_reseller.localizedValue
         btnAgree.setTitle(accountStrings.agreement_agree.localizedValue, for: .normal)
-        lblCR.text = strings.CRText.localizedValue
         
         lblTermHeader.text = accountStrings.more_terms_of_use.localizedValue
         lblTerm.text = accountStrings.agreement_terms_of_use.localizedValue

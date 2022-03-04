@@ -8,6 +8,7 @@ PODS:
   - Endless (0.0.1)
   - IQKeyboardManagerSwift (6.5.6)
   - JTAppleCalendar (7.1.7)
+  - Kingfisher (7.1.1)
   - LiveChat (2.0.24)
   - lottie-ios (3.2.3)
   - SwiftKeychainWrapper (4.0.1)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Endless
   - IQKeyboardManagerSwift
   - JTAppleCalendar
+  - Kingfisher
   - LiveChat (~> 2.0.24)
   - lottie-ios
   - SwiftKeychainWrapper
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Endless
     - IQKeyboardManagerSwift
     - JTAppleCalendar
+    - Kingfisher
     - LiveChat
     - lottie-ios
     - SwiftKeychainWrapper
@@ -45,11 +48,12 @@ SPEC CHECKSUMS:
   Endless: 7347390291c9b03405e976f6f69be32eee0f629d
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   LiveChat: 63028afb59c57ae6771d59838b1097def6e560ed
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: 05d74318bb4e49afc4d2197becfbb646f8f0234e
+PODFILE CHECKSUM: 1d71bb1e2bf0a3158edcea995b5d24d7e7a2d30a
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.2

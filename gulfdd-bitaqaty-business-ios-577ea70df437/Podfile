@@ -16,4 +16,6 @@ pod 'JTAppleCalendar'
 pod 'lottie-ios'
 pod 'Endless'
 pod 'LiveChat', '~> 2.0.24'
+pod 'Kingfisher'
+
 end

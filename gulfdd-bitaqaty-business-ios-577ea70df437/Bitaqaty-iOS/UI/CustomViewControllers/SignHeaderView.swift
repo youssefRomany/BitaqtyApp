@@ -13,6 +13,8 @@ class SignHeaderView: UIView{
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubTitle: UILabel!
     @IBOutlet weak var btnClose: UIButton!
+    @IBOutlet weak var splashLogo: UIImageView!
+
     var close: (() -> ())? = nil
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,11 +41,18 @@ class SignHeaderView: UIView{
         nibView.frame = bounds
         nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(nibView)
+        
     }
     
     
     func setData(_ header: String,_ title: String = "",_ subTitle: String = "",close: (() -> ())? = nil){
-        lblHeader.text = header
+        setImageView(forImageView: splashLogo, andURL: WhiteLabelLocal.shared.getLocalGoldRateList()?.logoPath ?? "", andPlaceHolderImage: "")
+
+        if lang == "en"{
+            lblHeader.text = "Welcome\nto \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "")"
+        }else{
+            lblHeader.text = "مرحبا بك\nفي \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameAr ?? "")"
+        }
         if (title.isEmpty){
             lblTitle.isHidden = true
         }else{

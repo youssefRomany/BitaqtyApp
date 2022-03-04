@@ -23,7 +23,7 @@ enum AUTH_API{
     static let remaining_trials = "auth/sms-verification-remaining-trials"
     static let accept_agreement = "auth/accept-agreement"
     static let profile = "auth/get-reseller"
-    static let whiteLabel = "auth//auth/white-label-system-setting"
+    static let whiteLabel = "auth/white-label-system-setting"
 }
 
 enum RESELLER_HOME_APIs{

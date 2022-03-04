@@ -62,7 +62,12 @@ class LoginVC: UIViewController {
 extension LoginVC{
     fileprivate func setupUI() {
         stackLang.semanticContentAttribute = .forceLeftToRight
-        lblCopyRight.text = strings.CRText.localizedValue
+        if lang == "en"{
+            lblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+        }else{
+            lblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+
+        }
         headerView.setData(accountStrings.sign_welcome.localizedValue,accountStrings.sign_in.localizedValue , accountStrings.sign_instruction.localizedValue)
         txtUserNameView.setData(accountStrings.sign_username.localizedValue, accountStrings.sign_username.localizedValue, 0, .emailAddress, .next)
         

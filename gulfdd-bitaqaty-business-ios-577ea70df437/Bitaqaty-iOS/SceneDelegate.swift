@@ -11,14 +11,15 @@ import SwiftKeychainWrapper
 import IQKeyboardManagerSwift
 import LiveChat
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate  {
     
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         LiveChat.licenseId = "8646654"
         LiveChat.windowScene = (scene as? UIWindowScene)
-        
+        AccountServices.requestWhiteLAbel(self)
+
         if !UserDefaults.standard.bool(forKey: UserDefaults.Key.installedBefore){
             KeychainWrapper.standard.removeObject(forKey: UserDefaults.Key.USER_NAME);
             DataService.deleteUserData()
@@ -157,3 +158,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
+
+extension SceneDelegate: OnFinishDelegate {
+    func onSuccess(_ model: WhiteLabelResp) {
+        print("rrrrrrr", model)
+    }
+
+}

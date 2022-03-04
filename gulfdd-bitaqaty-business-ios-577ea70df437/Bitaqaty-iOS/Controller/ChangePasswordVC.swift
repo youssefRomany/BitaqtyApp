@@ -62,6 +62,12 @@ class ChangePasswordVC: UIViewController {
 
 extension ChangePasswordVC{
     fileprivate func setupUI(){
+        if lang == "en"{
+            lblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+        }else{
+            lblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+        }
+
         txtCurrentPasswordView.txt.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         txtNewPasswordView.txt.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         txtConfNewPasswordView.txt.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
@@ -94,7 +100,6 @@ extension ChangePasswordVC{
             txtCurrentPasswordView.hidePassword()
         }
         btnChange.setTitle(accountStrings.pass_change.localizedValue, for: .normal)
-        lblCopyRight.text = strings.CRText.localizedValue
         txtNewPasswordView.setData(accountStrings.pass_new_pass.localizedValue, accountStrings.sign_dots.localizedValue, 1, .default, .next)
         txtNewPasswordView.hidePassword()
         txtConfNewPasswordView.setData(accountStrings.pass_conf_new_pass.localizedValue, accountStrings.sign_dots.localizedValue, 2, .default, .done)

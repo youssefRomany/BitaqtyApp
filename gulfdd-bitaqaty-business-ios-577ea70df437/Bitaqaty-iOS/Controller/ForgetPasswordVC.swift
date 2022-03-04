@@ -36,8 +36,12 @@ extension ForgetPasswordVC{
         }
         txtEmailView.setData(accountStrings.reset_email.localizedValue, accountStrings.reset_email.localizedValue, 0, .emailAddress, .done)
         btnSend.setTitle(accountStrings.send.localizedValue, for: .normal)
-        LblCopyRight.text = strings.CRText.localizedValue
         txtEmailView.txt.delegate = self
+        if lang == "en"{
+            LblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+        }else{
+            LblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+        }
     }
     
     fileprivate func resendCode(){

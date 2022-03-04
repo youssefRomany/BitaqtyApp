@@ -26,6 +26,7 @@ typealias DownloadComplete = () -> ();
 var MORE_PERMISSIONS: [Int] = []
 let PAGE_SIZE: Int = 10
 var SETTINGS: [SystemSettings] = []
+var whiteLabelGlobal: WhiteLabelResp?
 // FONT NAME
 let enBold = "Roboto-Bold";
 let enSemiBold = "Roboto-Medium";
