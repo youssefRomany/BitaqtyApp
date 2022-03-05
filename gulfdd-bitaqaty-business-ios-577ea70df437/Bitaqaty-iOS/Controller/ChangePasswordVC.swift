@@ -63,9 +63,9 @@ class ChangePasswordVC: UIViewController {
 extension ChangePasswordVC{
     fileprivate func setupUI(){
         if lang == "en"{
-            lblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+            lblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") business. All rights reserved."
         }else{
-            lblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+            lblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
         }
 
         txtCurrentPasswordView.txt.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)

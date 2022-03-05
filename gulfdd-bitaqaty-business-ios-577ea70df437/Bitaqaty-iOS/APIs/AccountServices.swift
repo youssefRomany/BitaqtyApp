@@ -82,11 +82,7 @@ class AccountServices {
                                 let resp = try JSONDecoder().decode(WhiteLabelResp.self, from: result)
                                 if let _ = resp.id{
                                     print(resp, "hhhhhhhhhhhh")
-                                    WhiteLabelLocal.shared.appendValueToLocalGoldRateList(whiteLabel: resp)
-                                    
-                                 let ppp =  WhiteLabelLocal.shared.getLocalGoldRateList()
-                                    whiteLabelGlobal = ppp
-                                    print(ppp?.name, "")
+                                    WhiteLabelLocal.shared.appendValueToLocalWhiteLabelList(whiteLabel: resp)
                                     delegate.onSuccess()
                                 }else if let errors = resp.errors{
                                     print(resp, "hhhhhhhhhhhh errrr")

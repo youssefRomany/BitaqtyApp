@@ -76,6 +76,8 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("dwehdjwedhwejdhwjedjewdw reseller")
+
         self.view.backgroundColor = .bgColor
         NotificationCenter.default.addObserver(self, selector: #selector(reloadBankRequests), name: .reloadHomeBankRequests, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadHomeRecharge), name: .reloadHomeRecharge, object: nil)

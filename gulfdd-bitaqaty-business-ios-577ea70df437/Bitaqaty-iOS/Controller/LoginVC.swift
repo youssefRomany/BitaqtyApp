@@ -63,9 +63,9 @@ extension LoginVC{
     fileprivate func setupUI() {
         stackLang.semanticContentAttribute = .forceLeftToRight
         if lang == "en"{
-            lblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+            lblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") business. All rights reserved."
         }else{
-            lblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+            lblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
 
         }
         headerView.setData(accountStrings.sign_welcome.localizedValue,accountStrings.sign_in.localizedValue , accountStrings.sign_instruction.localizedValue)

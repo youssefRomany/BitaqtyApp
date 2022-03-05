@@ -109,6 +109,12 @@ class SearchVC: UIViewController {
     func setupUI(){
         setupTableView()
         self.lblFirst.text = productListStrings.search_desc.localizedValue
+        if lang == "en"{
+            lblFirst.text = "Enter a few words to search on \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "")"
+        }else{
+            lblFirst.text = "ادخل بعض الكلمات للبحث في \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameAr ?? "")"
+
+        }
         self.lblSearchResult.text = productListStrings.search_results_for.localizedValue
         self.viewFirst.isHidden = false
         self.viewResult.isHidden = true

@@ -26,6 +26,7 @@ class CloseHeaderView: UIView {
     // MARK: setup view
     
     private func loadViewFromNib() -> UIView {
+
         let viewBundle = Bundle(for: type(of: self))
         let view = viewBundle.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?[0]
         self.tag = 0;
@@ -39,8 +40,11 @@ class CloseHeaderView: UIView {
         addSubview(nibView)
     }
     func showLogo(){
+        
         self.lblTitle.isHidden = true
         self.imgLogo.isHidden = false
+        setImageView(forImageView: imgLogo, andURL: WhiteLabelLocal.shared.getLocalWhiteLabelList()?.logoPath ?? "", andPlaceHolderImage: "")
+
         self.btnClose.setImage(UIImage(named: lang == "en" ? "ic_back_left" : "ic_back"), for: .normal)
         self.btnClose.imageView?.tintColor = .textColor
     }

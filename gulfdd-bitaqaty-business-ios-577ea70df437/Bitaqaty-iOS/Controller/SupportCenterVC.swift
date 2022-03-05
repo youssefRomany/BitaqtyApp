@@ -57,7 +57,8 @@ class SupportCenterVC: UIViewController {
     @IBOutlet weak var lblWhatsApp: UILabel!
     @IBOutlet weak var lblChat: UILabel!
     @IBOutlet weak var constTableHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var chatStackView: UIStackView!
+
     var tickets = [Ticket]()
     var cellHeight: CGFloat = UIDevice.isPad ? 50 : 40
     var selectedIndex = 0
@@ -164,6 +165,7 @@ class SupportCenterVC: UIViewController {
 extension SupportCenterVC{
     
     func setupUI(){
+        chatStackView.isHidden = !(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.showChat ?? false)
         txtEmail.delegate = self
         txtDetails.delegate = self
         self.tableView.isHidden = true

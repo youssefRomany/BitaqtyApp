@@ -236,6 +236,11 @@ class TransactionLogCell: UITableViewCell {
                 lblRetailPriceTitle.text = TransactionStrings.SubAccountBrice.localizedValue
                 lblRetailPriceAfterVatTitle.text = TransactionStrings.SubAccountBriceAfterVat.localizedValue
                 lblProfitTitle.text = TransactionStrings.profit.localizedValue
+                
+                lblBalanceValue.text = "\(log.subTransactionPrice ?? 0)"
+                lblRetailPriceValue.text = "\(log.subTransactionBalanceAfter ?? 0)"
+                lblRetailPriceAfterVatValue.text = "\(log.subTransactionBalanceAfter ?? 0)"
+
                 stackRetailPrice.isHidden = false
                 stackRetailPriceAfterVat.isHidden = false
                 stackVat.isHidden = false

@@ -27,7 +27,7 @@ class GeneralAPIs{
                                     let _ = print("Noura \(data.count)")
                                     if data.count > 0{
                                         SETTINGS = data
-                                        let _ = print("Noura \(SETTINGS.count)")
+                                        let _ = print("joooooooooooo \(SETTINGS)")
                                         completed()
                                     }else{
                                         failed(ErrorMessage(errorMsgs.no_data.localizedValue));

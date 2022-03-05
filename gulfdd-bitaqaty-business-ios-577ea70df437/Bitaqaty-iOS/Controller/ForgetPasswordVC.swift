@@ -38,9 +38,9 @@ extension ForgetPasswordVC{
         btnSend.setTitle(accountStrings.send.localizedValue, for: .normal)
         txtEmailView.txt.delegate = self
         if lang == "en"{
-            LblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+            LblCopyRight.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") business. All rights reserved."
         }else{
-            LblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+            LblCopyRight.text = "© 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
         }
     }
     

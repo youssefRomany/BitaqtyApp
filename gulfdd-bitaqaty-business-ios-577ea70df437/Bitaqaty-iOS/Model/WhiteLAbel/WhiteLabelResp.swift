@@ -60,7 +60,7 @@ class WhiteLabelLocal{
     
     static let shared = WhiteLabelLocal()
     
-    func appendValueToLocalGoldRateList(whiteLabel: WhiteLabelResp) {
+    func appendValueToLocalWhiteLabelList(whiteLabel: WhiteLabelResp) {
             do {
                 let encodedData = try PropertyListEncoder().encode(whiteLabel)
                 sharedPref.shared.setSharedValue("whiteLabel", value: encodedData)
@@ -69,7 +69,7 @@ class WhiteLabelLocal{
             }
         }
     
-    func getLocalGoldRateList() -> WhiteLabelResp? {
+    func getLocalWhiteLabelList() -> WhiteLabelResp? {
         if let decoded = sharedPref.shared.getSharedValue(forKey: "whiteLabel") as? Data {
                 do {
                     let goldRateList = try PropertyListDecoder().decode(WhiteLabelResp.self, from: decoded)

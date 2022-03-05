@@ -22,12 +22,12 @@ class SplashView: UIViewController{
         self.setAnimationView()
         lblCR.text = strings.CRText.localizedValue
         if lang == "en"{
-            lblCR.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") business. All rights reserved."
+            lblCR.text = "Copyright © 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") business. All rights reserved."
         }else{
-            lblCR.text = "© 2020 \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
+            lblCR.text = "© 2020 \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "") جميع الحقوق محفوظة لصالح"
         }
         loadSettings()
-        setImageView(forImageView: splashLogo, andURL: WhiteLabelLocal.shared.getLocalGoldRateList()?.logoPath ?? "", andPlaceHolderImage: "")
+        setImageView(forImageView: splashLogo, andURL: WhiteLabelLocal.shared.getLocalWhiteLabelList()?.logoPath ?? "", andPlaceHolderImage: "")
     }
     func loadSettings(){        
         if let _ = DataService.getUserData(){

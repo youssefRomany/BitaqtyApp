@@ -13,6 +13,7 @@ class MoreExtraHeaderView: UIView {
     @IBOutlet weak var imgHeader: UIImageView!
     var close: (()->())?
     
+    @IBOutlet weak var logoImageView: UIImageView!
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonSetup()
@@ -28,6 +29,7 @@ class MoreExtraHeaderView: UIView {
     private func loadViewFromNib() -> UIView {
         let viewBundle = Bundle(for: type(of: self))
         let view = viewBundle.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?[0]
+        
         self.tag = 0;
         return view as! UIView
     }
@@ -35,6 +37,8 @@ class MoreExtraHeaderView: UIView {
     private func commonSetup() {
         let nibView = loadViewFromNib()
         nibView.frame = bounds
+        setImageView(forImageView: logoImageView, andURL: WhiteLabelLocal.shared.getLocalWhiteLabelList()?.logoPath ?? "", andPlaceHolderImage: "")
+
         nibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(nibView)
         btnBack.titleLabel?.font = UIFont(name: FONT_ICON, size: 20);

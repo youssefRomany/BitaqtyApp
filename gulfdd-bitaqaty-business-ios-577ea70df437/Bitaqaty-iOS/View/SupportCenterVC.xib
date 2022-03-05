@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SupportCenterVC" customModule="Bitaqaty_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="btnSend" destination="o6L-9n-PSg" id="3zg-cv-qfn"/>
+                <outlet property="chatStackView" destination="a2h-wb-vfy" id="b0x-Ms-QD4"/>
                 <outlet property="constTableHeight" destination="XkX-ZW-aRJ" id="5nQ-9Z-Ck6"/>
                 <outlet property="icHowTo1" destination="SHc-IL-5jh" id="jmX-rt-7Yu"/>
                 <outlet property="icHowTo2" destination="mfe-ye-iQ2" id="p4u-NE-ZoB"/>

@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 import XLPagerTabStrip
 
+var addRecharge = false
+
 class MainVC: ButtonBarPagerTabStripViewController {
     @IBOutlet open var loaderView: ErrorView!
     
@@ -34,6 +36,7 @@ class MainVC: ButtonBarPagerTabStripViewController {
     var dateFromD = ""
     var dateToD = ""
     var loadProfile = false
+    var showww = ""
     override func viewDidLoad() {
         user = DataService.getUserData()
         let permissions = user.reseller?.PermissionsArr.filter{$0.Enabled}
@@ -50,11 +53,21 @@ class MainVC: ButtonBarPagerTabStripViewController {
             setupPager()
         }
         loadSettings()
+        showww = SETTINGS.first{$0.propertyKey == SETTING_KEYS.IOS_ENABLE_RECHARGE.rawValue}?.PropertyValue ?? "FALSE"
+
         super.viewDidLoad()
         self.setPagerOrientation()
         self.setupViews()
         addRightButton()
-        navigationItem.titleView = UIImageView(image: UIImage(named: "bar_logo"))
+        let imageview = UIImageView()
+        setImageView(forImageView: imageview, andURL: WhiteLabelLocal.shared.getLocalWhiteLabelList()?.logoPath ?? "", andPlaceHolderImage: "")
+
+        imageview.frame = CGRect(x: 0, y: 0, width: 40, height: 60)
+        imageview.contentMode = .scaleAspectFit
+        imageview.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        imageview.heightAnchor.constraint(equalToConstant: 60).isActive = true
+
+        navigationItem.titleView = imageview
         NotificationCenter.default.addObserver(self, selector: #selector(setButton), name: .tapSelected, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(rechargeTapped(_:)), name: .rechargeSelected, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadBalance), name: .reloadBalance, object: nil)
@@ -86,15 +99,18 @@ class MainVC: ButtonBarPagerTabStripViewController {
     func loadSettings(){
         if SETTINGS.count == 0{
             GeneralAPIs.getSettings {
+                print("chechhhhhhh \(SETTINGS)")
             } _: { (err) in
             }
+        }else{
+            print("hhhhhhh \(SETTINGS)")
         }
     }
     
     func setupViews(){
         self.viewRecharge.delegate = self
         if user.accountType != Roles.SUB_ACCOUNT.rawValue{
-            setCenterBtn()
+//            setCenterBtn()
         }
     }
     func setCenterBtn(){
@@ -311,7 +327,18 @@ class MainVC: ButtonBarPagerTabStripViewController {
             child_2.itemInfo.title = strings.TransactionLog.localizedValue
             child_3.itemInfo.title = strings.ProductList.localizedValue
             child_4.itemInfo.title = strings.More.localizedValue
-            return [child_1, child_2, child_0, child_3, child_4]
+            if showww == "TRUE"{
+                setCenterBtn()
+
+                return [child_1, child_2, child_0, child_3, child_4]
+
+            }else{
+//                btnCenter.isHidden = true
+//                lblCenter.isHidden = true
+//                imageCenter.isHidden = true
+                return [child_1, child_2, child_3, child_4]
+
+            }
         }
     }
     // MARK: - PagerSetup ends
@@ -390,6 +417,7 @@ class MainVC: ButtonBarPagerTabStripViewController {
                 child_0.itemInfo.title = strings.Recharge.localizedValue
                 if (subAccountTabs.count >= 4) {
                     //  setCenterBtn()
+                    
                     subAccountTabs.insert(SUBACCOUNT_TABS.RECHARGE.rawValue, at: 2)
                     VCs.insert(child_0, at: 2)
                 } else {
@@ -451,6 +479,23 @@ class MainVC: ButtonBarPagerTabStripViewController {
                 VCs.append(child_4)
             }
         }
+        
+
+        
+        
+        for (index,item) in subAccountTabs.enumerated(){
+            if item == 3 {
+                if showww != "TRUE"{
+                    subAccountTabs.remove(at: index)
+                    VCs.remove(at: index)
+                    break
+
+                }
+            }
+        }
+        
+        
+ 
         let _ = print("Noura subAccount \(subAccountTabs)")
         let _ = print("Noura MORE_PERMISSIONS \(MORE_PERMISSIONS)")
         if VCs.count > 0{

@@ -46,12 +46,12 @@ class SignHeaderView: UIView{
     
     
     func setData(_ header: String,_ title: String = "",_ subTitle: String = "",close: (() -> ())? = nil){
-        setImageView(forImageView: splashLogo, andURL: WhiteLabelLocal.shared.getLocalGoldRateList()?.logoPath ?? "", andPlaceHolderImage: "")
+        setImageView(forImageView: splashLogo, andURL: WhiteLabelLocal.shared.getLocalWhiteLabelList()?.logoPath ?? "", andPlaceHolderImage: "")
 
         if lang == "en"{
-            lblHeader.text = "Welcome\nto \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameEn ?? "")"
+            lblHeader.text = "Welcome\nto \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameEn ?? "")"
         }else{
-            lblHeader.text = "مرحبا بك\nفي \(WhiteLabelLocal.shared.getLocalGoldRateList()?.nameAr ?? "")"
+            lblHeader.text = "مرحبا بك\nفي \(WhiteLabelLocal.shared.getLocalWhiteLabelList()?.nameAr ?? "")"
         }
         if (title.isEmpty){
             lblTitle.isHidden = true
