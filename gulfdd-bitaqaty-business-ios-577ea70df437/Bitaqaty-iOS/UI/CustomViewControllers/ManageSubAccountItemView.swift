@@ -16,6 +16,7 @@ class ManageSubAccountItemView: UIView {
     
     var reset: (()->())? = nil
     
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonSetup()
@@ -25,6 +26,7 @@ class ManageSubAccountItemView: UIView {
         super.init(frame: frame)
         commonSetup()
     }
+    
     
     // MARK: setup view
     

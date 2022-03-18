@@ -94,9 +94,16 @@ class ManageSubAccountDetailsVC: UIViewController {
     var purchaseLimit: Double = 0
     var currentRemainingValue: Double = 0
     
+    var isAddSubAccount = false
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        subAccount = DataService.copyObject(user: subAccountData)
+        if isAddSubAccount{
+            
+        }else{
+            subAccount = DataService.copyObject(user: subAccountData)
+        }
 //        let _ = print("Noura1= \(subAccount?.Per)")
 //        let _ = print("Noura1= \(subAccountData?.subAccountDetailsDTO?.SubResellerType)")
 //

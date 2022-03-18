@@ -25,6 +25,7 @@ class ManageSubAccountListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var addSubAccountView: UIView!
     //let refreshControl = UIRefreshControl()
     
     private var pageIndex = 1
@@ -65,6 +66,7 @@ class ManageSubAccountListVC: UIViewController {
             }
         }
     }
+    
     func setupUI(){
         self.viewHeader.showX(accountStrings.more_manage_sub_account.localizedValue){
             self.dismiss(animated: true, completion: nil)
@@ -75,9 +77,11 @@ class ManageSubAccountListVC: UIViewController {
         self.viewShowMore.isHidden = true
         setupTableView()
         
+        addSubAccountView.round(to: 5)
         viewSearchContainer.round(to: 5)
         viewSearch.round(to: 5)
         btnExport.round(to: 5)
+        addSubAccountView.drawBorder(.blue, 5, 1)
         btnShowMore.drawBorder(.accentColor, 5, 1)
         btnExport.setTitle(manageStrings.export.localizedValue, for: .normal)
         btnShowMore.setTitle(manageStrings.show_more.localizedValue, for: .normal)
@@ -109,6 +113,14 @@ class ManageSubAccountListVC: UIViewController {
     //        self.pageIndex = 1
     //        self.loadData()
     //    }
+    @IBAction func addSubAccountAction(_ sender: Any) {
+        let vc = ManageSubAccountDetailsVC(nibName: "ManageSubAccountDetailsVC", bundle: nil)
+        vc.isAddSubAccount = true
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
+
+    }
+    
     @IBAction func exportClicked(_ sender: Any) {
         self.exportData()
     }

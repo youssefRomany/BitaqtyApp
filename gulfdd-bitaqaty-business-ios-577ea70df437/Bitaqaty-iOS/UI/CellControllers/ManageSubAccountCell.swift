@@ -20,7 +20,9 @@ class ManageSubAccountCell: UITableViewCell {
     @IBOutlet weak var lblEnabledValue: UILabel!
     @IBOutlet weak var btnTransLog: UIButton!
     @IBOutlet weak var btnManage: UIButton!
+    
     weak var delegate: ManageSubAccountDelegate? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
