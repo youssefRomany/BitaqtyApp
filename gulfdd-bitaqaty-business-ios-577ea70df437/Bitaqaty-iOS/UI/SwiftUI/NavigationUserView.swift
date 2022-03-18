@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct NavigationUserView: View {
     @State var user: User
     @State var isBalanceVisible = false
