@@ -25,10 +25,12 @@ enum manageStrings: String{
     case renewal_limit_to_default = "Renewal Limit to Default"
     
     case enable_account = "Enable Account"
+    case userName = "User Name"
+    case confirmUserName = "Confirm User Name"
     case fullName = "Full Name"
     case mobileNumber = "Mobile Number"
     case description = "Description"
-    case accessType = "Access Type"
+    case accessType = "Access Type "
     case purchase = "Purchase"
     case canPurchase = "This account can purchase any product"
     case amountLimited = "Amount will be limited for the account"
@@ -78,6 +80,10 @@ enum manageStrings: String{
     case err_enterBalance = "You need to enter purchase limit"
     case saving = "Saving..."
     case period = "Period"
+    case SelectAuthenticationType = "Select Authentication Type"
+    case googleWeb = "Google authenticator"
+    case mobile = "Send sms verification code via mobile number"
+    case resetAccessData = "Reset Access Data"
 
     
     var localizedValue: String{
@@ -164,22 +170,22 @@ enum manageStrings: String{
             return self.rawValue;
         case .fullName:
             if (lang == "ar"){
-                return "الاسم بالكامل"
+                return "الاسم بالكامل "
             }
             return self.rawValue;
         case .mobileNumber:
             if (lang == "ar"){
-                return "رقم الجوال"
+                return "رقم الجوال "
             }
             return self.rawValue;
         case .description:
             if (lang == "ar"){
-                return "الوصف"
+                return "الوصف "
             }
             return self.rawValue;
         case .accessType:
             if (lang == "ar"){
-                return "نوع الدخول"
+                return "نوع الدخول "
             }
             return self.rawValue;
         case .purchase:
@@ -421,6 +427,37 @@ enum manageStrings: String{
         case .period:
             if (lang == "ar"){
                 return "دوري "
+            }
+            return self.rawValue;
+        case .userName:
+            if (lang == "ar"){
+                return "اسم المستخدم "
+            }
+            return self.rawValue;
+        case .confirmUserName:
+            if (lang == "ar"){
+                return "تأكيد اسم المستخدم "
+            }
+            return self.rawValue;
+        case .SelectAuthenticationType:
+            if (lang == "ar"){
+                return "اختر كيفية التحقق من الحساب"
+            }
+            return self.rawValue;
+
+        case .googleWeb:
+            if (lang == "ar"){
+                return "عملية التحقق الثنائية"
+            }
+            return self.rawValue;
+        case .mobile:
+            if (lang == "ar"){
+                return "ارسال كود التحقيق لرقم الجوال"
+            }
+            return self.rawValue;
+        case .resetAccessData:
+            if (lang == "ar"){
+                return "إعادة تعيين بيانات الوصول"
             }
             return self.rawValue;
         }

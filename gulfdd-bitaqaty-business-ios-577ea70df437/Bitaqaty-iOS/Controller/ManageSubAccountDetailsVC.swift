@@ -37,10 +37,12 @@ class ManageSubAccountDetailsVC: UIViewController {
     @IBOutlet weak var viewBalance: UIView!
     @IBOutlet weak var viewPurchaseContainer: UIView!
     
-    @IBOutlet weak var viewFullName: ManageSubAccountItemView!
-    @IBOutlet weak var viewMobileNumber: ManageSubAccountItemView!
-    @IBOutlet weak var viewDesc: ManageSubAccountItemView!
-    @IBOutlet weak var viewAccessType: ManageSubAccountItemView!
+    @IBOutlet weak var userName: ManageEditSubAccountItemView!
+    @IBOutlet weak var confirmUserName: ManageEditSubAccountItemView!
+    @IBOutlet weak var viewFullName: ManageEditSubAccountItemView!
+    @IBOutlet weak var viewMobileNumber: ManageEditSubAccountItemView!
+    @IBOutlet weak var viewDesc: ManageEditSubAccountItemView!
+    @IBOutlet weak var viewAccessType: ManageEditSubAccountItemView!
     @IBOutlet weak var viewRemaining: ManageSubAccountItemView!
     
     @IBOutlet weak var viewRechargeLog: ManageSubRadioView!
@@ -87,15 +89,25 @@ class ManageSubAccountDetailsVC: UIViewController {
     @IBOutlet weak var lblDuration: UILabel!
     @IBOutlet weak var lblPeriodTitle: UILabel!
 
+    @IBOutlet weak var accessTypeStackView: UIStackView!
+    
+    @IBOutlet weak var smsAccessView: ManageSubRadioView!
+    @IBOutlet weak var googleAccessView: ManageSubRadioView!
+    @IBOutlet weak var selectAccessLabel: LblSmallRegularFont!
+    
+    @IBOutlet weak var resetAccessDataView: UIView!
+    @IBOutlet weak var resetAccessDataLbl: LblMediumRegularFont!
+    
     private var subAccount: UserInfo!
     var subAccountData: UserInfo!
 
     var roundedRadius: CGFloat = 8
     var purchaseLimit: Double = 0
     var currentRemainingValue: Double = 0
+    var accessTypeArr = [manageStrings.web.localizedValue, manageStrings.application.localizedValue]
     
     var isAddSubAccount = false
-
+    var selectedAccessType = 1 // 1 to web or 2 to application
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,6 +143,7 @@ class ManageSubAccountDetailsVC: UIViewController {
         self.viewProductListTitle.switchView.semanticContentAttribute = lang == "en" ? .forceLeftToRight : .forceRightToLeft
         self.viewReportsTitle.switchView.semanticContentAttribute = lang == "en" ? .forceLeftToRight : .forceRightToLeft
         self.viewSupportCenterTitle.switchView.semanticContentAttribute = lang == "en" ? .forceLeftToRight : .forceRightToLeft
+        self.resetAccessDataLbl.text = manageStrings.resetAccessData.localizedValue
         
         self.viewHeader.showX(manageStrings.manage_account.localizedValue){
             self.dismiss(animated: true, completion: nil)
@@ -160,6 +173,10 @@ class ManageSubAccountDetailsVC: UIViewController {
         viewDuration.isUserInteractionEnabled = true
     }
 
+    
+    @IBAction func resetAccessDataAction(_ sender: Any) {
+    }
+    
     @IBAction func onSaveClicked(_ sender: Any) {
         
         let permissionPurchase = subAccount.PermissionsArr.filter{$0.id == PERMISSIONS_IDS.PURCHASE.rawValue}[0]
@@ -219,14 +236,84 @@ class ManageSubAccountDetailsVC: UIViewController {
         
     }
     func setupAccountUI(){
+        selectAccessLabel.text = manageStrings.SelectAuthenticationType.localizedValue
+        googleAccessView.lblTitle.text = manageStrings.googleWeb.localizedValue
+        smsAccessView.lblTitle.text = manageStrings.mobile.localizedValue
         viewAccountContainer.setupShadowsWithRound(roundedRadius)
         viewAccountTitle.lblTitle.text = manageStrings.enable_account.localizedValue
-        viewFullName.lblTitle.text =  manageStrings.fullName.localizedValue
-        viewMobileNumber.lblTitle.text =  manageStrings.mobileNumber.localizedValue
-        viewDesc.lblTitle.text =  manageStrings.description.localizedValue
-        viewAccessType.lblTitle.text =  manageStrings.accessType.localizedValue
-        viewAccessType.viewDivider.isHidden = true
+        userName.lblTitle.text = manageStrings.userName.localizedValue+"*"
+        userName.inputTF.placeholder = manageStrings.userName.localizedValue
+        confirmUserName.lblTitle.text = manageStrings.confirmUserName.localizedValue+"*"
+        confirmUserName.inputTF.placeholder = manageStrings.confirmUserName.localizedValue
+        viewFullName.lblTitle.text =  manageStrings.fullName.localizedValue+"*"
+        viewMobileNumber.lblTitle.text =  manageStrings.mobileNumber.localizedValue+"*"
+        viewDesc.lblTitle.text =  manageStrings.description.localizedValue+"*"
+        viewAccessType.lblTitle.text =  manageStrings.accessType.localizedValue+"*"
+        viewFullName.inputTF.placeholder =  manageStrings.fullName.localizedValue
+        viewMobileNumber.inputTF.placeholder =  manageStrings.mobileNumber.localizedValue
+        viewMobileNumber.inputTF.keyboardType = .asciiCapableNumberPad
+        viewDesc.inputTF.placeholder =  manageStrings.description.localizedValue
+        viewAccessType.inputTF.placeholder =  manageStrings.accessType.localizedValue
+        viewAccessType.arrowView.isHidden = false
+        viewAccessType.inputTF.isEnabled = false
+        viewAccessType.viewDropDown = { [weak self] in
+            print("show dropn down")
+            self?.showAccessTypDropDown()
+        }
         viewAccountTitle.switchView.addTarget(self, action: #selector(switchAccountEnabledValueDidChange(_:)), for: .valueChanged)
+        
+        smsAccessView.btnCheck.addTarget(self, action: #selector(smsAction), for: .touchUpInside)
+        googleAccessView.btnCheck.addTarget(self, action: #selector(googleAccessAction), for: .touchUpInside)
+
+    }
+    
+    
+    
+    @objc func smsAction(){
+        if smsAccessView.tag == 1{
+            return
+        }
+        smsAccessView.tag = smsAccessView.tag == 0 ? 1 : 0
+        let isEnabled = smsAccessView.tag == 1
+        googleAccessView.tag = isEnabled ? 0 : 1
+        
+        
+        smsAccessView.setupImage(type: ImageType.Radio.rawValue, isEnabled: isEnabled)
+        googleAccessView.setupImage(type: ImageType.Radio.rawValue, isEnabled: !isEnabled)
+        
+    }
+    
+
+    @objc func googleAccessAction(){
+        if googleAccessView.tag == 1{
+            return
+        }
+        googleAccessView.tag = googleAccessView.tag == 0 ? 1 : 0
+        let isEnabled = googleAccessView.tag == 1
+        smsAccessView.tag = isEnabled ? 0 : 1
+    
+        
+        smsAccessView.setupImage(type: ImageType.Radio.rawValue, isEnabled: !isEnabled)
+        googleAccessView.setupImage(type: ImageType.Radio.rawValue, isEnabled: isEnabled)
+       
+    }
+    
+    
+    func showAccessTypDropDown() {
+        let popOver  = PopOverVC(nibName: "PopOverVC", bundle: nil);
+        popOver.arr = accessTypeArr
+        let height: CGFloat = UIDevice.isPad ? 50 : 40;
+        popOver.preferredContentSize = CGSize(width: viewAccessType.bounds.width, height: height * CGFloat(accessTypeArr.count))
+        popOver.delegate = self;
+        popOver.modalPresentationStyle = .popover;
+        let popoverMenuViewController = popOver.popoverPresentationController
+        popoverMenuViewController?.permittedArrowDirections = .up
+        popoverMenuViewController?.delegate = self;
+        popoverMenuViewController?.sourceView = viewAccessType
+        popoverMenuViewController?.sourceRect = CGRect(x: viewAccessType.bounds.width / 2,y:  viewAccessType.bounds.height,width: 1,height: 1);
+        DispatchQueue.main.async {
+            self.present(popOver,animated: true,completion: nil);
+        }
     }
     
     func setupPurchaseUI(){
@@ -517,11 +604,11 @@ class ManageSubAccountDetailsVC: UIViewController {
     func setupAccountDetailsData(){
         self.viewAccountTitle.switchView.isOn = !subAccount!.AccountLocked
         self.lblEmail.text = subAccount.Username.isEmpty ? subAccount.email : subAccount.Username
-        self.viewFullName.lblValue.text = subAccount.fullName
-        self.viewMobileNumber.lblValue.text = subAccount.mobileNumber
-        self.viewDesc.lblValue.text = subAccount.subAccountDetailsDTO != nil ? subAccount.subAccountDetailsDTO!.description : ""
+        self.viewFullName.inputTF.text = subAccount.fullName
+        self.viewMobileNumber.inputTF.text = subAccount.mobileNumber
+        self.viewDesc.inputTF.text = subAccount.subAccountDetailsDTO != nil ? subAccount.subAccountDetailsDTO!.description : ""
         let _ = print("Noura \(ACCESS_TYPE.init(rawValue: subAccount.AccessType)?.title) \(subAccount.AccessType)  000" )
-        self.viewAccessType.lblValue.text = ACCESS_TYPE.init(rawValue: subAccount.AccessType)?.title
+        self.viewAccessType.inputTF.text = ACCESS_TYPE.init(rawValue: subAccount.AccessType)?.title
     }
     
     func setupPurchaseData(){
@@ -557,6 +644,9 @@ class ManageSubAccountDetailsVC: UIViewController {
             self.viewPurchaseTitle.switchView.isOn = false
             stackPurchace.isHidden = true
         }
+        
+        //@Removee
+        viewRemaining.viewReset.isHidden = false
         
     }
     func setupRechargeData(){
@@ -668,6 +758,8 @@ class ManageSubAccountDetailsVC: UIViewController {
         }else{
             viewRemaining.viewReset.isHidden = true
         }
+        //@Removeeee
+        viewRemaining.viewReset.isHidden = false
     }
     
     func setupPeriodicSelected(){
@@ -923,5 +1015,25 @@ extension ManageSubAccountDetailsVC{
             }
         }
 
+    }
+}
+
+
+extension ManageSubAccountDetailsVC: PopOverDelegate{
+    func getDate(_ type: Int, _ date: Date) {
+        
+    }
+    
+    func getPosition(_ type: Int, _ position: Int, _ popType: Int) {
+        if (position != -1){
+            viewAccessType.inputTF.text = accessTypeArr[position]
+            print("ffffffvfvfv", position)
+            if position == 0 {
+                accessTypeStackView.isHidden = false
+            }else{
+                accessTypeStackView.isHidden = true
+            }
+
+        }
     }
 }

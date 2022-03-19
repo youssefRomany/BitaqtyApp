@@ -335,6 +335,8 @@
 		41EF1DAC26959EC800A26963 /* SubAccountDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF1DAB26959EC800A26963 /* SubAccountDetail.swift */; };
 		41F487B82696E71C001948D2 /* SignHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F487B72696E71C001948D2 /* SignHeaderView.xib */; };
 		41F487BB2696E734001948D2 /* SignHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F487BA2696E734001948D2 /* SignHeaderView.swift */; };
+		4890DFF027E530F9005E38D5 /* ManageEditSubAccountItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890DFEF27E530F9005E38D5 /* ManageEditSubAccountItemView.swift */; };
+		4890DFF227E5314D005E38D5 /* ManageEditSubAccountItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4890DFF127E5314D005E38D5 /* ManageEditSubAccountItemView.xib */; };
 		9015A6E3FF5597216AD68CAD /* Pods_Bitaqaty_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E5B1075F3A63C8797DE77F /* Pods_Bitaqaty_iOS.framework */; };
 		FA890B2D27CEBFDB007D13F5 /* WhiteLabelResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA890B2C27CEBFDB007D13F5 /* WhiteLabelResp.swift */; };
 /* End PBXBuildFile section */
@@ -685,6 +687,8 @@
 		41EF1DAB26959EC800A26963 /* SubAccountDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SubAccountDetail.swift; path = "Bitaqaty-iOS/Model/SubAccountDetail.swift"; sourceTree = SOURCE_ROOT; };
 		41F487B72696E71C001948D2 /* SignHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignHeaderView.xib; sourceTree = "<group>"; };
 		41F487BA2696E734001948D2 /* SignHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignHeaderView.swift; sourceTree = "<group>"; };
+		4890DFEF27E530F9005E38D5 /* ManageEditSubAccountItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageEditSubAccountItemView.swift; sourceTree = "<group>"; };
+		4890DFF127E5314D005E38D5 /* ManageEditSubAccountItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageEditSubAccountItemView.xib; sourceTree = "<group>"; };
 		B655DBE41BBD4996F837102C /* Pods-Bitaqaty-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitaqaty-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Bitaqaty-iOS/Pods-Bitaqaty-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C7E5B1075F3A63C8797DE77F /* Pods_Bitaqaty_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitaqaty_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA890B2C27CEBFDB007D13F5 /* WhiteLabelResp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteLabelResp.swift; sourceTree = "<group>"; };
@@ -888,6 +892,7 @@
 		1411DBB12681F3D90018E538 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				4890DFF327E5315F005E38D5 /* ManageEditSubAccountItemView */,
 				148646F526AEC66B007F261A /* CloseHeaderView.xib */,
 				4116B05F270073A700D46F83 /* DatePickerView.xib */,
 				4194CA99270066220044CC9C /* DropDownFilterView.xib */,
@@ -1240,6 +1245,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		4890DFF327E5315F005E38D5 /* ManageEditSubAccountItemView */ = {
+			isa = PBXGroup;
+			children = (
+				4890DFEF27E530F9005E38D5 /* ManageEditSubAccountItemView.swift */,
+				4890DFF127E5314D005E38D5 /* ManageEditSubAccountItemView.xib */,
+			);
+			path = ManageEditSubAccountItemView;
+			sourceTree = "<group>";
+		};
 		676AB4598569F27C79A7F060 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1364,6 +1378,7 @@
 				41CB60BC26D38E7E001E4001 /* BankTransferLogVC.xib in Resources */,
 				41F487B82696E71C001948D2 /* SignHeaderView.xib in Resources */,
 				41A0BBA526EA0BB6003AB99E /* RoundedTextField.xib in Resources */,
+				4890DFF227E5314D005E38D5 /* ManageEditSubAccountItemView.xib in Resources */,
 				4144803126DCDE4100B02A33 /* InstructionCell.xib in Resources */,
 				1416F1B926D25D190079ACC7 /* RechargingLogVC.xib in Resources */,
 				146CFEB626B2C63D004D5687 /* ManageSubAccountPurchaseView.xib in Resources */,
@@ -1695,6 +1710,7 @@
 				146B528126F08EFD00963CC6 /* Product.swift in Sources */,
 				14F039BB26E7C75F0005B902 /* PayPalFooterView.swift in Sources */,
 				412D872B26EA59EA009A7D3D /* CenteredCollectionViewFlowLayout.swift in Sources */,
+				4890DFF027E530F9005E38D5 /* ManageEditSubAccountItemView.swift in Sources */,
 				4194CA94270063BC0044CC9C /* SalesReportAPIs.swift in Sources */,
 				417B58722697469A009B8D08 /* ValidationView.swift in Sources */,
 				4119F03E269B017700E9C400 /* AlertVC.swift in Sources */,

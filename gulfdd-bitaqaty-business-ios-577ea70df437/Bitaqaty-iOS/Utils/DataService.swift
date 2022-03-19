@@ -155,7 +155,7 @@ class DataService {
                 "whitelabel-code": WhiteLabelLocal.shared.getLocalWhiteLabelList()?.code ?? "",
                 "locale": lang,
                 "Accept-Language": lang,
-                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969 ", // sub Balance account
+                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
 //                "device-id": getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // ""
             ];
@@ -166,7 +166,7 @@ class DataService {
                 "whitelabel-code": WhiteLabelLocal.shared.getLocalWhiteLabelList()?.code ?? "",
                 "OS" : "IOS",
                 "Accept-Language": lang,
-                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969 ", // sub Balance account
+                "device-id": "ED6E3AAB-347E-4EF6-882C-178EFA180969", // sub Balance account
 //                "device-id": getDeviceId(),
                 "Application-name" : "BITAQATY_BUSINESS_MOBILE" // "BITAQATY_BUSINESS_MOBILE"
             ];
